@@ -1,0 +1,21 @@
+.clients{
+  margin-top:155px;
+  h3{
+    color: #15b5a4;
+  }
+  ul{
+    width:100%;
+    li{
+      width:percentage(300/1400);
+      float: left;
+      padding:10px;
+      margin-right:40px;
+      &:nth-child(4n){
+        margin:0;
+      }
+      img{
+        width: 100%;
+      }
+    }
+  }
+}

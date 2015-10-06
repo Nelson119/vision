@@ -1,0 +1,41 @@
+.service{
+  position:relative;
+  width: 100%;
+  padding-top: percentage(400/1400);
+  margin-top: percentage(80/1400);
+  h3{
+    font-size: 26px;
+  }
+  figure.background{
+    top:0;
+    width: 100%;
+    position: absolute;
+    margin-top:percentage(50/1400);
+    padding-top:percentage(350/1400);
+    background:url(../images/home/pattern.png);
+  }
+  ul{
+    position:absolute;
+    top:0;
+    width:100%;
+    color:rgba(255,255,255,.8);
+    li{
+      position:relative;
+      float: left;
+      width:percentage(580/1400);
+      margin-left:percentage(80/1400);
+      img{
+        position:relative;
+        width:100%;
+      }
+      aside{
+        position:absolute;
+        top:0;
+        left:0;
+        width: 100%;
+        height: 100%;
+          background:url(../images/service/overlay-pattern.png);
+      }
+    }
+  }
+}

@@ -1,0 +1,100 @@
+.news{
+  width: 960px;
+  h3{
+    color: #f8b632;
+  }
+  ul{
+    li{
+      border-top:1px solid #c9c9c9;
+      height:60px;
+      line-height: 60px;
+      .date{
+        display: inline-block;
+        min-width:106px;
+        text-align: center;
+        color:#313131;
+      }
+      .category{
+        text-align: center;
+        margin:0 30px;
+        color:#fff;
+        padding:1px 8px;
+        border-radius:3px;
+        &.c-company{
+          background:#15b5a4;
+        }
+        &.c-anounce{
+          background:#fe805b;
+        }
+        &.c-promotion{
+          background:#2b75da;
+        }
+      }
+      .subj{
+        color:#313131;
+        display: inline-block;
+        width:620px;
+        text-align:left;
+      }
+      .more{
+        color:#f8b632;
+        line-height: 8px;
+        span{
+          display: inline-block;
+          height: 9px;
+          line-height: 0;
+          vertical-align: middle;
+          transition-duration: 0.2s;
+          transition-property: margin color;
+          position: relative;
+        }
+        &:hover{
+          i:before{
+            transform: rotateZ(360deg);
+          }
+          i{
+            width:60px;
+          }
+          span{
+            margin-left:-47px;
+            color:#fff;
+          }
+        }
+        i{
+          color:#fff;
+          position:relative;
+          background:#f8b632;
+          border-radius:6.5px;
+          margin-right:10px;
+          width:13px;
+          height:13px;
+          display: inline-block;
+            transition-duration: 0.2s;
+            transition-property: width;
+          &:before{
+            left: -2px;
+            position: absolute;
+            top: 0;
+            transition-duration: 0.2s;
+            transition-property: transform;
+          }
+        }
+      }
+
+      &:last-child{
+        border-bottom:1px solid #c9c9c9;
+      }
+    }
+  }
+  .btn{
+    margin-top:30px;
+    color:#fff;
+    background:#f8b632;
+    border:0;
+    padding:15px 45px;
+    font-size: 15px;
+    &:focus{
+      outline:none;
+    }
+  }
+}

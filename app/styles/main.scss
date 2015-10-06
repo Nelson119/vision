@@ -1,0 +1,244 @@
+$icon-font-path: '../fonts/';
+@import url(http://fonts.googleapis.com/earlyaccess/cwtexyen.css);
+@import url(http://fonts.googleapis.com/earlyaccess/cwtexhei.css);
+
+@import "utils/fontello";
+
+
+// bower:scss
+@import "bower_components/bootstrap-sass/assets/stylesheets/_bootstrap.scss";
+@import "bower_components/font-awesome/scss/font-awesome.scss";
+// endbower
+
+.browserupgrade {
+  margin: 0.2em 0;
+  background: #ccc;
+  color: #000;
+  padding: 0.2em 0;
+}
+
+/* Space out content a bit */
+body {
+  font: 15px/18px "微軟正黑體",'cwTeXHei', 'cwTeXYen', "Segoe UI","Helvetica Neue", メイリオ, Meiryo, 'ヒラギノ角ゴ Pro w3', 'Hiragino Kaku Gothic Pro', Osaka, 'ＭＳ Ｐゴシック', 'MS P Gothic', STXihei, 'HEITI TC', 黑體-繁, 微軟正黑體, 黑體, Arial, Helvetica, sans-serif,cursive;
+  color:#696969;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  font-feature-settings: "liga";
+  font-style: normal;
+  text-rendering: optimizelegibility;
+  padding-bottom: 20px;
+}
+
+.cwTeXHei{
+  font-family: 'cwTeXHei', "微軟正黑體", 'cwTeXYen', "Segoe UI","Helvetica Neue", メイリオ, Meiryo, 'ヒラギノ角ゴ Pro w3', 'Hiragino Kaku Gothic Pro', Osaka, 'ＭＳ Ｐゴシック', 'MS P Gothic', STXihei, 'HEITI TC', 黑體-繁, 微軟正黑體, 黑體, Arial, Helvetica, sans-serif,cursive;
+  font-weight: bold;
+}
+.zhenghei{
+  font-family: "微軟正黑體",'cwTeXHei', 'cwTeXYen', "Segoe UI","Helvetica Neue", メイリオ, Meiryo, 'ヒラギノ角ゴ Pro w3', 'Hiragino Kaku Gothic Pro', Osaka, 'ＭＳ Ｐゴシック', 'MS P Gothic', STXihei, 'HEITI TC', 黑體-繁, 微軟正黑體, 黑體, Arial, Helvetica, sans-serif,cursive;
+  font-weight: bold;
+}
+.cwTeXYen{
+  font-weight: bold;
+  font-family: 'cwTeXYen',"微軟正黑體", 'cwTeXHei', "Segoe UI","Helvetica Neue", メイリオ, Meiryo, 'ヒラギノ角ゴ Pro w3', 'Hiragino Kaku Gothic Pro', Osaka, 'ＭＳ Ｐゴシック', 'MS P Gothic', STXihei, 'HEITI TC', 黑體-繁, 微軟正黑體, 黑體, Arial, Helvetica, sans-serif,cursive;
+}
+
+/* Everything but the jumbotron gets side spacing for mobile first views */
+header,
+footer {
+}
+.container{
+  max-width:1400px;
+  width: 100%;
+  min-width: 1200px;
+  overflow:hidden;
+  a:focus{
+    outline:0;
+  }
+  ul{
+    margin: 0;
+    padding:0;
+    li{
+      list-style: none;
+    }
+  }
+
+  >section{
+    position:relative;
+    margin:80px auto;
+    font-size:13px;
+    text-align:center;
+
+    h3{
+      width:100%;
+      text-align: center;
+      font-size:26px;
+      margin-bottom: 30px;
+      span{
+        font-size: 13px;
+         color:#313131;
+      }
+    }
+  }
+
+  @import "section/home/highlight";
+  @import "section/home/marquee";
+  @import "section/home/service";
+  @import "section/home/news";
+  @import "section/home/clients";
+}
+
+/* Custom page header */
+header {
+  font-weight : bold!important;
+  color : #313131;
+  margin-top:20px;
+  position:relative;
+
+  /* Make the masthead heading the same height as the navigation */
+  h3 {
+    margin-top: 25px;
+    margin-bottom: 0;
+    line-height: 40px;
+    padding-bottom: 19px;
+    margin-left:20px;
+  }
+  .nav-pills{
+    >li,li.active{
+      width:144px;
+      display: inline-block;
+      height: 75px;
+      margin-top: 10px;
+      background:url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAQAAAC1HAwCAAAAC0lEQVQYV2P4zwAAAgEBAOIxSPwAAAAASUVORK5CYII=);
+
+      a,a.active,a:active,a:hover{
+        color: inherit;
+        border-radius: 0;
+        background:inherit;
+        text-align: center;
+      }
+      >a,>a.active,>a:active,>a:hover{
+        border-right: 1px solid #c9c9c9;
+        padding:0;
+      }
+      &:last-child >a{
+        border:0;
+      }
+      span{
+        display:inline-block;
+        width:100%;
+        text-align: center;
+        color:#d70b2a;
+        font-size:9px;
+        line-height: 15px;
+      }
+      ul{
+        margin-top:32px;
+        transform: scaleX(2) ;
+        opacity:0;
+        position:relative;
+        z-index: 1;
+
+        li{
+          text-align: center;
+          background:#d70b2a;
+          a{
+            // opacity:0;
+            text-decoration: none;
+            color:#fff!important;
+            color:rgba(255,255,255,0.8)!important;
+            height:40px;
+            width:100px;
+            margin: 0 auto;
+            display: block;
+            padding:13px;
+            border-bottom: 1px solid #c9c9c9;
+            &:hover{
+              color:rgba(255,255,255,1)!important;
+            }
+          }
+          &:last-child >a{
+            border:0;
+          }
+        }
+      }
+      &:hover{
+        ul{
+          transform: none;
+          // transition-duration: 0.5s;
+          opacity:inherit;
+          transition-property: transform opacity;
+          a{
+            transition-delay: 0.3s;
+            // transition-duration: 0.25s;
+            opacity:inherit;
+            transition-property: opacity;
+          }
+        }
+        &:after{
+          transform: none;
+          // transition-duration: 0.5s;
+          opacity:inherit;
+          // transition-property: transform opacity;
+        }
+      }
+      &.active,&:hover{
+        background:url(../images/header/nav-active.png) center 67px no-repeat;
+        a{
+          color:#d70b2a;
+        }
+      }
+      &:after{
+        position: absolute;
+        bottom:0;
+        width:100%;
+        display: block;
+        height:3px;
+        content:' ';
+        text-indent: -9999px;
+        background-color:#d70b2a;
+        transform: scaleX(2) ;
+        opacity:0;
+      }
+      &.active{
+        &:after{
+          transform: none;
+          opacity:inherit;
+        }
+      }
+    }
+
+  }
+  .locale{
+    position:absolute;
+    right: 0;
+    top: -20px;
+    li{
+      float:left;
+      background:#717171;
+      letter-spacing: 1px;
+      line-height: 10px;
+      padding:2px 2px 3px;
+      a{
+        color:#fff;
+        font-size: 10px;
+        text-decoration: none;
+        vertical-align: middle;
+      }
+      &.active{
+        background:#313131;
+      }
+    }
+  }
+}
+
+/* Custom page footer */
+footer {
+  padding-top: 19px;
+  color: #777;
+  border-top: 1px solid #e5e5e5;
+}
+
+.container-narrow > hr {
+  margin: 30px 0;
+}
+
