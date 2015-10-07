@@ -85,6 +85,7 @@ footer {
   @import "section/home/service";
   @import "section/home/news";
   @import "section/home/clients";
+  @import "section/home/events";
 }
 
 /* Custom page header */
@@ -95,45 +96,34 @@ header {
   position:relative;
 
   /* Make the masthead heading the same height as the navigation */
-  h3 {
-    margin-top: 25px;
+  h1 {
+    margin-top: 28px;
     margin-bottom: 0;
     line-height: 40px;
-    padding-bottom: 19px;
-    margin-left:20px;
+    padding-bottom: 30px;
+    margin-left:50px;
   }
-  .nav-pills{
-    >li,li.active{
-      width:144px;
-      display: inline-block;
-      height: 75px;
-      margin-top: 10px;
-      background:url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAQAAAC1HAwCAAAAC0lEQVQYV2P4zwAAAgEBAOIxSPwAAAAASUVORK5CYII=);
-
-      a,a.active,a:active,a:hover{
-        color: inherit;
-        border-radius: 0;
-        background:inherit;
-        text-align: center;
-      }
-      >a,>a.active,>a:active,>a:hover{
-        border-right: 1px solid #c9c9c9;
-        padding:0;
-      }
-      &:last-child >a{
-        border:0;
-      }
-      span{
-        display:inline-block;
-        width:100%;
-        text-align: center;
+  nav{
+    position:relative;
+    i.fa-caret-up{
+      z-index: 1;
+      position:absolute;
+      top:75px;
+      right:0;
+      width:145px;
+      display: block;
+      height:3px;
+      background-color:#d70b2a;
+      // transform: scaleX(2) ;
+      // opacity:0;
+      &:before{
+        position:absolute;
+        top:-10px;
+        left:70px;
+        font-size:13px;
         color:#d70b2a;
-        font-size:9px;
-        line-height: 15px;
       }
       ul{
-        margin-top:32px;
-        transform: scaleX(2) ;
         opacity:0;
         position:relative;
         z-index: 1;
@@ -161,48 +151,43 @@ header {
           }
         }
       }
-      &:hover{
-        ul{
-          transform: none;
-          // transition-duration: 0.5s;
-          opacity:inherit;
-          transition-property: transform opacity;
-          a{
-            transition-delay: 0.3s;
-            // transition-duration: 0.25s;
-            opacity:inherit;
-            transition-property: opacity;
-          }
-        }
-        &:after{
-          transform: none;
-          // transition-duration: 0.5s;
-          opacity:inherit;
-          // transition-property: transform opacity;
-        }
+    }
+  }
+  .nav-pills{
+    >li,li.active{
+      width:144px;
+      display: inline-block;
+      height: 75px;
+      margin-top: 10px;
+      background:url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAQAAAC1HAwCAAAAC0lEQVQYV2P4zwAAAgEBAOIxSPwAAAAASUVORK5CYII=);
+      ul{
+        display: none;
+      }
+      a,a.active,a:active,a:hover{
+        color: inherit;
+        border-radius: 0;
+        background:inherit;
+        text-align: center;
+      }
+      >a,>a.active,>a:active,>a:hover{
+        border-right: 1px solid #c9c9c9;
+        padding:0;
+      }
+      &:last-child >a{
+        border:0;
+      }
+      span{
+        display:inline-block;
+        width:100%;
+        text-align: center;
+        color:#d70b2a;
+        font-size:9px;
+        line-height: 15px;
       }
       &.active,&:hover{
-        background:url(../images/header/nav-active.png) center 67px no-repeat;
+        // background:url(../images/header/nav-active.png) center 67px no-repeat;
         a{
           color:#d70b2a;
-        }
-      }
-      &:after{
-        position: absolute;
-        bottom:0;
-        width:100%;
-        display: block;
-        height:3px;
-        content:' ';
-        text-indent: -9999px;
-        background-color:#d70b2a;
-        transform: scaleX(2) ;
-        opacity:0;
-      }
-      &.active{
-        &:after{
-          transform: none;
-          opacity:inherit;
         }
       }
     }
