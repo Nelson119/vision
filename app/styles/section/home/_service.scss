@@ -3,38 +3,112 @@
   width: 100%;
   padding-top: percentage(400/1400);
   margin-top: percentage(80/1400);
-  h3{
-    font-size: 26px;
-  }
-  figure.background{
-    top:0;
-    width: 100%;
-    position: absolute;
-    margin-top:percentage(50/1400);
-    padding-top:percentage(350/1400);
-    background:url(../images/home/pattern.png);
+  p{
+    margin-bottom: percentage(40/680);
+    transform:rotateX(90deg);
+    font-size: 24px;
+    opacity:0;
+    transition-delay: 0.2s;
+    transition-duration: 0.3s;
+    transition-property: opacity transform;
+    line-height: 20px;
   }
   ul{
     position:absolute;
     top:0;
     width:100%;
-    color:rgba(255,255,255,.8);
+    color:#313131;
     li{
       position:relative;
       float: left;
-      width:percentage(580/1400);
-      margin-left:percentage(80/1400);
+      width:percentage(680/1400);
+      margin-left:percentage(40/1400);
+      &:nth-child(1){
+        margin-left:0;
+      }
       img{
         position:relative;
         width:100%;
+      }
+      figure{
+        position:relative;
+        &:after{
+          width:100%;
+          height:100%;
+          position: absolute;
+          top:0;
+          left:0;
+          content:' ';
+          transition-duration: 0.2s;
+        }
+
+      }
+      h3{
+        font-weight: bold;
+        font-size: 38px;
+        margin-top: percentage(140/680);
+        margin-bottom:0;
+        transition-duration: 0.2s;
+        transition-delay: 0.2s;
+        span{
+          font-size: 19px;
+          display: block;
+          margin:0 auto;
+        }
+      }
+      figure.background{
+        position:absolute;
+        top:0;
+        left:0;
+        width:100%;
+        height:100%;
+        background:rgba(255,255,255,0);
+        transition-duration: 0.2s;
+        &:after{
+          display: none;
+        }
       }
       aside{
         position:absolute;
         top:0;
         left:0;
-        width: 100%;
-        height: 100%;
-          background:url(../images/service/overlay-pattern.png);
+        width:100%;
+        height:100%;
+        transition-duration: 0.2s;
+        a{
+          font-weight: bold;
+          width:150px;
+          height:40px;
+          display: block;
+          margin:0 auto 0;
+          padding-top: 10px;
+          color:#fff;
+          background:#d70b2a;
+          font-size:15px;
+          border-radius:3px;
+        }
+      }
+      &:hover{
+        figure:after{
+          border: 4px solid #d70b2a;
+        }
+        figure.background{
+          height: percentage(270/390);
+          width: percentage(500/680);
+          left:percentage(90/680);
+          margin: percentage(60/680) auto 0;
+          background:rgba(255,255,255,.75);
+        }
+        h3{
+          margin-top: percentage(100/680);
+          margin-bottom: percentage(40/680);
+        }
+        p{
+          opacity: inherit;
+          transform:rotateX(0deg);
+          transition-duration: 0.5s;
+          transition-property: transform;
+        }
       }
     }
   }

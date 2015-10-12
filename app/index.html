@@ -17,6 +17,8 @@
     <!-- build:css styles/main.css -->
     <link rel="stylesheet" href="styles/main.css">
     <!-- endbuild -->
+    <link rel="stylesheet" href="http://fonts.googleapis.com/earlyaccess/cwtexyen.css">
+    <link rel="stylesheet" href="http://fonts.googleapis.com/earlyaccess/cwtexhei.css">
     
     <!-- build:js scripts/vendor/modernizr.js -->
     <script src="/bower_components/modernizr/modernizr.js"></script>
@@ -29,30 +31,37 @@
     
     <section class="container">
       <header>
-        <nav>
-          <ul class="nav nav-pills pull-right cwTeXHei">
-            <li class="active"><a href="javascript:">關於長璟<span>ABOUT US</span></a></li>
-            <li><a href="javascript:">整合行銷<span>MARKETING</span></a></li>
-            <li><a href="javascript:">管理顧問<span>MANAGEMENT</span></a>
-              <ul>
-                <li><a href="javascript:">活動實績</a></li>
-                <li><a href="javascript:">會議場地</a></li>
+        <aside class="center">
+          <aside class="float">
+            <nav>
+              <ul class="nav nav-pills pull-right cwTeXHei">
+                <li class="active"><a href="javascript:">關於長璟<span>ABOUT US</span></a></li>
+                <li><a href="javascript:">整合行銷<span>MARKETING</span></a></li>
+                <li><a href="javascript:">管理顧問<span>MANAGEMENT</span></a>
+                  <ul class="cwTeXHei">
+                    <li><a href="javascript:">活動實績</a></li>
+                    <li><a href="javascript:">會議場地</a></li>
+                  </ul>
+                </li>
+                <li><a href="javascript:">活動快訊<span>NEWS</span></a></li>
+                <li><a href="javascript:">歷史軌跡<span>CLIENTS</span></a></li>
+                <li><a href="javascript:">聯絡我們<span>CONTACT US</span></a></li>
               </ul>
-            </li>
-            <li><a href="javascript:">活動快訊<span>NEWS</span></a></li>
-            <li><a href="javascript:">歷史軌跡<span>CLIENTS</span></a></li>
-            <li><a href="javascript:">聯絡我們<span>CONTACT US</span></a></li>
-          </ul>
-          <i class="fa fa-caret-up"></i>
-        </nav>
-        <h1 class="text-muted"><img alt="長璟整合行銷有限公司, 長璟管理顧問公司" src="images/header/logo.png"></h1>
-        <section class="locale">
-          <ul>
-            <li class="active"><a href="javascript:">繁中</a></li>
-            <li><a href="javascript:">簡中</a></li>
-          </ul>
-        </section>
+              <i class="fa fa-caret-up"></i>
+            </nav>
+            <h1 class="text-muted"><img alt="長璟整合行銷有限公司, 長璟管理顧問公司" src="images/header/logo.png"></h1>
+            <section class="locale">
+              <ul>
+                <li class="active"><a href="javascript:">繁中</a></li>
+                <li><a href="javascript:">簡中</a></li>
+              </ul>
+            </section>
+            
+          </aside>
+        </aside>
+
       </header>
+
 
       <section class="highlight">
 
@@ -91,23 +100,24 @@
       </section>
 
       <section class="service">
-        <figure class="background"></figure>
         <ul>
           <li>
-            <img src="images/service/marketing.png"/>
+            <figure><img src="images/service/marketing.png"/></figure>
+            <figure class="background"></figure>
             <aside>
               <h3>整合行銷<span>MARKETING</span></h3>
-              <p>承辦大、中、小型活動，統籌整場設計、規劃、施工、執行；
-  活動周邊設備出租；會議周邊設備出租</p>
+              <p>活動規劃、行銷推廣、媒體整合</p>
+              <a href="javascript:">服務項目</a>
             </aside>
           </li>
           <li>
+            <figure><img src="images/service/management.png"/></figure>
+            <figure class="background"></figure>
             <aside>
               <h3>管理顧問<span>MANAGEMENT</span></h3>
-              <p>承辦大、中、小型國際研討會、企業公司訓練；
-  代理全省各大飯店、渡假村相關業務</p>
+              <p>企業訓練、會議講座、場地代辦</p>
+              <a href="javascript:">服務項目</a>
             </aside>
-            <img src="images/service/management.png"/>
           </li>
         </ul>
       </section>
@@ -116,29 +126,43 @@
         <h3 class="cwTeXHei">活動快訊 <span>/&nbsp;NEWS</span></h3>
         <ul>
           <li>
-            <span class="date">2015.10.10</span>
+            <span class="date">2013.10.25</span>
             <span class="category c-company">公司情報</span>
             <span class="subj">長璟整合行銷FaceBook最新上架!!!</span>
             <a href="javascript:" class="more"><i class="icon-right-open-mini"></i><span>more</span></a>
           </li>
           <li>
-            <span class="date">2015.10.10</span>
-            <span class="category c-anounce">特別公告</span>
-            <span class="subj">長璟整合行銷FaceBook最新上架!!!</span>
+            <span class="date">2013.10.25</span>
+            <span class="category c-company">特別公告</span>
+            <span class="subj">尾牙&amp;春酒 最新最有創意的Idea 都在長璟整合行銷 詢問報價通通免...</span>
             <a href="javascript:" class="more"><i class="icon-right-open-mini"></i><span>more</span></a>
           </li>
           <li>
-            <span class="date">2015.10.10</span>
+            <span class="date">2013.10.25</span>
+            <span class="category c-company">優惠情報</span>
+            <span class="subj">慶祝長璟公司12周年慶~即將推出全省會議(20家以上飯店)感恩回饋...</span>
+            <a href="javascript:" class="more"><i class="icon-right-open-mini"></i><span>more</span></a>
+          </li>
+          <li>
+            <span class="date">2013.10.25</span>
+            <span class="category c-anounce">特別公告</span>
+            <span class="subj">尾牙&amp;春酒 最新最有創意的Idea 都在長璟整合行銷</span>
+            <a href="javascript:" class="more"><i class="icon-right-open-mini"></i><span>more</span></a>
+          </li>
+          <li>
+            <span class="date">2013.10.25</span>
             <span class="category  c-promotion">優惠情報</span>
-            <span class="subj">長璟整合行銷FaceBook最新上架!!!</span>
+            <span class="subj">慶祝長璟公司12周年慶!!</span>
             <a href="javascript:" class="more"><i class="icon-right-open-mini"></i><span>more</span></a>
           </li>
         </ul>
         <a href="javascript:" class="btn btn-default cwTeXHei">快訊一覽</a>
       </section>
 
+      <hr>
+
       <section class="clients">
-        <h3 class="cwTeXHei">歷史軌跡<span> / CLIENTS</span></h3>
+        <h3 class="cwTeXHei">衷心感謝<span> / CLIENTS</span></h3>
         <ul>
           <li>
             <img src="images/clients/01.png">
@@ -167,6 +191,8 @@
         </ul>
         <div class="clearfix"></div>
       </section>
+
+      <hr>
 
       <section class="events">
         <h3 class="cwTeXHei">活動實績<span> / EVENTS</span></h3>
@@ -202,32 +228,41 @@
           </ul>
           <i class="fa fa-caret-down"></i>
         </nav>
+        <div class="clearfix"></div>
+      </section>
+
+      <section class="events content">
         <ul>
-          <li>
-            <img src="images/clients/01.png">
+          <li class="active">
+            <img src="images/events/event01.png">
           </li>
           <li>
-            <img src="images/clients/02.png">
+            <img src="images/events/event02.png">
           </li>
           <li>
-            <img src="images/clients/03.png">
+            <img src="images/events/event03.png">
           </li>
           <li>
-            <img src="images/clients/04.png">
+            <img src="images/events/event01.png">
           </li>
           <li>
-            <img src="images/clients/05.png">
+            <img src="images/events/event02.png">
           </li>
           <li>
-            <img src="images/clients/06.png">
+            <img src="images/events/event03.png">
           </li>
           <li>
-            <img src="images/clients/07.png">
+            <img src="images/events/event01.png">
           </li>
           <li>
-            <img src="images/clients/08.png">
+            <img src="images/events/event02.png">
+          </li>
+          <li>
+            <img src="images/events/event03.png">
           </li>
         </ul>
+        <a href="javascript:" class="next"><img src="images/events/arrow.png"></a>
+        <a href="javascript:" class="prev"><img src="images/events/arrow.png"></a>
 
       </section>
 
