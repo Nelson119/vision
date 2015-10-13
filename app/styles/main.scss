@@ -1,6 +1,7 @@
 $icon-font-path: '../fonts/';
 
 @import "utils/fontello";
+@import "utils/cbox";
 
 
 // bower:scss
@@ -53,6 +54,10 @@ footer {
   a:focus{
     outline:0;
   }
+  a:hover,a:active,a:focus{
+    text-decoration: none;
+  }
+
   ul{
     margin: 0;
     padding:0;
@@ -63,6 +68,10 @@ footer {
   hr{
     margin:0;
     border-color:#c9c9c9;
+
+    &.red{
+      border-color:#d70b2a;
+    }
   }
   >section,>footer{
 
@@ -95,7 +104,7 @@ footer {
   @import "section/home/service";
   @import "section/home/news";
   @import "section/home/clients";
-  @import "section/home/events";
+  @import "section/home/activities";
 }
 
 /* Custom page header */
@@ -147,7 +156,7 @@ header {
       // opacity:0;
       &:before{
         position:absolute;
-        top:-10px;
+        top:-9px;
         left:70px;
         font-size:13px;
         color:#d70b2a;
@@ -259,9 +268,131 @@ header {
 
 /* Custom page footer */
 footer {
-  padding-top: 19px;
+  padding-top: 37px;
   color: #777;
   border-top: 1px solid #e5e5e5;
+  position:relative;
+  a.top{
+    font-family: arial;
+    font-weight: bold;
+    font-size:10px;
+    color:#d70b2a;
+    position:absolute;
+    right:0;
+    top:-20px;
+    text-align: center;
+    i{
+      font-size:25px;
+    }
+    span{
+      display: block;
+      margin-top:-10px;
+    }
+  }
+  ul{
+    text-align: center;
+    li{
+      line-height: 24px;
+      display: inline;
+      a{
+        color:#313131;
+        i{
+          vertical-align: middle;
+          filter: url("data:image/svg+xml;utf8,<svg xmlns=\'http://www.w3.org/2000/svg\'><filter id=\'grayscale\'><feColorMatrix type=\'matrix\' values=\'0.1111 0.1111 0.1111 0 0 0.1111 0.1111 0.1111 0 0 0.1111 0.1111 0.1111 0 0 0 0 0 1 0\'/></filter></svg>#grayscale"); /* Firefox 10+, Firefox on Android */
+          filter: gray; /* IE6-9 */
+          -webkit-filter: grayscale(100%); /* Chrome 19+, Safari 6+, Safari 6+ iOS */
+
+          background-image:url(../images/footer-nav.png);
+          display: inline-block;
+          width:24px;
+          height:24px;
+          margin-left:15px;
+          margin-right:10px;
+        }
+        span{
+          vertical-align: middle;
+          line-height: 13px;
+          font-size: 13px;
+          display: inline-block;
+          height:13px;
+          padding-right:15px;
+          border-right:1px solid #c9c9c9;
+        }
+        &:hover, &:active, &:focus{
+          text-decoration: none;
+          i{
+            filter:none;
+            -webkit-filter: none;
+            transition-duration: 0.2s;
+          }
+        }
+      }
+      &:nth-child(1){
+        a{
+          &:hover{
+            color:#d70b2a; 
+          }
+        }
+      }
+      &:nth-child(2){
+        a{
+          &:hover{
+            color:#fe805b; 
+          }
+          i{
+            background-position:-24px 0;
+          }
+        }
+      }
+      &:nth-child(3){
+        a{
+          &:hover{
+            color:#f8b632; 
+          }
+          i{
+            background-position:-48px 0;
+          }
+        }
+      }
+      &:nth-child(4){
+        a{
+          &:hover{
+            color:#15b5a4; 
+          }
+          i{
+            background-position:-72px 0;
+          }
+        }
+      }
+      &:nth-child(5){
+        a{
+          &:hover{
+            color:#2b75da; 
+          }
+          i{
+            width:10px;
+            background-position:-103px 0;
+          }
+          span{
+            border:0;
+          }
+        }
+      }
+    }
+  }
+
+  h2{
+    width:286.804347826087px;
+    margin: 35px auto;
+    img{
+      width:100%;
+    }
+  }
+  p{
+    font-size: 10px;
+    text-align: center;
+    margin-bottom:65px;
+  }
 }
 
 .container-narrow > hr {

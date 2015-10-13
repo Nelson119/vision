@@ -91,7 +91,7 @@ $(function(){
 		});
 	}($('header')));
 
-	//events
+	//activities nav
 	(function(container){
 		$('nav ul li', container).on('mouseover', function(){
 			var overlay = $('nav i', container);
@@ -112,17 +112,23 @@ $(function(){
 			]);
 			tl.play();
 		});
+	}($('.activities')));
+	//activities
+	(function(container){
 		$(window).on('resize', function(){
-			var ul = $('> ul', container);
-			var active = $('> ul li.active', container);
+			var ul = $('>ul', container);
+			var active = $('>ul li.active', container);
 			var index = active.index();
-			var w = $(window).width();
+			var w = $(window).width() > 1366 ? $(window).width() : 1366;
+			var containerWidth = container.width();
 
-			var offset = (w - 627) / 2 - 627 * 3 - 627 - 588 * index;
-			// var offset = ( * index) / 2
+			var offset = (w - containerWidth) / 2 - 588 * (index + 2);
+			var padding = 595 + 600 - (w - containerWidth) / 2;
+
 
 			TweenMax.to(ul, 0.5, {
-				marginLeft: offset
+				marginLeft: offset,
+				paddingLeft: padding
 			});
 			if(active.next().length){
 				$('.next', container).fadeIn(250);
@@ -138,7 +144,7 @@ $(function(){
 		}).trigger('resize');
 
 		$('.next', container).on('click', function(){
-			var active = $('> ul li.active', container);
+			var active = $('>ul li.active', container);
 			if(!active.next().length){
 				return;
 			}
@@ -146,8 +152,8 @@ $(function(){
 			$(window).trigger('resize');
 		});
 
-		$('.prev, container').on('click', function(){
-			var active = $('> ul li.active', container);
+		$('.prev', container).on('click', function(){
+			var active = $('>ul li.active', container);
 			if(!active.prev().length){
 				return;
 			}
@@ -155,5 +161,21 @@ $(function(){
 			$(window).trigger('resize');
 		});
 
-	}($('.events')));
+		$('>ul li a', container).colorbox({
+			innerHeight: 540,
+			innerWidth: 965,
+			fixed: true,
+			rel: 'group all',
+			transition: 'fade',
+			title: $(this).attr('title'),
+			current: '',
+			onComplete: function(){
+				$('#cboxTitle').attr('title', $('span >b', this).html());
+			},
+			onClosed: function(){
+				TweenMax.set($('.container'), {scrollLeft: 0});
+			}
+		});
+
+	}($('.activities.content')));
 });

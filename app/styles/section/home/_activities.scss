@@ -1,4 +1,4 @@
-.events{
+.activities{
   margin-top:80px;
   margin-bottom: 40px;
   h3{
@@ -94,8 +94,8 @@
       background:url(../images/home/pattern.png);
       height: 410px;
       width:60000px;
-      padding-left:627px*3;
-      padding-right:627px*3;
+      padding-left:588px*3;
+      padding-right:588px*3;
       margin-left:-627px*3;
       position:relative;
       display: block;
@@ -105,6 +105,11 @@
         padding: 16px 16px 5px;
         margin:35px 28px;
         background:#fff;
+        display: block;
+        transition-duration:0.2s;
+        &:hover{
+          transform:scale(1.02);
+        }
         span{
           display: block;
           text-align: left;
