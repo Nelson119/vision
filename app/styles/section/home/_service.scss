@@ -60,9 +60,11 @@
         position:absolute;
         top:0;
         left:0;
-        width:100%;
-        height:100%;
-        background:rgba(255,255,255,0);
+        height: percentage(270/390);
+        width: percentage(500/680);
+        left:percentage(90/680);
+        margin: percentage(60/680) auto 0;
+        background:rgba(255,255,255,.35);
         transition-duration: 0.2s;
         &:after{
           display: none;
@@ -93,10 +95,6 @@
           border: 4px solid #d70b2a;
         }
         figure.background{
-          height: percentage(270/390);
-          width: percentage(500/680);
-          left:percentage(90/680);
-          margin: percentage(60/680) auto 0;
           background:rgba(255,255,255,.75);
         }
         h3{
