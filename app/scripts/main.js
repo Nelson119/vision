@@ -171,6 +171,8 @@ $(function(){
 			current: '',
 			onComplete: function(){
 				$('#cboxTitle').attr('title', $('span >b', this).html());
+				$(this).parents('li').addClass('active').siblings().removeClass('active');
+				$(window).trigger('resize');
 			},
 			onClosed: function(){
 				TweenMax.set($('.container'), {scrollLeft: 0});
