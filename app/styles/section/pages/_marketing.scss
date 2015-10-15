@@ -1,0 +1,138 @@
+.page.marketing{
+
+
+  ul.service-list{
+    background:url(../images/marketing/services.png) no-repeat;
+    width:530px;
+    margin:0 auto;
+    padding:0 0 20px 84px;
+
+    li + li{
+      margin-top:50px;
+    }
+
+    h4{
+      font-size: 22px;
+      color:#313131;  
+
+    }
+    h5{
+      font-size: 14px;
+      color:#898989;
+    }
+  }
+  nav.categories{
+    position:relative;
+    text-align: center;
+    ul{
+      width:100%;
+      font-size: 15px;
+      li{
+        width:percentage(155/1400);
+        float: left;
+        a{
+          color:#535353;
+          width:100%;
+          display: inline-block;
+          height:14px;
+          line-height: 12px;
+          border-right:1px solid #c9c9c9;
+          position:relative;
+          text-decoration: none;
+        }
+        &.active,&:hover{
+          a{
+            color:#fff;
+          }
+        } 
+
+        &:last-child a{
+          border:0;
+        }
+      }
+    }
+    i.fa-caret-down{
+      position:absolute;
+      width:percentage(154/1400);
+      height:30px;
+      top:-5px;
+      left:0;
+      z-index: -1;
+      position:absolute;
+      content:' ';
+      display: block;
+      background:#fe805b;
+      color:#fe805b;
+      &:before{
+        line-height: 62px;
+      }
+    }
+  }
+  .fit{
+    margin-top:45px;
+    background:url(../images/home/pattern.png);
+  }
+  .activities-list{
+    letter-spacing: 0;
+    word-spacing: 0;
+    width:1400px;
+    padding:30px 50px;
+    margin:0 auto;
+    li{
+      background:#fff;
+      padding:12px;
+      display: inline-block;
+      img{
+        max-height:211px;
+        width:auto;
+      }
+      &:nth-child(3n+1){
+        margin-left:0;
+      }
+      &:nth-child(3) ~ li{
+        margin-top:50px;
+      }
+    }
+    li + li{
+      margin-left:38px;
+    }
+    h4{
+
+        &:hover{
+          transform:scale(1.02);
+        }
+        span{
+          display: block;
+          text-align: left;
+          color:#313131;
+          position:relative;
+          line-height: 50px;
+          font-size: 17px;
+          &:before{
+            display:inline-block;
+            width:13px;
+            height:13px;
+            background:#fe805b;
+            content: "";
+            font-family: FontAwesome;
+            line-height: 13px;
+            border-radius:50%;
+            color:#fff;
+            font-size:10px;
+            margin-right:8px;
+            padding-left:5px;
+          }
+          b{
+            font-size: 13px;
+            font-weight: normal;
+            color:#fe805b;
+            position:absolute;
+            right:0;
+          }
+        }
+    }
+
+  }
+
+
+}

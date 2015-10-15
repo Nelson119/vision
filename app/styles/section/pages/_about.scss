@@ -101,6 +101,7 @@
         margin:0 38px;
         position:relative;
         box-shadow:3px 3px 0 rgba(137,137,137,0.35);
+        overflow:hidden;
 
         img{
           vertical-align: top;
@@ -112,14 +113,15 @@
           text-align:center;
           width:100%;
           margin:0;
-          font-weight: bold;
         }
         h5{
           top:70px;
           font-size: 23px;
+          font-weight: bold;
         }
         h6{
           font-size: 18px;
+          transform:scale(10);
           opacity: 0;
           top:95px;
           color:#fff;
@@ -164,6 +166,7 @@
           }
           h6{
             opacity:1;
+            transform: none;
             transition-delay: 0.2s;
             transition-duration: 0.2s;
           }
