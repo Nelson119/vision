@@ -18,7 +18,7 @@ $icon-font-path: '../fonts/';
 
 /* Space out content a bit */
 body {
-  font: 15px/18px "微軟正黑體",'cwTeXHei', 'cwTeXYen', "Segoe UI","Helvetica Neue", メイリオ, Meiryo, 'ヒラギノ角ゴ Pro w3', 'Hiragino Kaku Gothic Pro', Osaka, 'ＭＳ Ｐゴシック', 'MS P Gothic', STXihei, 'HEITI TC', 黑體-繁, 微軟正黑體, 黑體, Arial, Helvetica, sans-serif,cursive;
+  font: 15px/18px メイリオ, Meiryo, 'ヒラギノ角ゴ Pro w3', 'Hiragino Kaku Gothic Pro', Osaka, 'ＭＳ Ｐゴシック', 'MS P Gothic', STXihei, 'HEITI TC', 黑體-繁, 微軟正黑體, 黑體, Arial, Helvetica, sans-serif,"微軟正黑體",'cwTeXHei', 'cwTeXYen', "Segoe UI","Helvetica Neue", cursive;
   color:#696969;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
@@ -29,16 +29,16 @@ body {
 }
 
 .cwTeXHei{
-  font-family: "微軟正黑體",'cwTeXHei', 'cwTeXYen', "Segoe UI","Helvetica Neue", メイリオ, Meiryo, 'ヒラギノ角ゴ Pro w3', 'Hiragino Kaku Gothic Pro', Osaka, 'ＭＳ Ｐゴシック', 'MS P Gothic', STXihei, 'HEITI TC', 黑體-繁, 微軟正黑體, 黑體, Arial, Helvetica, sans-serif,cursive;
+  font-family: メイリオ, Meiryo, 'ヒラギノ角ゴ Pro w3', 'Hiragino Kaku Gothic Pro', Osaka, 'ＭＳ Ｐゴシック', 'MS P Gothic', STXihei, 'HEITI TC', 黑體-繁, 微軟正黑體, 黑體, Arial, Helvetica, sans-serif,"微軟正黑體",'cwTeXHei', 'cwTeXYen', "Segoe UI","Helvetica Neue", cursive;
   font-weight: bold;
 }
 .zhenghei{
-  font-family: "微軟正黑體",'cwTeXHei', 'cwTeXYen', "Segoe UI","Helvetica Neue", メイリオ, Meiryo, 'ヒラギノ角ゴ Pro w3', 'Hiragino Kaku Gothic Pro', Osaka, 'ＭＳ Ｐゴシック', 'MS P Gothic', STXihei, 'HEITI TC', 黑體-繁, 微軟正黑體, 黑體, Arial, Helvetica, sans-serif,cursive;
+  font-family: メイリオ, Meiryo, 'ヒラギノ角ゴ Pro w3', 'Hiragino Kaku Gothic Pro', Osaka, 'ＭＳ Ｐゴシック', 'MS P Gothic', STXihei, 'HEITI TC', 黑體-繁, 微軟正黑體, 黑體, Arial, Helvetica, sans-serif,"微軟正黑體",'cwTeXHei', 'cwTeXYen', "Segoe UI","Helvetica Neue", cursive;
   font-weight: bold;
 }
 .cwTeXYen{
   font-weight: bold;
-  font-family: 'cwTeXYen',"微軟正黑體", 'cwTeXHei', "Segoe UI","Helvetica Neue", メイリオ, Meiryo, 'ヒラギノ角ゴ Pro w3', 'Hiragino Kaku Gothic Pro', Osaka, 'ＭＳ Ｐゴシック', 'MS P Gothic', STXihei, 'HEITI TC', 黑體-繁, 微軟正黑體, 黑體, Arial, Helvetica, sans-serif,cursive;
+  font-family: メイリオ, Meiryo, 'ヒラギノ角ゴ Pro w3', 'Hiragino Kaku Gothic Pro', Osaka, 'ＭＳ Ｐゴシック', 'MS P Gothic', STXihei, 'HEITI TC', 黑體-繁, 微軟正黑體, 黑體, Arial, Helvetica, sans-serif,"微軟正黑體",'cwTeXHei', 'cwTeXYen', "Segoe UI","Helvetica Neue", cursive;
 }
 
 /* Everything but the jumbotron gets side spacing for mobile first views */
@@ -171,7 +171,7 @@ header {
         z-index: 1;
 
         li{
-          display: block;
+          text-align: center;
           background:#d70b2a;
           a{
             // opacity:0;
@@ -182,7 +182,6 @@ header {
             width:100px;
             margin: 0 auto;
             display: block;
-            position: relative;
             padding:13px;
             border-bottom: 1px solid #c9c9c9;
             &:hover{
@@ -198,18 +197,20 @@ header {
   }
   .nav-pills{
     margin-right:100px;
+    position:relative;
     >li,li.active{
-      text-align: center;
       width:144px;
       display: inline-block;
       height: 75px;
       margin-top: 10px;
+      text-align: center;
       background:url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAQAAAC1HAwCAAAAC0lEQVQYV2P4zwAAAgEBAOIxSPwAAAAASUVORK5CYII=);
       ul{
         display: none;
       }
       a{
-        height: 65px;
+        height: 85px;
+        display: block;
         &:after{
           height:37px;
           position:absolute;

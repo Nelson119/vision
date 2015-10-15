@@ -4,10 +4,10 @@ $(function(){
 
 	//nav
 	(function(header){
-		$('.nav li', header).on('mouseover', function(){
+		$('nav li', header).on('mouseover', function(){
 			var $this = $(this);
 
-			if($this.index() === $('.nav li.on', header).index()) {
+			if($this.index() === $('nav li.on', header).index()) {
 				return;
 			}
 
