@@ -1,6 +1,6 @@
-01_­º­¶
+01_é¦–é 
 
-¿ï¾Ü¿ï³æ Underline
+é¸æ“‡é¸å–® Underline
 http://www.a-hikkoshi.co.jp/
 
 sticky menu
@@ -11,21 +11,27 @@ http://tympanus.net/Blueprints/AnimatedHeader/
 Banner slide
 http://tympanus.net/Tutorials/SlideshowJmpress/
 
-¿ï¾Üservice®É
+é¸æ“‡serviceæ™‚
 Border Transitions - Reveal
 http://ianlunn.github.io/Hover/#
 
-«ö¶s
-¬õ ¥ª¤W
+æŒ‰éˆ•
+ç´… å·¦ä¸Š
 http://tympanus.net/Development/CreativeButtons/
 
-¬¡°Ê¹êÁZ¬ÛÃ¯ÂI¤J
+æ´»å‹•å¯¦ç¸¾ç›¸ç°¿é»å…¥
 http://tympanus.net/Tutorials/AnimatedBorderMenus/index6.html
 
 02_
-¬ÛÃ¯
+ç›¸ç°¿
 http://codyhouse.co/demo/squeezebox-portfolio-template/index.html#0
 
 
-¤»¤j«OÃÒhover¯S®Ä
+å…­å¤§ä¿è­‰hoverç‰¹æ•ˆ
 http://tympanus.net/Tutorials/OriginalHoverEffects/index6.html
+
+GOOGLE MAP STYLE
+https://snazzymaps.com/explore?tag=greyscale
+
+åœ°åœ–
+http://codecanyon.net/item/jquery-shop-locator-/11541173?s_phrase=&s_rank=21
