@@ -12,9 +12,32 @@
     float:right;
     max-width:465px;
     height:960px;
+    .prev,.next{
+      background:url(../images/map/arrows.png);
+      width:40px;
+      height:22px;
+      display: block;
+      margin:10px auto;
+    }
+    .prev{
+      background-position:0 -44px;
+      &:hover{
+        background-position:0 0;
+      }
+    }
+    .next{
+      background-position:0 -66px;
+      &:hover{
+        background-position:0 -22px;
+      }
+    }
+    aside{
+      height:900px;
+      overflow: hidden;
+    }
     ul{
       width:425px;
-      padding:37px 0 0;
+      margin:0 0 0;
       li{
           padding:12px 20px;
           height:280px;
@@ -60,7 +83,7 @@
                 transform: rotateZ(360deg);
               }
               i{
-                width:80px;
+                width:60px;
               }
               span{
                 margin-left:-47px;

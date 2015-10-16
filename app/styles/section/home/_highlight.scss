@@ -30,7 +30,6 @@
     }
   }
   nav{
-    position:absolute;
     top:0;
     width:100%;
     ul{
@@ -50,8 +49,16 @@
           text-indent: -999em;
           background: #c9c9c9;
 
-          &.active{
+        }
+        &.active,&:hover{
+          a{
             background: #d70b2a;
+          }
+        }
+        &:hover{
+          opacity:0.5;
+          &.active{
+            opacity: inherit;
           }
         }
       }

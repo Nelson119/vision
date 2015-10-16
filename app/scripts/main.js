@@ -303,6 +303,10 @@ $(function(){
 		$('nav li', header).on('mouseover', function(){
 			var $this = $(this);
 
+            if(!$('nav li.active', header).length){
+                $('nav i', header).fadeIn(250);
+            }
+
 			if($this.index() === $('nav li.on', header).index()) {
 				return;
 			}
@@ -349,10 +353,16 @@ $(function(){
 			]);
 			tl.play();
 		});
-		$('.nav li.active', header).trigger('mouseover');
-		// $('nav', header).on('mouseout', function(){
-		// 	$('.nav li.active', header).trigger('mouseover');
-		// });
+		$('nav li.active', header).trigger('mouseover');
+        if(!$('nav li.active', header).length){
+            $('nav i', header).hide();
+        }
+		$('nav li:not(:eq(2)), nav i ul', header).on('mouseout', function(){
+            if(!$('nav li.active', header).length){
+                $('nav i', header).hide();
+            }
+			$('nav li.active', header).trigger('mouseover');
+		});
 
 
 		var stickMenu = header;
@@ -421,6 +431,7 @@ $(function(){
 		$('>ul li', container).each(function(idx){
 			var btn = $('<li><a href=\'javascript:\'><img src=\'data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAQAAAC1HAwCAAAAC0lEQVQYV2P4zwAAAgEBAOIxSPwAAAAASUVORK5CYII=\' alt=\'' + idx + '\'></a></li>');
 			btn.on('click', function(){
+                btn.addClass('active').siblings().removeClass('active');
 				hook(idx);
 			});
 			$('>nav ul', container).append(btn);
@@ -586,25 +597,21 @@ $(function(){
 
 				});
 				var geocoder = new google.maps.Geocoder();
-				var places = [{
-					address: '台北市北投區泉源路25號',
-					marker: null,
-					name: '龍邦僑園會館',
-					image: 'images/map/map01.png',
-					id: 1
-				}, {
-					address: '台北市信義路四段1號',
-					marker: null,
-					name: '信義路會館',
-					image: 'images/map/map02.png',
-					id: 2
-				}, {
-					address: '台北市凱達格蘭大道1號',
-					marker: null,
-					name: '總統府',
-					image: 'images/map/map03.png',
-					id: 3
-				}];
+				var places = [];
+                $('.map nav li').each(function(idx, ele){
+                    var datum = {
+                        address: $(ele).attr('data-address'),
+                        marker: null,
+                        name: $(ele).attr('data-name'),
+                        image: $(ele).attr('data-image'),
+                        index: $(ele).attr('data-index')
+                    };
+                    places.push(datum);
+                    $('.name', ele).html(datum.name);
+                    $('.address', ele).html(datum.address);
+                    $('img', ele).attr('src', datum.image);
+
+                });
 				for(var i in places){
 					var place = places[i];
 					geocodeAddress(geocoder, map, place);
@@ -612,6 +619,16 @@ $(function(){
 
 			}
 			initMap();
+
+            // $('.page.map .next').on('mouseover', function(){
+            //     var offset = $('.map nav ul').height() - $('.map nav').height();
+            //     $('.map nav ul').animate({
+            //         marginTop: -offset
+            //     }, offset);
+            // });
+            // $('.page.map .next, .page.map .next').on('mouseout',function (){
+            //     $('.map nav ul').stop();
+            // });
 		}($('#map')));
 	}
 });

@@ -130,7 +130,7 @@ header {
 
   /* Make the masthead heading the same height as the navigation */
   h1 {
-    margin-top: 8px;
+    margin-top: 0;
     margin-bottom: 0;
     line-height: 40px;
     padding-bottom: 30px;
@@ -163,8 +163,6 @@ header {
       display: block;
       height:3px;
       background-color:#d70b2a;
-      // transform: scaleX(2) ;
-      // opacity:0;
       &:before{
         position:absolute;
         top:-9px;
@@ -180,8 +178,18 @@ header {
         li{
           text-align: center;
           background:#d70b2a;
+          &:nth-child(1) a{
+            position:relative;
+            &:before{
+              position:absolute;
+              content:' ';
+              width:100%;
+              top:-100px;
+              left:0;
+              height:100px;
+            }
+          }
           a{
-            // opacity:0;
             text-decoration: none;
             color:#fff!important;
             color:rgba(255,255,255,0.8)!important;
@@ -191,7 +199,7 @@ header {
             display: block;
             padding:13px;
             border-bottom: 1px solid #c9c9c9;
-            &:hover{
+            &:hover,&.active{
               color:rgba(255,255,255,1)!important;
             }
           }
