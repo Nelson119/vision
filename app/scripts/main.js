@@ -547,69 +547,71 @@ $(function(){
 	}($('.activities.content, .marketing, .management')));
 
 	// map
-	(function(m){
+	if($('#map').length){
+		(function(m){
 
-		function geocodeAddress(geocoder, map, place) {
+			function geocodeAddress(geocoder, map, place) {
 
-			var infowindow = new google.maps.InfoWindow();
+				var infowindow = new google.maps.InfoWindow();
 
-			geocoder.geocode({'address': place.address}, function(results, status) {
-				if (status === google.maps.GeocoderStatus.OK) {
-					map.setCenter(results[0].geometry.location);
-						var marker = new google.maps.Marker({
-						map: map,
-						position: results[0].geometry.location,
-						title: place.name
-					});
-					marker.setIcon('images/map/marker.png');
-					marker.addListener('click', function() {
-						var container = $('<div></div>');
-						container.append('<h3>' + place.name + '</h3>');
-						container.append('<p>' + place.address + '</p>');
-						container.append('<img src=\'' + place.image + '\'>');
-						infowindow.setContent(container.html());
-						infowindow.open(map, this);
-						map.setZoom(16);
-						map.setCenter(marker.getPosition());
-					});
+				geocoder.geocode({'address': place.address}, function(results, status) {
+					if (status === google.maps.GeocoderStatus.OK) {
+						map.setCenter(results[0].geometry.location);
+							var marker = new google.maps.Marker({
+							map: map,
+							position: results[0].geometry.location,
+							title: place.name
+						});
+						marker.setIcon('images/map/marker.png');
+						marker.addListener('click', function() {
+							var container = $('<div></div>');
+							container.append('<h3>' + place.name + '</h3>');
+							container.append('<p>' + place.address + '</p>');
+							container.append('<img src=\'' + place.image + '\'>');
+							infowindow.setContent(container.html());
+							infowindow.open(map, this);
+							map.setZoom(16);
+							map.setCenter(marker.getPosition());
+						});
 
-				}
-			});
-		}
-
-		function initMap() {
-			var map = new google.maps.Map(m[0], {
-				zoom: 8,
-				center: {lat: 25.5, lng: 120.6},
-				styles: mapStyle
-
-			});
-			var geocoder = new google.maps.Geocoder();
-			var places = [{
-				address: '台北市北投區泉源路25號',
-				marker: null,
-				name: '龍邦僑園會館',
-				image: 'images/map/map01.png',
-				id: 1
-			}, {
-				address: '台北市信義路四段1號',
-				marker: null,
-				name: '信義路會館',
-				image: 'images/map/map02.png',
-				id: 2
-			}, {
-				address: '台北市凱達格蘭大道1號',
-				marker: null,
-				name: '總統府',
-				image: 'images/map/map03.png',
-				id: 3
-			}];
-			for(var i in places){
-				var place = places[i];
-				geocodeAddress(geocoder, map, place);
+					}
+				});
 			}
 
-		}
-		initMap();
-	}($('#map')));
+			function initMap() {
+				var map = new google.maps.Map(m[0], {
+					zoom: 8,
+					center: {lat: 25.5, lng: 120.6},
+					styles: mapStyle
+
+				});
+				var geocoder = new google.maps.Geocoder();
+				var places = [{
+					address: '台北市北投區泉源路25號',
+					marker: null,
+					name: '龍邦僑園會館',
+					image: 'images/map/map01.png',
+					id: 1
+				}, {
+					address: '台北市信義路四段1號',
+					marker: null,
+					name: '信義路會館',
+					image: 'images/map/map02.png',
+					id: 2
+				}, {
+					address: '台北市凱達格蘭大道1號',
+					marker: null,
+					name: '總統府',
+					image: 'images/map/map03.png',
+					id: 3
+				}];
+				for(var i in places){
+					var place = places[i];
+					geocodeAddress(geocoder, map, place);
+				}
+
+			}
+			initMap();
+		}($('#map')));
+	}
 });

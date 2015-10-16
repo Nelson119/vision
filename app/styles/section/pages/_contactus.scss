@@ -1,0 +1,61 @@
+.page.contactus{
+	.icon{
+		text-align: center;
+		margin-bottom: 20px;
+	}
+	p{
+		text-align: center;
+		margin:0;
+		font-size:15px;
+		line-height: 1.2em;
+	}
+	p + p{
+		margin-top:5px;
+	}
+	h4{
+		text-align: center;
+		font-size:35px;
+		font-family:arial;
+		color:#d70b2a;
+		margin-bottom:80px;
+		span{
+			margin-top:10px;
+			font-size:11px;
+			display: block;
+		}
+	}
+	.w960{
+		width:1020px;
+		position:relative;
+		margin:0 auto 80px;
+	}
+	.form-group {
+	    height: 35px;
+	    line-height: 35px;
+	}
+	.form-group.required .control-label:after {
+	  content:" ※";
+	  color:red;
+	}
+	input.form-control,textarea.form-control{
+		border-radius: 0;
+		border:0;
+		background-color: #eee;
+		box-shadow:none;
+		resize:none;
+		&:focus{
+			outline:none;
+		}
+	}
+	input{
+		outline:none;
+	}
+	textarea.form-control{
+		height:300px;
+	}
+	.radio input[type="radio"], .radio-inline input[type="radio"], .checkbox input[type="checkbox"], .checkbox-inline input[type="checkbox"] {
+	    margin-left: -20px;
+	    margin-right:5px;
+	    position: static;
+	}
+}

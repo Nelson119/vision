@@ -1,0 +1,225 @@
+.page.news{
+  width:100%	;
+
+  nav.categories{
+    position:relative;
+    text-align: center;
+    ul{
+      width:100%;
+      font-size: 15px;
+      li{
+        width:percentage(155/1400);
+        float: left;
+        a{
+          color:#535353;
+          width:100%;
+          display: inline-block;
+          height:14px;
+          line-height: 12px;
+          border-right:1px solid #c9c9c9;
+          position:relative;
+          text-decoration: none;
+        }
+        &.active,&:hover{
+          a{
+            color:#fff;
+          }
+        } 
+
+        &:last-child a{
+          border:0;
+        }
+      }
+    }
+    i.fa-caret-down{
+      position:absolute;
+      width:percentage(154/1400);
+      height:30px;
+      top:-5px;
+      left:0;
+      z-index: -1;
+      position:absolute;
+      content:' ';
+      display: block;
+      background:#d70b2a;
+      color:#d70b2a;
+      &:before{
+        line-height: 62px;
+      }
+    }
+  }
+
+  .list{
+  	width:960px;
+  	margin:44px auto 0;
+  	li{
+		position:relative;
+  		padding:20px 25px 10px;
+  		border-bottom:1px solid #c9c9c9;
+		letter-spacing: 1px;
+  		&:first-child{
+  			border-top:1px solid #c9c9c9;
+  		}
+  	}
+  	img{
+  		vertical-align: top;
+  	}
+	.category{
+		top:20px;
+		position:absolute;
+		text-align: center;
+		color:#fff;
+		padding:1px 8px;
+		border-radius:3px;
+		font-size: 13px;
+		&.c-company{
+			background:#15b5a4;
+		}
+		&.c-anounce{
+			background:#fe805b;
+		}
+		&.c-promotion{
+			background:#2b75da;
+		}
+	}
+  	.date{
+		position:absolute;
+		font-size: 13px;
+		top: 55px;
+  	}
+  	.subj{
+		padding-top: 50px;
+		max-width:689px;
+  		display: inline-block;
+  	}
+	.more{
+		color:#f8b632;
+		line-height: 8px;
+		position:absolute;
+		bottom:25px;
+		right:25px;
+		font-size:13px;
+
+		span{
+		  display: inline-block;
+		  height: 9px;
+		  line-height: 0;
+		  vertical-align: middle;
+		  transition-duration: 0.2s;
+		  transition-property: margin color;
+		  position: relative;
+		}
+		&:hover{
+		  i:before{
+		    transform: rotateZ(360deg);
+		  }
+		  i{
+		    width:60px;
+		  }
+		  span{
+		    margin-left:-47px;
+		    // color:#fff;
+		  }
+		}
+		i{
+		  color:#fff;
+		  position:relative;
+		  background:#f8b632;
+		  border-radius:6.5px;
+		  margin-right:10px;
+		  width:13px;
+		  height:13px;
+		  display: inline-block;
+		    transition-duration: 0.2s;
+		    transition-property: width;
+		  &:before{
+		    left: -2px;
+		    position: absolute;
+		    top: 0;
+		    transition-duration: 0.2s;
+		    transition-property: transform;
+		  }
+		}
+	}
+  }
+
+
+  .fit{
+  	margin-top:-40px;
+	padding:1px;
+  	background:url(../images/home/pattern.png);
+  	.w960{
+  		width:960px;
+  		margin:40px auto;
+  		background:#fff;
+  		border:1px solid #898989;
+  		border-radius:2px;
+  		padding:40px;
+  		position:relative;
+		.category{
+			text-align: center;
+			color:#fff;
+			padding:1px 8px;
+			border-radius:3px;
+			font-size: 13px;
+			line-height: 15px;
+			&.c-company{
+				background:#15b5a4;
+			}
+			&.c-anounce{
+				background:#fe805b;
+			}
+			&.c-promotion{
+				background:#2b75da;
+			}
+		}
+		.fb-like{
+			position:absolute;
+			right:40px;
+			top:40px;
+		}
+		h3.title{
+			font-size:22px;
+			color:#313131;
+			text-align: left;
+			border-bottom:1px solid #898989;
+		}
+	  	.date{
+			font-size: 13px;
+	  	}
+	  	.post{
+	  		p{
+	  			font-size:13px;
+	  			a{
+	  				color:#f8b632;
+	  				text-decoration: underline;
+	  			}
+	  		}
+	  		p + p{
+	  			margin-top:25px;
+	  		}
+	  		figure{
+	  			margin-bottom:40px;
+	  			text-align: center;
+	  		}
+	  	}
+  	}
+  }
+  .fit ~ .center{
+  	text-align:center;
+  }
+  .btn-default{
+  	margin-bottom:80px;
+  	background:#d70b2a;
+    box-shadow:0px 4px 0px #8d081c;
+    &:hover{
+      box-shadow:0px 3px 0px #8d081c;
+    }
+    &:active{
+      box-shadow:0px 0 0px #8d081c;
+    }
+    &:focus{
+      outline:none;
+    }
+  }
+}
