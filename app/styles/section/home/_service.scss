@@ -1,7 +1,7 @@
 .service{
   position:relative;
   width: 100%;
-  padding-top: percentage(400/1400);
+  // padding-top: percentage(400/1400);
   margin-top: percentage(80/1400);
   p{
     margin-bottom: percentage(40/680);
@@ -14,7 +14,7 @@
     line-height: 20px;
   }
   ul{
-    position:absolute;
+    position:relative;
     top:0;
     width:100%;
     color:#313131;
