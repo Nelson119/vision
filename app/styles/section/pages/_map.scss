@@ -13,7 +13,7 @@
     max-width:465px;
     height:960px;
     .prev,.next{
-      background:url(../images/map/arrows.png);
+      background:url(../images/map/arrows-2.png);
       width:40px;
       height:22px;
       display: block;
@@ -34,10 +34,12 @@
     aside{
       height:900px;
       overflow: hidden;
+      position:relative;
     }
     ul{
       width:425px;
       margin:0 0 0;
+      position:relative;
       li{
           padding:12px 20px;
           height:280px;
@@ -45,6 +47,25 @@
           font-weight: normal;
           border:1px solid #15b5a4;
           position:relative;
+
+          &:after{
+            width:387px;
+            height:217px;
+            background:#000;
+            opacity:0.5;
+            left: 20px;
+            position: absolute;
+            top: 12px;
+            display: block;
+            content:' ';
+            z-index:1;
+          }
+          &.active{
+            transition-duration: 0.4s;
+            &:after{
+              opacity: 0;
+            }
+          }
 
           h4{
             font-size:18px;
@@ -63,45 +84,47 @@
             line-height: 8px;
             position:absolute;
             font-size:13px;
-            right:17px;
+            right:55px;
             bottom:5px;
             height:13px;
             word-spacing: 0;
             display: inline-block;
             span{
               display: inline-block;
+              top:6px;
               height: 9px;
               line-height: 0;
               vertical-align: middle;
               transition-duration: 0.2s;
               transition-property: margin color;
-              position: relative;
-            z-index: 1;
+              position: absolute;
+              z-index: 1;
             }
             &:hover{
               i:before{
                 transform: rotateZ(360deg);
               }
               i{
-                width:60px;
+                width:55px;
+                // left:47px;
               }
               span{
-                margin-left:-47px;
                 color:#fff;
               }
             }
             i{
               color:#fff;
-              position:relative;
+              position:absolute;
               background:#f8b632;
               border-radius:6.5px;
-              margin-right:0;
+              margin-right:5px;
               width:13px;
               height:13px;
               min-height:13px;
               display: inline-block;
               transition-duration: 0.2s;
               transition-property: width;
+              left:-15px;
               &:before{
                 left: -2px;
                 position: absolute;
@@ -114,6 +137,75 @@
       }
       li + li{
         margin-top:24px;
+      }
+    }
+  }
+
+  .inmap{
+    h3{
+      font-size: 18px;
+      margin:20px 0 5px !important;
+    }
+    p{
+      line-height: 1.2em;
+      font-size: 11px;
+      margin:0 0 5px;
+    }
+    a{
+      color:#15b5a4;
+      font-size: 11px;
+      display: block;
+      width: 70px;
+      float: right;
+      text-align: right;
+      position:relative;
+      margin:0 0 25px;
+      span{
+        display: inline-block;
+        top:0;
+        right:5px;
+        height: 15px;
+        line-height: 15px;
+        width:70px;
+        vertical-align: middle;
+        transition-duration: 0.2s;
+        transition-property: margin color;
+        position: absolute;
+        z-index: 1;
+      }
+      &:hover{
+        i:before{
+          transform: rotateZ(360deg);
+        }
+        i{
+          width:67px;
+          // left:47px;
+        }
+        span{
+          color:#fff;
+        }
+      }
+      i{
+        color:#fff;
+        position:absolute;
+        background:#15b5a4;
+        border-radius:6.5px;
+        margin-right:5px;
+        width:13px;
+        height:13px;
+        min-height:13px;
+        display: inline-block;
+        transition-duration: 0.2s;
+        transition-property: width;
+        left:0;
+        top:2px;
+        &:before{
+          left: 0;
+          position: absolute;
+          top: 0;
+          transition-duration: 0.2s;
+          transition-property: transform;
+        }
       }
     }
   }

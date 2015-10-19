@@ -4,6 +4,7 @@
   nav.categories{
     position:relative;
     text-align: center;
+	margin-left: 520px;
     ul{
       width:100%;
       font-size: 15px;
@@ -63,6 +64,7 @@
   	}
   	img{
   		vertical-align: top;
+  		margin-right: 20px;
   	}
 	.category{
 		top:20px;
@@ -89,7 +91,7 @@
   	}
   	.subj{
 		padding-top: 50px;
-		max-width:689px;
+		max-width:695px;
   		display: inline-block;
   	}
 	.more{
@@ -97,7 +99,7 @@
 		line-height: 8px;
 		position:absolute;
 		bottom:25px;
-		right:25px;
+		right:35px;
 		font-size:13px;
 
 		span{
@@ -107,7 +109,7 @@
 		  vertical-align: middle;
 		  transition-duration: 0.2s;
 		  transition-property: margin color;
-		  position: relative;
+		  position: absolute;
 		}
 		&:hover{
 		  i:before{
@@ -117,28 +119,28 @@
 		    width:60px;
 		  }
 		  span{
-		    margin-left:-47px;
-		    // color:#fff;
+		    color:#fff; 
 		  }
 		}
 		i{
-		  color:#fff;
-		  position:relative;
-		  background:#f8b632;
-		  border-radius:6.5px;
-		  margin-right:10px;
-		  width:13px;
-		  height:13px;
-		  display: inline-block;
+			color:#fff;
+			position:absolute;
+			background:#f8b632;
+			border-radius:6.5px;
+			left:-18px;
+			width:13px;
+			height:13px;
+			top:-6px;
+			display: inline-block;
 		    transition-duration: 0.2s;
 		    transition-property: width;
-		  &:before{
-		    left: -2px;
-		    position: absolute;
-		    top: 0;
-		    transition-duration: 0.2s;
-		    transition-property: transform;
-		  }
+		  	&:before{
+			    left: -2px;
+			    position: absolute;
+			    top: 0;
+			    transition-duration: 0.2s;
+			    transition-property: transform;
+			}
 		}
 	}
   }

@@ -1,5 +1,6 @@
 'use strict';
-/*global  $, TweenMax, TimelineMax, google */
+/*eslint-disable new-cap, no-unused-vars */
+/*global  $, TweenMax, TimelineMax, google, _*/
 var mapStyle = [
     {
         'featureType': 'all',
@@ -337,6 +338,13 @@ $(function(){
 				})
 			] );
 			overlay.html($('ul', $this).clone());
+
+            // $('nav i', header).on('mouseout', function(){
+            //     if(!$('nav li.active', header).length){
+            //         $('nav i', header).hide();
+            //     }
+            //     $('nav li.active', header).trigger('mouseover');
+            // });
 			tl.add([
 				TweenMax.set($('ul', overlay), {
 					height: 0
@@ -357,7 +365,7 @@ $(function(){
         if(!$('nav li.active', header).length){
             $('nav i', header).hide();
         }
-		$('nav li:not(:eq(2)), nav i ul', header).on('mouseout', function(){
+		$('nav li:not(:eq(2))', header).on('mouseout', function(){
             if(!$('nav li.active', header).length){
                 $('nav i', header).hide();
             }
@@ -366,11 +374,7 @@ $(function(){
 
 
 		var stickMenu = header;
-		// stickMenu.insertAfter($('header'));
-		// TweenMax.set(stickMenu,{
-		// 	top: 0,
-		// 	position: 'absolute'
-		// });
+
 		var menuTimeline = new TimelineMax({paused: true, onComplete: function(){
 		}});
 		$(window).on('scroll resize', function(){
@@ -526,6 +530,7 @@ $(function(){
 			innerHeight: 725,
 			innerWidth: 965,
 			fixed: true,
+            overlayClose: false,
 			rel: 'group all',
 			transition: 'fade',
 			title: $(this).attr('title'),
@@ -561,74 +566,140 @@ $(function(){
 	if($('#map').length){
 		(function(m){
 
-			function geocodeAddress(geocoder, map, place) {
+            var places = [];
 
-				var infowindow = new google.maps.InfoWindow();
+            var mapSection = $('.page.map');
 
-				geocoder.geocode({'address': place.address}, function(results, status) {
-					if (status === google.maps.GeocoderStatus.OK) {
-						map.setCenter(results[0].geometry.location);
-							var marker = new google.maps.Marker({
-							map: map,
-							position: results[0].geometry.location,
-							title: place.name
-						});
-						marker.setIcon('images/map/marker.png');
-						marker.addListener('click', function() {
-							var container = $('<div></div>');
-							container.append('<h3>' + place.name + '</h3>');
-							container.append('<p>' + place.address + '</p>');
-							container.append('<img src=\'' + place.image + '\'>');
-							infowindow.setContent(container.html());
-							infowindow.open(map, this);
-							map.setZoom(16);
-							map.setCenter(marker.getPosition());
-						});
+            var activeIndex = 1;
 
-					}
-				});
-			}
 
-			function initMap() {
-				var map = new google.maps.Map(m[0], {
-					zoom: 8,
-					center: {lat: 25.5, lng: 120.6},
-					styles: mapStyle
+            function goto(index){
+                $('nav >aside >ul >li', mapSection).eq(index - 1).addClass('active').siblings().removeClass('active');
+                var target = $('nav >aside >ul', mapSection);
+                var offset = 608 + (304 * index) * -1;
 
-				});
-				var geocoder = new google.maps.Geocoder();
-				var places = [];
-                $('.map nav li').each(function(idx, ele){
+                TweenMax.to(target, 0.5, {
+                    marginTop: offset
+                });
+
+            }
+
+            function geocodeAddress(geocoder, map, place) {
+
+                var infowindow = new google.maps.InfoWindow();
+
+                geocoder.geocode({'address': place.address}, function(results, status) {
+                    if (status === google.maps.GeocoderStatus.OK) {
+                        map.setCenter(results[0].geometry.location);
+                            var marker = new google.maps.Marker({
+                            map: map,
+                            position: results[0].geometry.location,
+                            title: place.name
+                        });
+                        marker.setIcon('images/map/marker.png');
+                        marker.addListener('click', function() {
+                            var container = $('<div></div>');
+                            var aside = $('<aside class="inmap"></aside>');
+                            aside.append('<h3>' + place.name + '</h3>');
+                            aside.append('<p>' + place.address + '</p>');
+                            aside.append('<a class=\'activate-map\' href=\'#' + place.id + '\'><i class=\'icon-right-open-mini\'></i><span>詳細資訊</span></a>');
+
+                            container.append(aside);
+
+                            goto(place.index);
+
+                            // container.append('<img src=\'' + place.image + '\'>');
+                            infowindow.setContent(container.html());
+                            infowindow.open(map, this);
+                            map.setZoom(16);
+                            map.setCenter(marker.getPosition());
+
+                            $('.inmap .activate-map').colorbox({
+                                inline: true,
+                                overlayClose: false,
+                                innerWidth: 1400,
+                                innerHeight: 768,
+                                onComplete: function(){
+                                    $('.box-content .picture-preview').append('<a href=\'javascript:\' class=\'prev\'></a>');
+                                    $('.box-content .picture-preview').append('<a href=\'javascript:\' class=\'next\'></a>');
+                                }
+                            });
+
+                        });
+                        place.marker = marker;
+
+                    }
+                });
+            }
+            function initMap() {
+                var map = new google.maps.Map(m[0], {
+                    zoom: 8,
+                    center: {lat: 25.5, lng: 120.6},
+                    styles: mapStyle
+
+                });
+                var geocoder = new google.maps.Geocoder();
+                $('nav >aside >ul >li', mapSection).each(function(idx, ele){
+                    $('aside .box-content', ele).attr('id', 'marker' + new Date() * 1);
                     var datum = {
                         address: $(ele).attr('data-address'),
                         marker: null,
                         name: $(ele).attr('data-name'),
                         image: $(ele).attr('data-image'),
-                        index: $(ele).attr('data-index')
+                        index: $(ele).attr('data-index'),
+                        id: $('aside .box-content', ele).attr('id')
                     };
                     places.push(datum);
                     $('.name', ele).html(datum.name);
                     $('.address', ele).html(datum.address);
                     $('img', ele).attr('src', datum.image);
 
+
                 });
-				for(var i in places){
-					var place = places[i];
-					geocodeAddress(geocoder, map, place);
-				}
+                for(var i in places){
+                    var place = places[i];
+                    geocodeAddress(geocoder, map, place);
+                }
 
-			}
-			initMap();
+            }
 
-            // $('.page.map .next').on('mouseover', function(){
-            //     var offset = $('.map nav ul').height() - $('.map nav').height();
-            //     $('.map nav ul').animate({
-            //         marginTop: -offset
-            //     }, offset);
-            // });
-            // $('.page.map .next, .page.map .next').on('mouseout',function (){
-            //     $('.map nav ul').stop();
-            // });
+            $('nav >aside >ul >li.active', mapSection).next().eq(activeIndex).addClass('active').siblings().removeClass('active');
+
+            $('nav .next', mapSection).on('click', function(){
+                if(!$('nav >aside >ul >li.active', mapSection).next().length){
+                    return false;
+                }
+                var index = $('nav >aside >ul >li.active', mapSection).next().attr('data-index');
+                goto(index);
+                var marker = _.find(places, {index: index}).marker;
+                var trig = new google.maps.event.trigger(marker, 'click' );
+            });
+
+            $('nav .prev', mapSection).on('click', function(){
+                if(!$('nav >aside >ul >li.active', mapSection).prev().length){
+                    return false;
+                }
+                var index = $('nav >aside >ul >li.active', mapSection).prev().attr('data-index');
+                goto(index);
+                var marker = _.find(places, {index: index}).marker;
+                var trig = new google.maps.event.trigger(marker, 'click' );
+            });
+
+            initMap();
+            $('#colorbox').addClass('map-detail');
+
 		}($('#map')));
 	}
+
+    //footer
+    (function(footer){
+
+        $('.top', footer).on('click', function(){
+            var offset = $(window).scrollTop();
+            TweenMax.to($('body, html'), offset / 3000, {
+                scrollTop: 0
+            });
+        });
+
+    }($('footer')));
 });

@@ -215,7 +215,7 @@
 
 #cbox{
   a:focus{
-    outline:0;
+    outline:none!important;
   }
   a:hover,a:active,a:focus{
     text-decoration: none;
@@ -282,3 +282,143 @@
   margin-bottom:16px;
 }
 
+
+
+.map-detail{
+  .box-content{
+    background: #fff;
+    >section{
+      padding-left:880px;
+      padding-top:40px;
+      padding-right:40px;
+      h4{
+        // font-weight:bold;
+        font-size:26px;
+        margin:0;
+        &:after{
+          background:url(../images/map/icon.png);
+          display: inline-block;
+          width:30px;
+          height:28px;
+          content:' ';
+          margin-left:5px;
+        }
+      }
+      span{
+        font-size:13px;
+      }
+      hr{
+        margin:10px 0 ;
+        border-color:#898989;
+      }
+      p{
+        font-size:13px;
+        line-height: 1.4em;
+        letter-spacing: 1px;
+      }
+
+      p + hr{
+        margin-bottom:0;
+      }
+
+      table{
+        padding-bottom:40px;
+
+        td{
+          padding:25px;
+          line-height: 1.4em;
+          font-size:13px;
+        }
+        td:nth-child(odd){
+          background:#eee;
+        }
+        tr + tr{
+          border-top: 1px solid #898989;
+        }
+      }
+
+      // width:500px;
+    }
+  }
+  #cboxPrevious, #cboxNext, #cboxTitle{
+    display: none!important;
+  }
+  .picture-preview{
+    float: left;
+    width: 800px;
+    height:650px;
+    margin-left:50px;
+    margin-top:50px;
+    overflow: hidden;
+    position:relative;
+    .picture{
+      width:800px;
+      height:450px;
+      overflow:hidden;
+      img{
+        width:100%;
+      }
+    }
+
+    ul{
+      width: 10000em;
+      padding:0;
+      margin: 0 0 0 35px;
+      position:absolute;
+      bottom:40px;
+
+      li{
+        list-style:none;
+        float:left;
+        width: 170px;
+        height:96px;
+        overflow: hidden;
+        img{
+          width: 100%;
+          &:after{
+            content:attr(title);
+          }
+        }
+      }
+      li + li{
+        margin-left:15px;
+      }
+    }
+    .next, .prev{
+      top: 510px;
+      width: 25px;
+      height:100px;
+      display: block;
+      position:absolute;
+      right:0;
+      background:#fff;
+      &:after{
+        background:url(../images/map/arrows.png) #fff 44px 0;
+        content:' ';
+        display: block;
+        margin-top:30px;
+        width:22px;
+        height:40px;
+      }
+      &:hover{
+        &:after{
+          background-position:0 0;
+        }
+      }
+    }
+    .prev{
+      left:0;
+      &:after{
+        background-position:-66px 0 ;
+      }
+      &:hover{
+        &:after{
+          background-position:-22px;
+        }
+      }
+    }
+  }
+
+
+
+}
