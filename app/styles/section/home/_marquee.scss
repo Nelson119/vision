@@ -31,10 +31,19 @@
     position:relative;
     overflow:hidden;
     ul{
-      width:99999em;
+      width:100%;
+      height:30px;
+      position:relative;
       li{
-        float:left;
-        margin-left:125px;
+
+        
+        /* required styles */
+        position: absolute;
+        margin-left:10px;
+        top: -999em;
+        left: 0;
+        display: block;
+        white-space: nowrap; /* keep all text on a single line */
         a{
           color:#313131;
         }

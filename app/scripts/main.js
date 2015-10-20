@@ -653,6 +653,17 @@ $(function(){
                     $('.name', ele).html(datum.name);
                     $('.address', ele).html(datum.address);
                     $('img', ele).attr('src', datum.image);
+                    $('a', ele).attr('href', '#' +datum.id).colorbox({
+                        inline: true,
+                        overlayClose: false,
+                        innerWidth: 1400,
+                        innerHeight: 768,
+                        onComplete: function(){
+                            $(ele).addClass('active').siblings().removeClass('active');
+                            $('.box-content .picture-preview').append('<a href=\'javascript:\' class=\'prev\'></a>');
+                            $('.box-content .picture-preview').append('<a href=\'javascript:\' class=\'next\'></a>');
+                        }
+                    });
 
 
                 });
@@ -702,4 +713,12 @@ $(function(){
         });
 
     }($('footer')));
+
+
+    //marquee
+    (function(marquee){
+        $('.mq ul').marquee({
+
+        });
+    }($('.marquee')));
 });

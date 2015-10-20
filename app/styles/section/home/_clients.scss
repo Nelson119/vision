@@ -2,8 +2,10 @@
   margin-top:80px;
   h3{
     color: #15b5a4;
+    margin-bottom:10px;
   }
-  ul{
+  ul.clients{
+    margin-top:0;
     width:100%;
     li{
       width:percentage(300/1400);

@@ -75,6 +75,7 @@
           <h4>02-2883-3218<span>營業時間 9 : 00〜18 : 00 (假日、例假日休息)</span></h4>
           <form class="w960">
             <section class="row">
+              <hr>
               <section class="form-group required">
                 <section class="col-lg-2">
                   <label class="control-label" for="name">查詢類型</label>
@@ -87,42 +88,47 @@
                 </section>
 
               </section>
+              <hr>
 
               <section class="form-group required">
                 <section class="col-lg-2">
                   <label class="control-label" for="name">姓名</label>
                 </section>
                 <section class="col-lg-10">
-                  <input type="text" name="name" class="form-control" required placeholder="ex:史蒂芬周">
+                  <input type="text" name="name" class="form-control" required placeholder="">
                 </section>
               </section>
+              <hr>
               
               <section class="form-group required">
                 <section class="col-lg-2">
                   <label class="control-label" for="corp">公司名稱</label>
                 </section>
                 <section class="col-lg-10">
-                  <input type="text" name="corp" class="form-control" required placeholder="ex:富土康">
+                  <input type="text" name="corp" class="form-control" required placeholder="">
                 </section>
               </section>
+              <hr>
               
               <section class="form-group required">
                 <section class="col-lg-2">
                   <label class="control-label" for="phone">電話號碼</label>
                 </section>
                 <section class="col-lg-10">
-                  <input type="text" name="phone" class="form-control" required placeholder="ex:0987-654321">
+                  <input type="text" name="phone" class="form-control" required placeholder="">
                 </section>
               </section>
+              <hr>
               
               <section class="form-group">
                 <section class="col-lg-2">
                   <label class="control-label" for="fax">傳真號碼</label>
                 </section>
                 <section class="col-lg-10">
-                  <input type="text" name="fax" class="form-control" placeholder="ex:02-23456789">
+                  <input type="text" name="fax" class="form-control" placeholder="">
                 </section>
               </section>
+              <hr>
 
               <section class="form-group">
                 <section class="col-lg-2">
@@ -132,27 +138,36 @@
                   <input type="text" name="addres" class="form-control" placeholder="">
                 </section>
               </section>
+              <hr>
 
               <section class="form-group required">
                 <section class="col-lg-2">
                   <label class="control-label" for="email">E-MAIL</label>
                 </section>
                 <section class="col-lg-10">
-                  <input type="text" name="email" class="form-control" required placeholder="ex:史蒂芬周">
+                  <input type="text" name="email" class="form-control" required placeholder="">
                 </section>
               </section>
+              <hr>
 
-              <section class="form-group required">
-                <section class="col-lg-2">
-                  <label class="control-label" for="message">詢問內容</label>
-                </section>
-                <section class="col-lg-10">
-                  <textarea type="text" name="message" class="form-control" required placeholder=""></textarea>
-                </section>
+              <section class="form-group required text">
+                <!-- <section class="row"> -->
+                  <section class="col-lg-2">
+                    <label class="control-label" for="message">詢問內容</label>
+                  </section>
+                  <section class="col-lg-10">
+                    <textarea type="text" name="message" class="form-control" required placeholder=""></textarea>
+                  </section>
+                  <div class="clearfix"></div>
+                <!-- </section> -->
               </section>
-              \
+              
               <section class="form-group">
-                <section class="col-lg-12 text-center">
+              <hr>
+                <section class="col-lg-12 text-center hint">
+                  上列欄位有※符號為必填項目，請確實填寫勿遺漏。
+                </section>
+                <section class="col-lg-12 text-center butt">
                   <button class="btn btn-default">發送訊息</button>
                 </section>
               </section>
@@ -228,6 +243,7 @@
     <!-- endbuild -->
     
     <!-- build:js scripts/main.js -->
+    <script src="scripts/lib/jquery.marquee.js"></script>
     <script src="scripts/main.js"></script>
     <!-- endbuild -->
   </body>
