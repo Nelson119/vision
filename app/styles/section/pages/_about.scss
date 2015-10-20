@@ -29,42 +29,36 @@
     margin:0 auto 30px;
   }
   .qa{
-    width:900px;
+    width:960px;
     margin:10px auto 80px;
     letter-spacing: 0;
     word-spacing: 0;
+    background: url(../images/about/qa-background.png) no-repeat;
     h6{
       font-size:20px;
       color:#d70b2a;
       font-weight: bold;
+      margin:20px 0 0;
     }
     span{
       font-size:15px;
-      color:#717171;
+      color:#fff;
       font-weight: bold;
     }
     li{
       position: relative;
       display: inline-block;
-      text-align:center;
+      text-align:left;
+      padding-left:40px;
       padding-bottom:1em;
-      width:287px;
-      border: 2px solid #d70b2a;
-      background-color: #fdf3f4;
+      width:auto;
       vertical-align: middle;
-
-      &:before{
-        border: 2px solid #fff;
-        content: " ";
-        display: block;
-        height: 84px;
-        margin: 2px;
-        position: absolute;
-        width: 279px;
+      &:nth-child(2){
+        padding-left:100px;
       }
-    }
-    li + li{
-      margin-left:10px;
+      &:nth-child(3){
+        padding-left:80px;
+      }
     }
   }
 

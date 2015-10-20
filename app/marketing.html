@@ -12,6 +12,9 @@
 
     <!-- build:css styles/vendor.css -->
     <!-- bower:css -->
+    <link rel="stylesheet" href="/bower_components/blueimp-gallery/css/blueimp-gallery.css" />
+    <link rel="stylesheet" href="/bower_components/blueimp-gallery/css/blueimp-gallery-indicator.css" />
+    <link rel="stylesheet" href="/bower_components/blueimp-gallery/css/blueimp-gallery-video.css" />
     <!-- endbower -->
     <!-- endbuild -->
 
@@ -133,56 +136,56 @@
         <aside class="fit">
             <ul class="activities-list">
               <li>
-                <a href="images/events/event01.png" title="陳建銘議員石牌公園『愛與環保...">
-                  <img src="images/events/event01.png">
+                <a href="javascript:" title="陳建銘議員石牌公園『愛與環保...">
+                  <img src="images/activities/event01.png">
                   <h4 ><span>陳建銘議員石牌公園『愛與環保...<b>2014.10.26</b></span></h4>
                 </a>
               </li>
               <li>
-                <a href="images/events/event02.png" title="吉廣建設江子翠住宅開工動土典禮">
-                  <img src="images/events/event02.png">
+                <a href="javascript:" title="吉廣建設江子翠住宅開工動土典禮">
+                  <img src="images/activities/event02.png">
                   <h4 ><span>吉廣建設江子翠住宅開工動土典禮<b>2014.10.26</b></span></h4>
                 </a>
               </li>
               <li>
-                <a href="images/events/event03.png" title="陳建銘議員石牌公園">
-                  <img src="images/events/event03.png">
+                <a href="javascript:" title="陳建銘議員石牌公園">
+                  <img src="images/activities/event03.png">
                   <h4 ><span>陳建銘議員石牌公園<b>2014.10.26</b></span></h4>
                 </a>
               </li>
               <li>
-                <a href="images/events/event01.png" title="陳建銘議員石牌公園『愛與環保...">
-                  <img src="images/events/event01.png">
+                <a href="javascript:" title="陳建銘議員石牌公園『愛與環保...">
+                  <img src="images/activities/event01.png">
                   <h4 ><span>陳建銘議員石牌公園『愛與環保...<b>2014.10.26</b></span></h4>
                 </a>
               </li>
               <li>
-                <a href="images/events/event02.png" title="吉廣建設江子翠住宅開工動土典禮.">
-                  <img src="images/events/event02.png">
+                <a href="javascript:" title="吉廣建設江子翠住宅開工動土典禮.">
+                  <img src="images/activities/event02.png">
                   <h4 ><span>吉廣建設江子翠住宅開工動土典禮<b>2014.10.26</b></span></h4>
                 </a>
               </li>
               <li>
-                <a href="images/events/event03.png" title="陳建銘議員石牌公園">
-                  <img src="images/events/event03.png">
+                <a href="javascript:" title="陳建銘議員石牌公園">
+                  <img src="images/activities/event03.png">
                   <h4 ><span>陳建銘議員石牌公園<b>2014.10.26</b></span></h4>
                 </a>
               </li>
               <li>
-                <a href="images/events/event01.png" title="陳建銘議員石牌公園『愛與環保...">
-                  <img src="images/events/event01.png">
+                <a href="javascript:" title="陳建銘議員石牌公園『愛與環保...">
+                  <img src="images/activities/event01.png">
                   <h4 ><span>陳建銘議員石牌公園『愛與環保...<b>2014.10.26</b></span></h4>
                 </a>
               </li>
               <li>
-                <a href="images/events/event02.png" title="吉廣建設江子翠住宅開工動土典禮">
-                  <img src="images/events/event02.png">
+                <a href="javascript:" title="吉廣建設江子翠住宅開工動土典禮">
+                  <img src="images/activities/event02.png">
                   <h4 ><span>吉廣建設江子翠住宅開工動土典禮<b>2014.10.26</b></span></h4>
                 </a>
               </li>
               <li>
-                <a href="images/events/event03.png" title="陳建銘議員石牌公園">
-                  <img src="images/events/event03.png">
+                <a href="javascript:" title="陳建銘議員石牌公園">
+                  <img src="images/activities/event03.png">
                   <h4 ><span>陳建銘議員石牌公園<b>2014.10.26</b></span></h4>
                 </a>
               </li>
@@ -232,6 +235,20 @@
         <p class="copy">&copy; VISION Management Consulting Co., Ltd. All Rights Reserved.</p>
       </footer>
     </section>
+    <div id="blueimp-gallery" class="blueimp-gallery">
+        <div class="slides"></div>
+        <h3 class="title"></h3>
+        <section class="overlay">
+          <aside class="center">
+            <a class="prev icon-left-open-big"></a>
+            <a class="next icon-right-open-big"></a>
+            <a class="close"></a>
+            <a class="play-pause"></a>
+          </aside>
+          
+        </section>
+        <ol class="indicator"></ol>
+    </div>
     
     <!-- Google Analytics: change UA-XXXXX-X to be your site's ID. -->
     <script>
@@ -249,6 +266,13 @@
     <script src="/bower_components/gsap/src/uncompressed/TweenMax.js"></script>
     <script src="/bower_components/jquery-colorbox/jquery.colorbox.js"></script>
     <script src="/bower_components/lodash/lodash.js"></script>
+    <script src="/bower_components/blueimp-gallery/js/blueimp-helper.js"></script>
+    <script src="/bower_components/blueimp-gallery/js/blueimp-gallery.js"></script>
+    <script src="/bower_components/blueimp-gallery/js/blueimp-gallery-fullscreen.js"></script>
+    <script src="/bower_components/blueimp-gallery/js/blueimp-gallery-indicator.js"></script>
+    <script src="/bower_components/blueimp-gallery/js/blueimp-gallery-video.js"></script>
+    <script src="/bower_components/blueimp-gallery/js/blueimp-gallery-vimeo.js"></script>
+    <script src="/bower_components/blueimp-gallery/js/blueimp-gallery-youtube.js"></script>
     <!-- endbower -->
     <!-- endbuild -->
     

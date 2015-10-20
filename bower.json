@@ -7,7 +7,8 @@
     "gsap": "~1.18.0",
     "jquery-colorbox": "colorbox#~1.6.3",
     "lodash": "~3.10.1",
-    "font-awesome": "~4.4.0"
+    "font-awesome": "~4.4.0",
+    "blueimp-gallery": "~2.16.0"
   },
   "overrides": {
     "bootstrap-sass": {

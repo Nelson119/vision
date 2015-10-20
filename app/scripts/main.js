@@ -530,46 +530,70 @@ $(function(){
 		});
 
 
-		var div = $(document.createElement('div'));
-		var nav = $(document.createElement('nav'));
-		var l = $(document.createElement('ul'));
+        $('>ul li a, .activities-list li a', container).on('click',function(){
+            var gallery = blueimp.Gallery([
+                {
+                    title: '陳建銘議員石牌公園『愛與環保...',
+                    href: 'images/activities/event02.png',
+                    type: 'image/jpeg',
+                    thumbnail: 'images/activities/event02.png'
+                },
+                {
+                    title: '吉廣建設江子翠住宅開工動土典禮',
+                    href: 'images/activities/event02.png',
+                    type: 'image/jpeg',
+                    thumbnail: 'images/activities/event02.png'
+                }
+            ],{
+                thumbnailProperty: 'thumbnail',
+                closeOnSlideClick: false,
+                transitionSpeed: 1000,
 
-		l.append($('>ul li, .activities-list li', container).clone());
-		nav.append(l);
-		div.append(nav);
+            });
+        });
 
-		$('>ul li a, .activities-list li a', container).colorbox({
-			innerHeight: 725,
-			innerWidth: 965,
-			fixed: true,
-            overlayClose: false,
-			rel: 'group all',
-			transition: 'fade',
-			title: $(this).attr('title'),
-			current: function(){
-				$('li', div).eq($(this).parents('li').index())
-					.addClass('active')
-					.siblings().removeClass('active');
-				return div.html();
-			},
-			onComplete: function(){
-				$('#cboxTitle').attr('title', $('span >b', this).html());
-				$(this).parents('li').addClass('active').siblings().removeClass('active');
-				$(window).trigger('resize');
-				$('#cboxCurrent nav ul li').on('click', function(){
-					$('>ul li', container).eq($(this).index()).find('a').trigger('click');
-				});
-				TweenMax.set($('#cboxCurrent ul'), {
-					marginLeft: ($(window).width() - $('#cboxCurrent li').width()) / 2 - $('#cboxCurrent .active').offset().left
-				});
-			},
-			onClosed: function(){
-				TweenMax.set($('.container'), {scrollLeft: 0});
-			}
-		});
 
-		var cboxNav = $('<ul></ul>');
-		cboxNav.append($('>ul li ', container).clone());
+		// var div = $(document.createElement('div'));
+		// var nav = $(document.createElement('nav'));
+		// var l = $(document.createElement('ul'));
+
+		// l.append($('>ul li, .activities-list li', container).clone());
+		// nav.append(l);
+		// div.append(nav);
+
+		// $('>ul li a, .activities-list li a', container).colorbox({
+		// 	innerHeight: 725,
+		// 	innerWidth: 965,
+		// 	fixed: true,
+  //           overlayClose: false,
+		// 	rel: 'group all',
+		// 	transition: 'fade',
+		// 	title: $(this).attr('title'),
+		// 	current: function(){
+		// 		$('li', div).eq($(this).parents('li').index())
+		// 			.addClass('active')
+		// 			.siblings().removeClass('active');
+		// 		return div.html();
+		// 	},
+		// 	onComplete: function(){
+		// 		$('#cboxTitle').attr('title', $('span >b', this).html());
+		// 		$(this).parents('li').addClass('active').siblings().removeClass('active');
+		// 		$(window).trigger('resize');
+		// 		$('#cboxCurrent nav ul li').on('click', function(){
+		// 			$('>ul li', container).eq($(this).index()).find('a').trigger('click');
+		// 		});
+		// 		TweenMax.set($('#cboxCurrent ul'), {
+		// 			marginLeft: ($(window).width() - $('#cboxCurrent li').width()) / 2 - $('#cboxCurrent .active').offset().left
+		// 		});
+		// 	},
+		// 	onClosed: function(){
+		// 		TweenMax.set($('.container'), {scrollLeft: 0});
+		// 	}
+		// });
+
+		// var cboxNav = $('<ul></ul>');
+		// cboxNav.append($('>ul li ', container).clone());
+
 
 
 	}($('.activities.content, .marketing, .management')));

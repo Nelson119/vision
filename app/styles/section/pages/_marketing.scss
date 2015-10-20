@@ -104,12 +104,13 @@
       margin-left:38px;
     }
     h4{
+        margin-bottom: 0;
         span{
           display: block;
           text-align: left;
           color:#313131;
           position:relative;
-          line-height: 50px;
+          line-height: 22px;
           font-size: 17px;
           &:before{
             display:inline-block;
