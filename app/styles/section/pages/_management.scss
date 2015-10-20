@@ -27,12 +27,12 @@
   nav.categories{
     position:relative;
     text-align: center;
-    margin-left:300px;
+    margin-left:480px;
     ul{
       width:100%;
       font-size: 15px;
       li{
-        width:percentage(165/1400);
+        width:165px;
         float: left;
         a{
           color:#535353;
@@ -57,7 +57,7 @@
     }
     i.fa-caret-down{
       position:absolute;
-      width:percentage(164/1400);
+      width:165px;
       height:30px;
       top:-2px;
       left:0;
@@ -89,6 +89,7 @@
       img{
         max-height:211px;
         width:auto;
+        opacity: 0.5;
       }
       &:nth-child(3n+1){
         margin-left:0;
@@ -96,17 +97,25 @@
       &:nth-child(3) ~ li{
         margin-top:50px;
       }
+
+      &:hover{
+        img{
+          opacity:inherit;
+          transition-duration: 0.5s;
+        }
+      }
     }
     li + li{
       margin-left:38px;
     }
     h4{
+        margin-bottom: 0;
         span{
           display: block;
           text-align: left;
           color:#313131;
           position:relative;
-          line-height: 50px;
+          line-height: 22px;
           font-size: 17px;
           &:before{
             display:inline-block;

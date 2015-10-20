@@ -4,10 +4,13 @@
     color: #f8b632;
   }
   >ul{
+    max-width:960px;
+    margin:0 auto;
     li{
       border-top:1px solid #c9c9c9;
       height:60px;
       line-height: 60px;
+      transition-duration:0.25s;
       .date{
         display: inline-block;
         min-width:106px;
@@ -72,8 +75,8 @@
           width:13px;
           height:13px;
           display: inline-block;
-            transition-duration: 0.2s;
-            transition-property: width;
+          transition-duration: 0.2s;
+          transition-property: width;
           &:before{
             left: -2px;
             position: absolute;
@@ -90,6 +93,7 @@
 
       &:hover{
         background:#e9f1fb;
+
       }
     }
   }
