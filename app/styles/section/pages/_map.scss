@@ -80,20 +80,23 @@
             height: 217px;
           }
           .more{
-            color:#f8b632;
-            line-height: 8px;
+            color:#15b5a4;
+            font-size: 11px;
+            display: block;
+            width: 70px;
             position:absolute;
-            font-size:13px;
-            right:55px;
-            bottom:5px;
-            height:13px;
-            word-spacing: 0;
-            display: inline-block;
+            left:324px;
+            top:-20px;
+            text-align: right;
+            position:relative;
+            margin:0 0 25px;
             span{
               display: inline-block;
-              top:6px;
-              height: 9px;
-              line-height: 0;
+              top:2px;
+              right:5px;
+              height: 15px;
+              line-height: 15px;
+              width:70px;
               vertical-align: middle;
               transition-duration: 0.2s;
               transition-property: margin color;
@@ -105,7 +108,7 @@
                 transform: rotateZ(360deg);
               }
               i{
-                width:55px;
+                width:67px;
                 // left:47px;
               }
               span{
@@ -115,7 +118,7 @@
             i{
               color:#fff;
               position:absolute;
-              background:#f8b632;
+              background:#15b5a4;
               border-radius:6.5px;
               margin-right:5px;
               width:13px;
@@ -124,9 +127,10 @@
               display: inline-block;
               transition-duration: 0.2s;
               transition-property: width;
-              left:-15px;
+              left:0;
+              top:2px;
               &:before{
-                left: -2px;
+                left: 0;
                 position: absolute;
                 top: 0;
                 transition-duration: 0.2s;

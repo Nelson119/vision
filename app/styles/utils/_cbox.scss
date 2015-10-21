@@ -361,6 +361,10 @@
         width:100%;
       }
     }
+    .picture + i{
+      text-transform: normal;
+      text-align: center;
+    }
 
     ul{
       width: 10000em;
@@ -375,11 +379,19 @@
         width: 170px;
         height:96px;
         overflow: hidden;
+        cursor: pointer;
+        border:1px solid transparent;
+        &.active{
+          border:1px solid #15b5a4;
+        }
+        &:after{
+          display: inline-block;
+          width: 100%;
+          text-align:center;
+          content:attr(title);
+        }
         img{
           width: 100%;
-          &:after{
-            content:attr(title);
-          }
         }
       }
       li + li{
@@ -430,6 +442,9 @@
 
 
 #blueimp-gallery{
+  .prev, .next, .close, .title, .indicator{
+    display: block;
+  }
   .indicator{
     li{
       background-size: 100% auto;
@@ -535,9 +550,10 @@
     right:-5%;
     top:10%;
     margin-right: 20px;
-    transform:rotateZ(-720deg);
+    transform:rotateZ(-270deg);
     transform-origin:55px 39px 0;
-    transition-duration:0.25s;
+    transition-duration:0.35s;
+    transition-timing-function: ease-out;
     i{
       display: inline-block;
       width: 16px;

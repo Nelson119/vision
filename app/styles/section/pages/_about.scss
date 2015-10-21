@@ -137,7 +137,7 @@
           width:100%;
           left:0;
           top:0;
-          border:px solid rgba(215,11,42,0);
+          border:0px solid rgba(215,11,42,0);
         }
         &:hover{
           &:before{
@@ -149,7 +149,7 @@
             left:0;
           }
           &:after{
-            border:3px solid rgba(215,11,42,1);
+            border:6px solid rgba(215,11,42,1);
             transition-delay: 0.2s;
             transition-duration: 0.2s;
           }
