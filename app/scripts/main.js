@@ -1,6 +1,6 @@
 'use strict';
 /*eslint-disable new-cap, no-unused-vars */
-/*global  $, TweenMax, TimelineMax, google, _*/
+/*global  $, TweenMax, TimelineMax, google, _, blueimp */
 var mapStyle = [
     {
         'featureType': 'all',
@@ -301,6 +301,11 @@ $(function(){
 
 	//nav
 	(function(header){
+
+        var tl = new TimelineMax({paused: true, onComplete: function(){
+
+        }});
+
 		$('nav li', header).on('mouseover', function(){
 			var $this = $(this);
 
@@ -316,7 +321,9 @@ $(function(){
 			var activeColor = '#d70b2a';
 			var normalColor = '#313131';
 
-			var tl = new TimelineMax({paused: true, onComplete: function(){
+            tl.stop();
+
+			tl = new TimelineMax({paused: true, onComplete: function(){
 
 			}});
 
@@ -365,12 +372,18 @@ $(function(){
         if(!$('nav li.active', header).length){
             $('nav i', header).hide();
         }
-		$('nav li:not(:eq(2))', header).on('mouseout', function(){
+        $('nav li:not(:eq(2))', header).on('mouseout', function(){
             if(!$('nav li.active', header).length){
                 $('nav i', header).hide();
             }
-			$('nav li.active', header).trigger('mouseover');
-		});
+            $('nav li.active', header).trigger('mouseover');
+        });
+        $('.page,.highlight').on('mouseover', function(){
+            if(!$('nav li.active', header).length){
+                $('nav i', header).hide();
+            }
+            $('nav li.active', header).trigger('mouseover');
+        });
 
 
 		var stickMenu = header;
@@ -530,25 +543,56 @@ $(function(){
 		});
 
 
-        $('>ul li a, .activities-list li a', container).on('click',function(){
-            var gallery = blueimp.Gallery([
+        $('>ul li a, .activities-list li a', container).on('click', function(){
+            var data = [
                 {
                     title: '陳建銘議員石牌公園『愛與環保...',
                     href: 'images/activities/event02.png',
                     type: 'image/jpeg',
-                    thumbnail: 'images/activities/event02.png'
+                    thumbnail: 'images/activities/event02.png',
+                    date: '2014.10.26'
                 },
                 {
                     title: '吉廣建設江子翠住宅開工動土典禮',
                     href: 'images/activities/event02.png',
                     type: 'image/jpeg',
-                    thumbnail: 'images/activities/event02.png'
+                    thumbnail: 'images/activities/event02.png',
+                    date: '2014.10.26'
                 }
-            ],{
+            ];
+            var gallery = blueimp.Gallery(data, {
                 thumbnailProperty: 'thumbnail',
                 closeOnSlideClick: false,
                 transitionSpeed: 1000,
-
+                onopened: function(){
+                    $(window).on('resize', function(){
+                        var idx = $('#blueimp-gallery .indicator .active').index();
+                        var img = $('.slide-content').eq(idx);
+                        var top = img.offset().top - img.parent().offset().top;
+                        var left = img.offset().left - img.parent().offset().left;
+                        TweenMax.to($('#blueimp-gallery .next'), 0.5, {
+                            left: left + img.width(),
+                            top: top + img.height() / 2 - $('#blueimp-gallery .next').height() / 2
+                        });
+                        TweenMax.to($('#blueimp-gallery .prev'), 0.5, {
+                            left: left - $('#blueimp-gallery .prev').width(),
+                            top: top + img.height() / 2 - $('#blueimp-gallery .prev').height() / 2
+                        });
+                        TweenMax.to($('#blueimp-gallery .close'), 0.5, {
+                            left: left + img.width() + 10,
+                            top: top
+                        });
+                    TweenMax.to($('#blueimp-gallery .title'), 0.5, {
+                        left: left,
+                        top: top + img.height() + 10
+                    });
+                    }).trigger('resize');
+                    var i = $('#blueimp-gallery .indicator .active').index();
+                    $('#blueimp-gallery .title').append('<b>' + data[i].date + '</b>');
+                },
+                onslideend: function(){
+                    $(window).trigger('resize');
+                }
             });
         });
 
@@ -560,7 +604,9 @@ $(function(){
 		// l.append($('>ul li, .activities-list li', container).clone());
 		// nav.append(l);
 		// div.append(nav);
-
+  //       $('>ul li a, .activities-list li a', container).each(function(i, d){
+  //           $(this).attr('href', $('img', this).attr('src'));
+  //       });
 		// $('>ul li a, .activities-list li a', container).colorbox({
 		// 	innerHeight: 725,
 		// 	innerWidth: 965,
@@ -569,6 +615,7 @@ $(function(){
 		// 	rel: 'group all',
 		// 	transition: 'fade',
 		// 	title: $(this).attr('title'),
+  //           scrolling: true,
 		// 	current: function(){
 		// 		$('li', div).eq($(this).parents('li').index())
 		// 			.addClass('active')

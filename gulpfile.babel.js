@@ -50,7 +50,7 @@ gulp.task('html', ['styles'], () => {
     .pipe($.if('*.css', $.minifyCss({compatibility: '*'})))
     .pipe(assets.restore())
     .pipe($.useref())
-    .pipe($.if('*.html', $.minifyHtml({conditionals: true, loose: true})))
+    // .pipe($.if('*.html', $.minifyHtml({conditionals: true, loose: true})))
     .pipe(gulp.dest('dist'));
 });
 
@@ -162,4 +162,13 @@ gulp.task('build', ['lint', 'html', 'images', 'fonts', 'extras'], () => {
 
 gulp.task('default', ['clean'], () => {
   gulp.start('build');
+});
+
+
+var tinypng = $.tinypng;
+ 
+gulp.task('tinypng', function () {
+    gulp.src('app/images/**/*.png')
+        .pipe(tinypng('RpQXcDk7_To0LtCie5S647UshZiHjFdF'))
+        .pipe(gulp.dest('dist/images'));
 });
