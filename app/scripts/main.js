@@ -297,6 +297,24 @@ var mapStyle = [
         ]
     }
 ];
+
+//fake data;
+var data = [
+    {       
+        title: '陳建銘議員石牌公園『愛與環保...',
+        href: 'images/activities/event02.png',
+        type: 'image/jpeg',
+        thumbnail: 'images/activities/event02.png',
+        date: '2014.10.26'
+    },
+    {
+        title: '吉廣建設江子翠住宅開工動土典禮',
+        href: 'images/activities/event02.png',
+        type: 'image/jpeg',
+        thumbnail: 'images/activities/event02.png',
+        date: '2014.10.26'
+    }
+];
 $(function(){
 
 	//nav
@@ -308,21 +326,8 @@ $(function(){
 
 		$('nav li', header).on('mouseover', function(){
 			var $this = $(this);
-
-            if(!$('nav li.active', header).length){
-                $('nav i', header).fadeIn(250);
-            }
-
-			if($this.index() === $('nav li.on', header).index()) {
-				return;
-			}
-
 			var overlay = $('nav i', header);
-			var activeColor = '#d70b2a';
-			var normalColor = '#313131';
-
             tl.stop();
-
 			tl = new TimelineMax({paused: true, onComplete: function(){
 
 			}});
@@ -331,59 +336,17 @@ $(function(){
 			left = $('nav').width() - $this.parent().width() + left - $this.parent().css('marginRight').replace(/px/, '');
 
 			tl.add( [
-				TweenMax.to($('ul', overlay), 0.25, {
-					opacity: 0
-				})
-				, TweenMax.to(overlay, 0.25, {
+				TweenMax.to(overlay, 0.25, {
 					left: left
 				})
-				, TweenMax.to($('a', $this.siblings()), 0.25, {
-					color: normalColor
-				})
-				, TweenMax.to($('a', $this), 0.25, {
-					color: activeColor
-				})
 			] );
-			overlay.html($('ul', $this).clone());
-
-            // $('nav i', header).on('mouseout', function(){
-            //     if(!$('nav li.active', header).length){
-            //         $('nav i', header).hide();
-            //     }
-            //     $('nav li.active', header).trigger('mouseover');
-            // });
 			tl.add([
-				TweenMax.set($('ul', overlay), {
-					height: 0
-				})
-			]);
-			tl.add([
-				TweenMax.to($('ul', overlay), 0.25, {
-					opacity: 1,
-					height: 'auto'
-				}),
 				function(){
 					$this.addClass('on').siblings().removeClass('on');
 				}
 			]);
 			tl.play();
 		});
-		$('nav li.active', header).trigger('mouseover');
-        if(!$('nav li.active', header).length){
-            $('nav i', header).hide();
-        }
-        $('nav li:not(:eq(2))', header).on('mouseout', function(){
-            if(!$('nav li.active', header).length){
-                $('nav i', header).hide();
-            }
-            $('nav li.active', header).trigger('mouseover');
-        });
-        $('.page,.highlight').on('mouseover', function(){
-            if(!$('nav li.active', header).length){
-                $('nav i', header).hide();
-            }
-            $('nav li.active', header).trigger('mouseover');
-        });
 
 
 		var stickMenu = header;
@@ -412,6 +375,10 @@ $(function(){
 			]);
 			menuTimeline.play();
 		});
+        $('.nav-pills').superfish({
+            speedOut:'normal',
+            delay: 500
+        });
 	}($('header')));
 
     //highlight
@@ -571,22 +538,7 @@ $(function(){
 
 
         $('>ul li a, .activities-list li a', container).on('click', function(){
-            var data = [
-                {
-                    title: '陳建銘議員石牌公園『愛與環保...',
-                    href: 'images/activities/event02.png',
-                    type: 'image/jpeg',
-                    thumbnail: 'images/activities/event02.png',
-                    date: '2014.10.26'
-                },
-                {
-                    title: '吉廣建設江子翠住宅開工動土典禮',
-                    href: 'images/activities/event02.png',
-                    type: 'image/jpeg',
-                    thumbnail: 'images/activities/event02.png',
-                    date: '2014.10.26'
-                }
-            ];
+
             var gallery = blueimp.Gallery(data, {
                 thumbnailProperty: 'thumbnail',
                 closeOnSlideClick: false,
@@ -695,6 +647,18 @@ $(function(){
                                     $('.box-content .picture-preview').append('<a href=\'javascript:\' class=\'next\'></a>');
                                 }
                             });
+                            // $('.inmap .activate-map').on('click', function(){
+
+                            //     var gallery = blueimp.Gallery(data, {
+                            //         thumbnailProperty: 'thumbnail',
+                            //         closeOnSlideClick: false,
+                            //         transitionSpeed: 1000,
+                            //         onopened: function(){
+                            //         },
+                            //         onslideend: function(){
+                            //         }
+                            //     });
+                            // });
 
                         });
                         place.marker = marker;

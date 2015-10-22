@@ -220,20 +220,60 @@ header {
       margin-top: 10px;
       text-align: center;
       background:url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAQAAAC1HAwCAAAAC0lEQVQYV2P4zwAAAgEBAOIxSPwAAAAASUVORK5CYII=);
+
       ul{
-        display: none;
+        position:relative;
+        background:#d70b2a;
+        margin-top:-19px;
+
+        li{
+          text-align: center;
+          background:#d70b2a;
+          margin:0;
+          &.active{
+            height:inherit;
+          }
+          &:hover,&.active{
+            a{
+              color:rgba(255,255,255,1)!important;
+            }
+          }
+          a{
+            position:relative;
+            padding:0;
+            &:before{
+              display: none;
+            }
+          }
+          a{
+            text-decoration: none;
+            color:#fff!important;
+            color:rgba(255,255,255,0.8)!important;
+            margin: 0 auto;
+            display: block;
+            height:40px!important;
+            padding:13px!important;
+            width:100px;
+            border-bottom: 1px solid #c9c9c9;
+          }
+          &:last-child >a{
+            border:0;
+          }
+        }
       }
       a{
         height: 85px;
         display: block;
-        &:after{
+        position:relative;
+        padding-right:0;
+        &:before{
           height:37px;
           position:absolute;
           top:0;
           width: 0;
           content:' ';
           border-right: 1px solid #c9c9c9;
-
+          right:0;
         }
       }
       a,a.active,a:active,a:hover{

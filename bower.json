@@ -8,7 +8,8 @@
     "jquery-colorbox": "colorbox#~1.6.3",
     "lodash": "~3.10.1",
     "font-awesome": "~4.4.0",
-    "blueimp-gallery": "~2.16.0"
+    "blueimp-gallery": "~2.16.0",
+    "superfish": "~1.7.6"
   },
   "overrides": {
     "bootstrap-sass": {
