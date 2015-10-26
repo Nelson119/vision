@@ -3,15 +3,16 @@
 
 
   #map{
-    width: 934px;
-    height: 960px;
+    width: percentage(934/1400);
+    height: 880px;
     display: inline-block;
     margin-bottom:80px;
   }
   nav{
     float:right;
-    max-width:465px;
-    height:960px;
+    width: percentage(465/1400);
+    position:relative;
+    height:880px;
     .prev,.next{
       background:url(../images/map/arrows-2.png);
       width:40px;
@@ -32,25 +33,26 @@
       }
     }
     aside{
-      height:900px;
+      height:820px;
       overflow: hidden;
       position:relative;
     }
     ul{
-      width:425px;
-      margin:0 0 0;
+      width:percentage(425/465);
+      float: right;
       position:relative;
+      margin-right:10px;
       li{
           padding:12px 20px;
-          height:280px;
+          height:256px;
           color:#313131;
           font-weight: normal;
           border:1px solid #15b5a4;
           position:relative;
 
           &:after{
-            width:387px;
-            height:217px;
+            width:percentage(380/425);
+            height:190px;
             background:#000;
             opacity:0.5;
             left: 20px;
@@ -76,20 +78,19 @@
             margin:0;
           }
           img{
-            width:387px;
-            height: 217px;
+            width:100%;
+            height: auto;
           }
           .more{
-            color:#15b5a4;
-            font-size: 11px;
+            color: #15b5a4;
             display: block;
-            width: 70px;
-            position:absolute;
-            left:324px;
-            top:-20px;
+            font-size: 11px;
+            margin: 228px 7px 25px;
+            position: absolute;
+            right: 10px;
             text-align: right;
-            position:relative;
-            margin:0 0 25px;
+            top: 0;
+            width: 70px;
             span{
               display: inline-block;
               top:2px;
@@ -108,7 +109,7 @@
                 transform: rotateZ(360deg);
               }
               i{
-                width:67px;
+                width:74px;
                 // left:47px;
               }
               span{
@@ -120,14 +121,13 @@
               position:absolute;
               background:#15b5a4;
               border-radius:6.5px;
-              margin-right:5px;
               width:13px;
               height:13px;
               min-height:13px;
               display: inline-block;
               transition-duration: 0.2s;
               transition-property: width;
-              left:0;
+              left:-5px;
               top:2px;
               &:before{
                 left: 0;
@@ -169,7 +169,7 @@
         top:0;
         right:5px;
         height: 15px;
-        line-height: 15px;
+        line-height: 16px;
         width:70px;
         vertical-align: middle;
         transition-duration: 0.2s;
@@ -182,7 +182,7 @@
           transform: rotateZ(360deg);
         }
         i{
-          width:67px;
+          width:74px;
           // left:47px;
         }
         span{
@@ -194,14 +194,13 @@
         position:absolute;
         background:#15b5a4;
         border-radius:6.5px;
-        margin-right:5px;
         width:13px;
         height:13px;
         min-height:13px;
         display: inline-block;
         transition-duration: 0.2s;
         transition-property: width;
-        left:0;
+        left:-5px;
         top:2px;
         &:before{
           left: 0;

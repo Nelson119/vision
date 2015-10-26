@@ -290,9 +290,15 @@
   .box-content{
     background: #fff;
     >section{
-      padding-left:880px;
+      padding-left:770px;
       padding-top:40px;
       padding-right:40px;
+      max-height: 700px;
+      aside{
+        max-height: 650px;
+        overflow-y:auto;
+        padding-right:30px;
+      }
       h4{
         // font-weight:bold;
         font-size:26px;
@@ -345,10 +351,17 @@
   #cboxPrevious, #cboxNext, #cboxTitle{
     display: none!important;
   }
+  #cboxClose{
+    &:hover{
+      &:after,&:before{
+        background-color:#15b5a4;
+      }
+    }
+  }
   .picture-preview{
     float: left;
-    width: 800px;
-    height:650px;
+    width: 700px;
+    height:670px;
     margin-left:50px;
     margin-top:50px;
     overflow: hidden;
@@ -364,6 +377,10 @@
     .picture + i{
       text-transform: normal;
       text-align: center;
+      display: block;
+      width: 100%;
+      line-height: 30px;
+      font-size:15px;
     }
 
     ul{
@@ -371,17 +388,16 @@
       padding:0;
       margin: 0 0 0 35px;
       position:absolute;
-      bottom:40px;
+      bottom:42px;
 
       li{
         list-style:none;
         float:left;
-        width: 170px;
-        height:96px;
+        width: 145px;
+        height:118px;
         overflow: hidden;
         cursor: pointer;
-        border:1px solid transparent;
-        &.active{
+        &.active img{
           border:1px solid #15b5a4;
         }
         &:after{
@@ -389,9 +405,18 @@
           width: 100%;
           text-align:center;
           content:attr(title);
+          margin-top: 5px;
         }
         img{
+          border:1px solid transparent;
           width: 100%;
+        }
+        span{
+          display: block;
+          color:#313131;
+          font-size: 13px;
+          text-align:center;
+          width:100%;
         }
       }
       li + li{

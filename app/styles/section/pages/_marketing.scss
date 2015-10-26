@@ -24,7 +24,7 @@
   nav.categories{
     position:relative;
     text-align: center;
-    margin-left:260px;
+    margin-left:210px;
     ul{
       width:100%;
       font-size: 15px;
@@ -72,70 +72,6 @@
   .fit{
     margin-top:45px;
     background:url(../images/home/pattern.png);
-  }
-  .activities-list{
-    letter-spacing: 0;
-    word-spacing: 0;
-    width:1400px;
-    padding:30px 50px;
-    margin:0 auto;
-    li{
-      background:#fff;
-      padding:12px;
-      display: inline-block;
-      position:relative;
-      img{
-        max-height:211px;
-        width:auto;
-        opacity: 0.5;
-        transition-duration: 0.5s;
-      }
-      &:hover img{
-        opacity: inherit;
-      }
-      &:nth-child(3n+1){
-        margin-left:0;
-      }
-      &:nth-child(3) ~ li{
-        margin-top:50px;
-      }
-    }
-    li + li{
-      margin-left:38px;
-    }
-    h4{
-        margin-bottom: 0;
-        span{
-          display: block;
-          text-align: left;
-          color:#313131;
-          position:relative;
-          line-height: 22px;
-          font-size: 17px;
-          &:before{
-            display:inline-block;
-            width:13px;
-            height:13px;
-            background:#fe805b;
-            content: "";
-            font-family: FontAwesome;
-            line-height: 13px;
-            border-radius:50%;
-            color:#fff;
-            font-size:10px;
-            margin-right:8px;
-            padding-left:5px;
-          }
-          b{
-            font-size: 13px;
-            font-weight: normal;
-            color:#fe805b;
-            position:absolute;
-            right:0;
-          }
-        }
-    }
-
   }
 
 
