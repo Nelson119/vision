@@ -1,18 +1,20 @@
 .page.map{
 
-
+  .center{
+    width:1250px;
+  }
 
   #map{
-    width: percentage(934/1400);
-    height: 880px;
+    width: 650px;
+    height: 520px;
     display: inline-block;
     margin-bottom:80px;
   }
   nav{
     float:right;
-    width: percentage(465/1400);
+    width: 310px;
     position:relative;
-    height:880px;
+    height:520px;
     .prev,.next{
       background:url(../images/map/arrows-2.png);
       width:40px;
@@ -33,26 +35,26 @@
       }
     }
     aside{
-      height:820px;
+      height:490px;
       overflow: hidden;
       position:relative;
     }
     ul{
-      width:percentage(425/465);
+      width: 280px;
       float: right;
       position:relative;
       margin-right:10px;
       li{
           padding:12px 20px;
-          height:256px;
+          height:145px;
           color:#313131;
           font-weight: normal;
           border:1px solid #15b5a4;
           position:relative;
 
           &:after{
-            width:percentage(380/425);
-            height:190px;
+            width:238px;
+            height:90px;
             background:#000;
             opacity:0.5;
             left: 20px;
@@ -79,7 +81,7 @@
           }
           img{
             width:100%;
-            height: auto;
+            height: 100%;
           }
           .more{
             color: #15b5a4;

@@ -9,7 +9,10 @@
     "lodash": "~3.10.1",
     "font-awesome": "~4.4.0",
     "blueimp-gallery": "~2.16.0",
-    "superfish": "~1.7.6"
+    "superfish": "~1.7.6",
+    "jqmq": "~1.0.4",
+    "js-marker-clusterer": "*",
+    "markerclustererplus": "~2.1.4"
   },
   "overrides": {
     "bootstrap-sass": {

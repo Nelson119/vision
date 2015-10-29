@@ -211,21 +211,25 @@ header {
       }
     }
   }
-  .nav-pills{
+  .menu >ul{
     margin-right:100px;
     position:relative;
-    >li,li.active{
+    float: right;
+
+    >li,>li.active{
       width:130px;
       display: inline-block;
       height: 75px;
       margin-top: 10px;
       text-align: center;
+      float:left;
       background:url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAQAAAC1HAwCAAAAC0lEQVQYV2P4zwAAAgEBAOIxSPwAAAAASUVORK5CYII=);
 
       ul{
         position:relative;
         background:#d70b2a;
         margin-top:-19px;
+        float: none;
 
         li{
           text-align: center;
