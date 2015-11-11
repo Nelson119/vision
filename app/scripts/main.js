@@ -1,4 +1,4 @@
-'use strict';
+﻿'use strict';
 /*eslint-disable new-cap, no-unused-vars */
 /*global  $, TweenMax, TimelineMax, blueimp */
 
@@ -88,7 +88,7 @@ $(function(){
 				})
 			]);
 			menuTimeline.play();
-		});
+		}).trigger('resize');
         $('.menu >ul').superfish({
             speedOut: 'normal',
             delay: 500
@@ -188,7 +188,10 @@ $(function(){
 
 			]);
 			tl.play();
-		});
+		}).on('mouseout', function(){
+            $('nav.categories ul li.active', container).trigger('mouseover');
+        });
+        $('nav.categories ul li.active', container).trigger('mouseover');
 	}($('.activities, .marketing, .management, .news')));
 
 	//activities
@@ -253,7 +256,16 @@ $(function(){
 
 
         $('>ul li a, .activities-list li a', container).on('click', function(){
-
+            data = [];
+            $('ul.hide li', this).each(function(){
+                data.push({
+                    title: $(this).attr('data-description'),
+                    href: $(this).attr('data-src'),
+                    type: 'image/jpeg',
+                    thumbnail: $(this).attr('data-src'),
+                    date: $(this).attr('data-date')
+                });
+            });
             var gallery = blueimp.Gallery(data, {
                 thumbnailProperty: 'thumbnail',
                 closeOnSlideClick: false,

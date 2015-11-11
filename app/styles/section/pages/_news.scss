@@ -78,6 +78,9 @@
 		padding:1px 8px;
 		border-radius:3px;
 		font-size: 13px;
+		a{
+			color:#fff;
+		}
 		&.c-company{
 			background:#15b5a4;
 		}
@@ -178,6 +181,9 @@
 			}
 			&.c-promotion{
 				background:#2b75da;
+			}
+			a{
+				color:#fff;
 			}
 		}
 		.fb-like{

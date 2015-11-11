@@ -57,21 +57,35 @@
 		height:300px;
 	}
 	.radio input[type="radio"], .radio-inline input[type="radio"], .checkbox input[type="checkbox"], .checkbox-inline input[type="checkbox"] {
-	    margin-left: -20px;
+	    margin-left: 0;
 	    margin-right:5px;
 	    position: static;
+	}
+	.wpcf7-form-control.radio-inline{
+		padding:0;
+	}
+	.wpcf7-list-item label{
+		font-weight: normal;
 	}
 	hr{
 		border:1px solid #eee;
 		margin:10px 0;
 	}
-	.hint{
+	.butt{
+		height:36px;
+	}
+	div.wpcf7-response-output{
 		color:#d70b2a;
 		font-size:11px;
 		margin:20px 0;
 	}
-	.butt{
-		height:36px;
+	span.wpcf7-not-valid-tip{
+		color:#d70b2a;
+		font-size:11px;
+		margin:0;
+	}
+	div.wpcf7-mail-sent-ng, div.wpcf7-validation-errors {
+	    border: 0;
 	}
 	.btn-default{
 		margin-bottom:4px;
