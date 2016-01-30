@@ -97,10 +97,15 @@
 		top: 55px;
   	}
   	.subj{
-		padding-top: 50px;
-		max-width:695px;
-  		display: inline-block;
-  		color:#313131;
+	    color: #313131;
+	    display: inline-block;
+	    height: 70px;
+	    max-width: 695px;
+	    overflow: hidden;
+	    padding-top: 50px;
+	    text-overflow: ellipsis;
+	    white-space: nowrap;
+	    width: 690px;
   	}
 	.more{
 		color:#f8b632;

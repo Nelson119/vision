@@ -31,6 +31,9 @@
 		word-spacing: 0;
 		margin-bottom:80px;
 		margin-top:35px;
+		.page-numbers.current{
+			color: #fe805b !important;
+		}
 		a{
 		  &.prev,&.next{
 		    color:#fe805b !important;
@@ -85,6 +88,12 @@
 		  display: inline-block;
 		  position:relative;
 		  width:percentage(430/1400);
+		  a{
+	  	    display: block;
+		    height: 235px;
+		    overflow: hidden;
+		    position: relative;
+		  }
 		  img{
 		    width:100%;
 		    opacity: 0.5;
@@ -104,36 +113,48 @@
 		  margin-left:percentage(38/1400);
 		}
 		h4{
-		    margin-bottom: 0;
+		    background: #fff none repeat scroll 0 0;
+		    bottom: 0;
+		    margin: 0;
+		    padding-top: 10px;
+		    position: absolute;
+		    width: 100%;
 		    span{
-		      display: block;
-		      text-align: left;
-		      color:#313131;
-		      position:relative;
-		      line-height: 22px;
-		      font-size: 17px;
-		      &:before{
-		        display:inline-block;
-		        width:13px;
-		        height:13px;
-		        background:#fe805b;
-		        content: "";
-		        font-family: FontAwesome;
-		        line-height: 13px;
-		        border-radius:50%;
-		        color:#fff;
-		        font-size:10px;
-		        margin-right:8px;
-		        padding-left:5px;
-		      }
-		      b{
-		        font-size: 13px;
-		        font-weight: normal;
-		        color:#fe805b;
-		        position:absolute;
-		        right:0;
-		      }
+			    color: #313131;
+			    display: block;
+			    font-size: 16px;
+			    line-height: 22px;
+			    height:22px;
+			    overflow: hidden;
+			    position: relative;
+			    text-align: left;
+			    text-overflow: ellipsis;
+			    white-space: nowrap;
+			    width:290px;
+				&:before{
+					display:inline-block;
+					width:13px;
+					height:13px;
+					background:#fe805b;
+					content: "";
+					font-family: FontAwesome;
+					line-height: 13px;
+					border-radius:50%;
+					color:#fff;
+					font-size:10px;
+					margin-right:8px;
+					padding-left:5px;
+				}
 		    }
+			b{
+				font-size: 13px;
+				font-weight: normal;
+				color:#fe805b;
+				position:absolute;
+			    line-height: 22px;
+			    right:0;
+			    bottom:0;
+			}
 		}
 
 	}

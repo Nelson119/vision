@@ -369,6 +369,10 @@ $(function(window){
 
             var countyWindows = [];
 
+            var hint = $('<a id=\'hint-btn\' href=\'javascript:\'> 請用滑鼠左鍵點選您要辦活動的縣市/場地</a>');
+
+            var minZoomLevel = 7;
+
             function goto(index){
                 $('nav >aside >ul >li', mapSection).eq(index - 1).addClass('active').siblings().removeClass('active');
                 var target = $('nav >aside >ul', mapSection);
@@ -457,6 +461,8 @@ $(function(window){
 
                 container.append(aside);
 
+                $('.inmap').remove();
+
                 goto(place.index);
                 var latLng = {lat: marker.getPosition().lat() + 0.0009, lng: marker.getPosition().lng()};
                 map.setCenter(marker.getPosition());
@@ -487,6 +493,14 @@ $(function(window){
                 });
 
             }
+            function parseLatLng(ll) {
+                var lat = ll.replace(/[(](\d+\.\d+).*/, '$1');
+                var lng = ll.replace(/.*\,\s*(\d+\.\d+)\)/, '$1');
+
+                var latLng = new google.maps.LatLng(parseFloat(lat), parseFloat(lng));
+
+                return latLng;
+            }
 
 
             function bindEvent(county, polyLabel){
@@ -499,7 +513,7 @@ $(function(window){
                     labelAnchor: new google.maps.Point(30, 20),
                     labelClass: 'labels', // the CSS class for the label
                     labelStyle: {opacity: 1.0},
-                    icon: 'data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAB4AAAAcCAYAAAB2+A+pAAACJklEQVRIx62WO0gDQRRFU4mFgk3Eb8RvoyKkSyNEsRJETGUREEGwsDYE7LS0MohiYwhCQCyC+aiNBiwUFLUSizRGJKAglgaE9T54I8O4cXd2snBIkbf3zOzM21mfr06XP38wChKgBKrgGzyDPRDy1ftqKxw1sJBE1j+k2/OppnpKcw5Cmeu6yBG0oQQ/ggUwAAIgQjKlJmkqDfBaisAMPYEatXuKPGgiXpOCXp0eIWrupPqEifhCClpzUb8g1ZdMxCUpaNplu4n6qon41UBsmYjlNdtwUb8k1VdMxPJOfesoHLc49PujVJ8zEU8rLXJht7NZmlZqV/4E9p9e7YOiAxkOfFMC6d28Qn3Ka7qkzNTi3m9VpWPAcsmkzZvLDUm72cY1xKe0rgj61JDSbAN24qKGmBhG0KqG+O8bi0avKSU6bXZsLSq2Ox8hc5rSirTDQy7O4znb9kDQpqY4I+79KgT7HDZaEjV+sF6z0RHY23WSH8fvPG+2BEnADc1SEseFFDycXU41KgfH7xlN/Y2aHCgbfXXQ4MR6sXgbzFB/ci8LKe34AfwXAxYz8huWKgUXQRbsghiIgjAYpJl4+OgjYZWeHN3P4m2edUQWnwPrH97BvTS4RXFvz/JtN2hU5CHHEwshzQ5SOw4l8Qew+PceZMEOiIMoCIMhdXAknvUgjrF0iKVuEYOb8PGj0xWHWRzVFAt2SFz2IG5m8ZZH8YsX8ZO0vldexT80EKKNUzmyNQAAAABJRU5ErkJggg==',
+                    icon: 'http://www.long-vision.com.tw/skin/images/blank.png',
                     visible: false
                  });
                 google.maps.event.clearListeners(county, 'mousemove');
@@ -507,13 +521,14 @@ $(function(window){
                 google.maps.event.clearListeners(marker, 'click');
                 var latLng = null;
                 google.maps.event.addListener(marker, 'click', function(event) {
-                    map.setCenter(latLng);
-                    map.setZoom(map.getZoom() + 1);
+                    map.setCenter(county.center);
+                    map.setZoom(county.zoomLevel);
 
                 });
                 google.maps.event.addListener(county, 'click', function(event) {
-                    map.setCenter(latLng);
-                    map.setZoom(map.getZoom() + 1);
+                    console.log(county.center);
+                    map.setCenter(county.center);
+                    map.setZoom(county.zoomLevel);
 
                 });
                 google.maps.event.addListener(county, 'mousemove', function(event) {
@@ -564,78 +579,108 @@ $(function(window){
                         strokeOpacity: 0.7,
                         strokeWeight: 1,
                         fillColor: '#94dd40',
-                        fillOpacity: 0.7
+                        fillOpacity: 0.7,
+                        zoomLevel: (isNaN(rows[i][5]) ? 10 : rows[i][5]) * 1,
+                        center: parseLatLng(rows[i][6])
                     });
                     bindEvent(county, rows[i][1]);
                     polys.push(county);
                     county.setMap(map);
                 }
+                hint.html(' ' + $('#map').attr('data-title'));
+                hint.on('click', function(){
+                    if(map.getZoom() === minZoomLevel){
+                        return false;
+                    }else{
+                        map.setZoom(minZoomLevel);
+                    }
+                });
+                $('#map').append(hint);
             }
 
             function addClusters(geocoder){
                 $.each(markers, function(i, d){
                     var mc = new MarkerClusterer(map, d, { ignoreHidden: true });
+                    mc.setMaxZoom(9);
                     clusters[i] = mc;
 
                 });
             }
 
-            function geocodeAddress(geocoder, place) {
-
-                markerInfoWindow = new google.maps.InfoWindow();
-
-                geocoder.geocode({'address': place.address}, function(results, status) {
-                    if (status === google.maps.GeocoderStatus.OK) {
-                        // map.setCenter(results[0].geometry.location);
-                        var marker = new google.maps.Marker({
-                            map: map,
-                            position: results[0].geometry.location,
-                            title: place.name
-                        });
-                        marker.setIcon('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAB4AAAAcCAYAAAB2+A+pAAACJklEQVRIx62WO0gDQRRFU4mFgk3Eb8RvoyKkSyNEsRJETGUREEGwsDYE7LS0MohiYwhCQCyC+aiNBiwUFLUSizRGJKAglgaE9T54I8O4cXd2snBIkbf3zOzM21mfr06XP38wChKgBKrgGzyDPRDy1ftqKxw1sJBE1j+k2/OppnpKcw5Cmeu6yBG0oQQ/ggUwAAIgQjKlJmkqDfBaisAMPYEatXuKPGgiXpOCXp0eIWrupPqEifhCClpzUb8g1ZdMxCUpaNplu4n6qon41UBsmYjlNdtwUb8k1VdMxPJOfesoHLc49PujVJ8zEU8rLXJht7NZmlZqV/4E9p9e7YOiAxkOfFMC6d28Qn3Ka7qkzNTi3m9VpWPAcsmkzZvLDUm72cY1xKe0rgj61JDSbAN24qKGmBhG0KqG+O8bi0avKSU6bXZsLSq2Ox8hc5rSirTDQy7O4znb9kDQpqY4I+79KgT7HDZaEjV+sF6z0RHY23WSH8fvPG+2BEnADc1SEseFFDycXU41KgfH7xlN/Y2aHCgbfXXQ4MR6sXgbzFB/ci8LKe34AfwXAxYz8huWKgUXQRbsghiIgjAYpJl4+OgjYZWeHN3P4m2edUQWnwPrH97BvTS4RXFvz/JtN2hU5CHHEwshzQ5SOw4l8Qew+PceZMEOiIMoCIMhdXAknvUgjrF0iKVuEYOb8PGj0xWHWRzVFAt2SFz2IG5m8ZZH8YsX8ZO0vldexT80EKKNUzmyNQAAAABJRU5ErkJggg==');
-                        marker.setVisible(false);
-                        marker.addListener('click', function(){
-                            lightboxOpen(place);
-                        });
-
-                        $(results[0].address_components).filter(function(){
-                            if(/縣|市/ig.test(this.long_name)){
-                                place.city = this.long_name;
-                            }
-                        }).first();
-
-                        place.marker = marker;
-
-                        if(markers[place.city] === undefined){
-                            markers[place.city] = [];
-                        }
-
-                        markers[place.city].push(marker);
-
-                        total++;
-
-                        if(total === places.length){
-                            addClusters(geocoder);
-                        }
-                    }
+            function finalizePlace(geocoder, place){
+                var marker = new google.maps.Marker({
+                    map: map,
+                    position: place.geometryLocation,
+                    title: place.name
+                });
+                marker.setIcon('http://www.long-vision.com.tw/skin/images/map/marker.png');
+                marker.setVisible(false);
+                marker.addListener('click', function(){
+                    lightboxOpen(place);
                 });
 
 
-                // google.maps.event.addListener(markerInfoWindow,'closeclick',function(){
-                //    var minZoomLevel = 7;=
-                //     map.setZoom(minZoomLevel);
-                // });
+                place.marker = marker;
+
+                if(markers[place.city] === undefined){
+                    markers[place.city] = [];
+                }
+
+                markers[place.city].push(marker);
+
+                total++;
+
+                if(total === places.length){
+                    addClusters(geocoder);
+                }
+                place.btn.removeClass('disabled');
+
+            }
+
+            function geocodeAddress(geocoder, place) {
+
+                markerInfoWindow = new google.maps.InfoWindow();
+                if(!place.geometryLocation){
+                    geocoder.geocode({'address': place.address}, function(results, status) {
+
+                        if (status === google.maps.GeocoderStatus.OK) {
+                            $(results[0].address_components).filter(function(){
+                                if(/縣|市/ig.test(this.long_name)){
+                                    place.city = this.long_name;
+                                }
+                                place.geometryLocation = results[0].geometry.location;
+                                $.post('/wp-admin/admin-ajax.php',
+                                    {
+                                        action: 'update_map_geometry_location',
+                                        id: place.postId,
+                                        geometryLocation: JSON.stringify({lat: place.geometryLocation.lat(), lng: place.geometryLocation.lng()}),
+                                        city: place.city
+                                    }, function(r){
+                                    // console.log(r);
+                                    });
+                                finalizePlace(geocoder, place);
+                            }).first();
+                        }else{
+                            //console.log(status)
+                        }
+                    });
+
+                }else{
+                    finalizePlace(geocoder, place);
+                }
+
+                google.maps.event.addListener(markerInfoWindow, 'closeclick', function(){
+                    map.setZoom(minZoomLevel);
+                });
             }
 
             function initMap() {
 
-               var minZoomLevel = 7;
-
 
                // Bounds for Twiwan
                var strictBounds = new google.maps.LatLngBounds(
-                 new google.maps.LatLng(22, 120),
-                 new google.maps.LatLng(25, 122)
+                  new google.maps.LatLng(20, 120),
+                  new google.maps.LatLng(30, 125)
                );
 
                 map = new google.maps.Map(m[0], {
@@ -646,19 +691,28 @@ $(function(window){
                 });
                 var geocoder = new google.maps.Geocoder();
                 $('nav >aside >ul >li', mapSection).each(function(idx, ele){
-                    $('aside .box-content', ele).attr('id', 'marker' + new Date() * 1);
+                    $('aside .box-content', ele).attr('id', 'marker' + new Date() * 1 + Math.floor(Math.random() * 100000000));
+
+                    var geometryLocation = !$(ele).attr('data-geometry') ?
+                        null :
+                        $.parseJSON($(ele).attr('data-geometry'));
+
                     var datum = {
                         address: $(ele).attr('data-address'),
                         marker: null,
                         name: $(ele).attr('data-name'),
                         image: $(ele).attr('data-image'),
                         index: $(ele).attr('data-index'),
+                        postId: $(ele).attr('data-post-id'),
+                        geometryLocation: !geometryLocation ? null : new google.maps.LatLng(geometryLocation.lat, geometryLocation.lng),
+                        city: $(ele).attr('data-city'),
+                        btn: $('figure, .location', ele),
                         id: $('aside .box-content', ele).attr('id')
                     };
                     places.push(datum);
                     $('.name', ele).html(datum.name);
                     $('.address', ele).html(datum.address);
-                    $('img', ele).attr('src', datum.image);
+                    $('>figure img', ele).attr('src', datum.image);
                     $('a.more', ele).attr('href', '#' + datum.id).colorbox({
                         inline: true,
                         overlayClose: false,
@@ -684,13 +738,12 @@ $(function(window){
                         var marker = _.find(places, {index: $(ele).attr('data-index')}).marker;
                         var trig = new google.maps.event.trigger(marker, 'click' );
                     });
+                    $('figure, .location', ele).addClass('disabled btn');
 
 
                 });
                 $.each(places, function(i, place) {
-                    setTimeout(function(){
-                        geocodeAddress(geocoder, place);
-                    }, i * 350);
+                    geocodeAddress(geocoder, place);
                 });
 
                // Listen for the dragend event
@@ -733,7 +786,9 @@ $(function(window){
                         $.each(polys, function(){
                             this.setOptions({
                                 strokeOpacity: 0,
-                                fillOpacity: 0
+                                fillOpacity: 0,
+                                clickable: false
+
                             });
                         });
                         $.each(markers, function(label){
@@ -741,12 +796,14 @@ $(function(window){
                                 d.setVisible(true);
                             });
                         });
+                        hint.html(' ' + '回到全台灣地圖');
                     }
                     else{
                         $.each(polys, function(){
                             this.setOptions({
                                 strokeOpacity: 0.7,
-                                fillOpacity: 0.7
+                                fillOpacity: 0.7,
+                                clickable: true
                             });
                         });
                         $.each(markers, function(label){
@@ -754,6 +811,7 @@ $(function(window){
                                 d.setVisible(false);
                             });
                         });
+                        hint.html(' ' + $('#map').attr('data-title'));
                     }
                });
 
@@ -802,8 +860,7 @@ $(function(window){
             window.drawMap = drawMap;
 
             $('#colorbox').addClass('map-detail');
-
-
+            window.map = map;
         }($('#map')));
     }
 

@@ -1,393 +1,453 @@
-<!doctype html>
+<!DOCTYPE html>
 <html class="no-js" lang="">
-  <head>
-    <meta charset="utf-8">
-    <meta name="description" content="">
-    <link rel="shortcut icon" type=image/x-icon href=/images/favico.png>
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>vision</title>
+    <head>
+        <meta charset="utf-8">
+        <meta name="description" content="">
+        <link rel="shortcut icon" type="image/x-icon" href="/images/favico.png">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <title>vision</title>
+        <link rel="apple-touch-icon" href="apple-touch-icon.png">
+        <!-- Place favicon.ico in the root directory -->
+        <!-- build:css styles/vendor.css -->
+        <!-- bower:css -->
+        <link rel="stylesheet" href="/bower_components/blueimp-gallery/css/blueimp-gallery.css" />
+        <link rel="stylesheet" href="/bower_components/blueimp-gallery/css/blueimp-gallery-indicator.css" />
+        <link rel="stylesheet" href="/bower_components/blueimp-gallery/css/blueimp-gallery-video.css" />
+        <link rel="stylesheet" href="/bower_components/superfish/dist/css/superfish.css" />
+        <link rel="stylesheet" href="/bower_components/lightgallery/dist/css/lightgallery.css" />
+        <!-- endbower -->
+        <!-- endbuild -->
+        <!-- build:css styles/main.css -->
+        <link rel="stylesheet" href="styles/main.css">
+        <!-- endbuild -->
+        <link rel="stylesheet" href="http://fonts.googleapis.com/earlyaccess/cwtexyen.css">
+        <link rel="stylesheet" href="http://fonts.googleapis.com/earlyaccess/cwtexhei.css">
 
-    <link rel="apple-touch-icon" href="apple-touch-icon.png">
-    <!-- Place favicon.ico in the root directory -->
+        <!-- build:js scripts/vendor/modernizr.js -->
+        <script src="/bower_components/modernizr/modernizr.js"></script>
+        <!-- endbuild -->
+        <style type="text/css">.notranslate.flag.zh-CN{display:block;background:none!important;}
+.notranslate.flag.zh-CN:after{content:'简中';}
+.notranslate.flag.zh-TW{display:block;background:none!important;background:#313131!important;}
+.notranslate.flag.zh-TW:after{content:'繁中';}
+#flags #sortable li a{line-height:15px;}
+#flags #sortable li {float: right !important;}
+#flags.size18 a {
+    height: auto!important;
+    width: auto!important;
+    padding:5px 12px!important;
+}.goog-tooltip {display: none !important;}.goog-tooltip:hover {display: none !important;}.goog-text-highlight {background-color: transparent !important; border: none !important; box-shadow: none !important;}#google_language_translator a {display: none !important; }.goog-te-gadget {color:transparent !important;}.goog-te-gadget { font-size:0px !important; }.goog-branding { display:none; }#google_language_translator { display:none; }#flags { display:none; }.goog-te-banner-frame{visibility:hidden !important;}body { top:0px !important;}</style>
+    </head>
+    <body>
+                    <!--[if lt IE 10]>
+                <p class="browserupgrade">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
+                <![endif]-->
+        <section class="container">
+            <header>
+                <aside class="center">
+                    <aside class="float">
+                        <nav class="menu">
+                            <i class="fa fa-caret-up"></i>
+                            <ul class="">
+                                <li><a href="about.html">關於長璟<span>ABOUT US</span></a></li>
+                                <li><a href="marketing.html">整合行銷<span>MARKETING</span></a></li>
+                                <li><a href="javascript:">管理顧問<span>MANAGEMENT</span></a>
+                                    <ul class="cwTeXHei">
+                                        <li><a href="management.html">活動實績</a></li>
+                                        <li><a href="map.html">場地導覽</a></li>
+                                    </ul>
+                                </li>
+                                <li><a href="news.html">活動快訊<span>NEWS</span></a></li>
+                                <li><a href="clients.html">衷心感謝<span>CLIENTS</span></a></li>
+                                <li><a href="contactus.html">聯絡我們<span>CONTACT US</span></a></li>
+                            </ul>
+                        </nav>
+                        <h1 class="text-muted"><a href="./"><img alt="長璟整合行銷有限公司, 長璟管理顧問公司" src="images/header/logo.png"></a></h1>
+                         <div class="size18" id="flags"><ul style="float:left" class="ui-sortable" id="sortable"><li id="Chinese"><a class="notranslate flag zh-CN" title="Chinese"></a></li><li id="Chinese(Traditional)"><a class="notranslate flag zh-TW" title="Chinese(Traditional)"></a></li></ul></div>
+                        <div id="google_language_translator"></div>
 
-    <!-- build:css styles/vendor.css -->
-    <!-- bower:css -->
-    <link rel="stylesheet" href="/bower_components/blueimp-gallery/css/blueimp-gallery.css" />
-    <link rel="stylesheet" href="/bower_components/blueimp-gallery/css/blueimp-gallery-indicator.css" />
-    <link rel="stylesheet" href="/bower_components/blueimp-gallery/css/blueimp-gallery-video.css" />
-    <link rel="stylesheet" href="/bower_components/superfish/dist/css/superfish.css" />
-    <!-- endbower -->
-    <!-- endbuild -->
-
-    <!-- build:css styles/main.css -->
-    <link rel="stylesheet" href="styles/main.css">
-    <!-- endbuild -->
-    <link rel="stylesheet" href="http://fonts.googleapis.com/earlyaccess/cwtexyen.css">
-    <link rel="stylesheet" href="http://fonts.googleapis.com/earlyaccess/cwtexhei.css">
-    
-    <!-- build:js scripts/vendor/modernizr.js -->
-    <script src="/bower_components/modernizr/modernizr.js"></script>
-    <!-- endbuild -->
-  </head>
-  <body>
-    <!--[if lt IE 10]>
-      <p class="browserupgrade">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
-    <![endif]-->
-    
-    <section class="container">
-      <header>
-        <aside class="center">
-          <aside class="float">
-            <nav class="menu">
-              <i class="fa fa-caret-up"></i>
-              <ul class="">
-                <li><a href="about.html">關於長璟<span>ABOUT US</span></a></li>
-                <li><a href="marketing.html">整合行銷<span>MARKETING</span></a></li>
-                <li><a href="javascript:">管理顧問<span>MANAGEMENT</span></a>
-                  <ul class="cwTeXHei">
-                    <li><a href="management.html">活動實績</a></li>
-                    <li><a href="map.html">場地導覽</a></li>
-                  </ul>
-                </li>
-                <li><a href="news.html">活動快訊<span>NEWS</span></a></li>
-                <li><a href="clients.html">衷心感謝<span>CLIENTS</span></a></li>
-                <li><a href="contactus.html">聯絡我們<span>CONTACT US</span></a></li>
-              </ul>
-            </nav>
-            <h1 class="text-muted"><a href="./"><img alt="長璟整合行銷有限公司, 長璟管理顧問公司" src="images/header/logo.png"></a></h1>
-            <section class="locale">
-              <ul>
-                <li class="active"><a href="javascript:">繁中</a></li>
-                <li><a href="javascript:">簡中</a></li>
-              </ul>
+                    </aside>
+                </aside>
+            </header>
+            <section class="highlight"><ul>
+                    <li class="active"><a href="" title=""><img alt="" src="http://www.long-vision.com.tw/file/2015/11/網站圖檔.jpg"></a></li>
+                    <li><a href="" title=""><img alt="" src="http://www.long-vision.com.tw/file/2015/11/網站圖檔02.jpg"></a></li>
+                    <li><a href="" title=""><img alt="" src="http://www.long-vision.com.tw/file/2015/11/網站圖檔03.jpg"></a></li>
+                    <li><a href="" title=""><img alt="" src="http://www.long-vision.com.tw/file/2015/11/網站圖檔04.jpg"></a></li>
+                </ul>
+                <nav><ul></ul>
+                    <a class="prev" href="javascript:"><img src="http://www.long-vision.com.tw/skin/images/highlight/next.png"></a>
+                    <a class="next" href="javascript:"><img src="http://www.long-vision.com.tw/skin/images/highlight/next.png"></a>
+                </nav></section><section class="marquee">
+                <aside class="w150">
+                    <i class="icon-megaphone"></i>
+  NEWS
+                    <i class="fa fa-caret-right"></i>
+                </aside>
+                <aside class="mq"><ul>
+                        <li><a target="_blank" href="http://www.long-vision.com.tw/" title="長璟整合行銷 & 長璟管理顧問 - 新網頁開張, 正式與大家見面^^">長璟整合行銷 & 長璟管理顧問 - 新網頁開張, 正式與大家見面^^</a></li>
+                        <li><a target="_blank" href="http://www.long-vision.com.tw/%E7%AE%A1%E7%90%86%E9%A1%A7%E5%95%8F/" title="尾牙活動盡在長璟">尾牙活動盡在長璟</a></li>
+                    </ul>
+                </aside>
+            </section><section class="service"><ul>
+                    <li>
+                        <figure><img src="http://www.long-vision.com.tw/skin/images/service/marketing.png" /></figure>
+                        <figure class="background"></figure>
+                        <aside><h3 class="title">整合行銷<span>MARKETING</span></h3><p>活動規劃、行銷推廣、媒體整合</p>
+                            <a href="/整合行銷">服務項目</a>
+                        </aside></li>
+                    <li>
+                        <figure><img src="http://www.long-vision.com.tw/skin/images/service/management.png" /></figure>
+                        <figure class="background"></figure>
+                        <aside><h3 class="title">管理顧問<span>MANAGEMENT</span></h3><p>全省會議場地導覽</p>
+                            <a href="/管理顧問">服務項目</a>
+                        </aside></li>
+                </ul><div class="clearfix"></div>
+            </section><section class="news"><h3 class="cwTeXHei">活動快訊 <span>/&nbsp;NEWS</span></h3><ul>
+                    <li>
+                        <span class="date">2015.11.13</span>
+                        <span class="category" style="background:#fe805b"><a href="http://www.long-vision.com.tw/category/%e7%89%b9%e5%88%a5%e5%85%ac%e5%91%8a/" rel="tag">特別公告</a></span>
+                        <a href="http://www.long-vision.com.tw/%e5%b0%be%e7%89%99%e6%98%a5%e9%85%92-%e6%9c%80%e6%96%b0%e6%9c%80%e6%9c%89%e5%89%b5%e6%84%8f%e7%9a%84idea-%e9%83%bd%e5%9c%a8%e9%95%b7%e7%92%9f%e6%95%b4%e5%90%88%e8%a1%8c%e9%8a%b7-%e8%a9%a2%e5%95%8f/" title="尾牙&#038;春酒 最新最有創意的Idea 都在長璟整合行銷 詢問報價通通for free!!" class="subj">尾牙&#038;春酒 最新最有創意的Idea 都在長璟整合行銷 詢問報價通通for free!!</a>
+                        <a class="more" href="http://www.long-vision.com.tw/%e5%b0%be%e7%89%99%e6%98%a5%e9%85%92-%e6%9c%80%e6%96%b0%e6%9c%80%e6%9c%89%e5%89%b5%e6%84%8f%e7%9a%84idea-%e9%83%bd%e5%9c%a8%e9%95%b7%e7%92%9f%e6%95%b4%e5%90%88%e8%a1%8c%e9%8a%b7-%e8%a9%a2%e5%95%8f/"><i class="icon-right-open-mini"></i><span>more</span></a></li>
+                    <li>
+                        <span class="date">2015.11.13</span>
+                        <span class="category" style="background:#15b5a4"><a href="http://www.long-vision.com.tw/category/%e5%85%ac%e5%8f%b8%e6%83%85%e5%a0%b1/" rel="tag">公司情報</a></span>
+                        <a href="http://www.long-vision.com.tw/%e9%95%b7%e7%92%9f%e6%95%b4%e5%90%88%e8%a1%8c%e9%8a%b7facebook%e6%9c%80%e6%96%b0%e4%b8%8a%e7%b7%9a/" title="長璟整合行銷FaceBook最新上線!!!" class="subj">長璟整合行銷FaceBook最新上線!!!</a>
+                        <a class="more" href="http://www.long-vision.com.tw/%e9%95%b7%e7%92%9f%e6%95%b4%e5%90%88%e8%a1%8c%e9%8a%b7facebook%e6%9c%80%e6%96%b0%e4%b8%8a%e7%b7%9a/"><i class="icon-right-open-mini"></i><span>more</span></a></li>
+                    <li>
+                        <span class="date">2015.11.13</span>
+                        <span class="category" style="background:#2b75da"><a href="http://www.long-vision.com.tw/category/%e5%84%aa%e6%83%a0%e6%83%85%e5%a0%b1/" rel="tag">優惠情報</a></span>
+                        <a href="http://www.long-vision.com.tw/%e6%85%b6%e7%a5%9d%e9%95%b7%e7%92%9f%e5%85%ac%e5%8f%b812%e5%91%a8%e5%b9%b4%e6%85%b6%e5%8d%b3%e5%b0%87%e6%8e%a8%e5%87%ba%e5%85%a8%e7%9c%81%e6%9c%83%e8%ad%b020%e5%ae%b6%e4%bb%a5%e4%b8%8a%e9%a3%af/" title="慶祝長璟公司12周年慶~即將推出全省會議(20家以上飯店)感恩回饋價喔~各位…" class="subj">慶祝長璟公司12周年慶~即將推出全省會議(20家以上飯店)感恩回饋價喔~各位…</a>
+                        <a class="more" href="http://www.long-vision.com.tw/%e6%85%b6%e7%a5%9d%e9%95%b7%e7%92%9f%e5%85%ac%e5%8f%b812%e5%91%a8%e5%b9%b4%e6%85%b6%e5%8d%b3%e5%b0%87%e6%8e%a8%e5%87%ba%e5%85%a8%e7%9c%81%e6%9c%83%e8%ad%b020%e5%ae%b6%e4%bb%a5%e4%b8%8a%e9%a3%af/"><i class="icon-right-open-mini"></i><span>more</span></a></li>
+                </ul>
+                <a href="http://www.long-vision.com.tw/活動快訊" class="btn btn-default cwTeXHei">快訊一覽</a>
+            </section><hr><section class="clients"><h3 class="cwTeXHei title">衷心感謝<span> / CLIENTS</span></h3><ul class="clients">
+                    <li><img src="http://www.long-vision.com.tw/file/2015/11/client01.png"></li>
+                    <li><img src="http://www.long-vision.com.tw/file/2015/11/client02.png"></li>
+                    <li><img src="http://www.long-vision.com.tw/file/2015/11/client03.png"></li>
+                    <li><img src="http://www.long-vision.com.tw/file/2015/11/client04.png"></li>
+                    <li><img src="http://www.long-vision.com.tw/file/2015/11/client06.png"></li>
+                    <li><img src="http://www.long-vision.com.tw/file/2015/11/client07.png"></li>
+                    <li><img src="http://www.long-vision.com.tw/file/2015/11/client08.png"></li>
+                    <li><img src="http://www.long-vision.com.tw/file/2015/11/client09.png"></li>
+                </ul><div class="clearfix"></div>
+            </section><hr><section class="activities"><h3 class="cwTeXHei title">活動實績<span> / ACTIVITIES</span></h3>
+                <nav class="cwTeXHei categories"><ul>
+                        <li><a href="http://www.long-vision.com.tw/marketing/%e6%98%a5%e9%85%92%e5%b0%be%e7%89%99/" title="View all posts in 春酒尾牙">春酒尾牙</a></li>
+                        <li><a href="http://www.long-vision.com.tw/marketing/%e8%a1%a8%e6%8f%9a%e5%a4%a7%e6%9c%83/" title="View all posts in 表揚大會">表揚大會</a></li>
+                        <li><a href="http://www.long-vision.com.tw/marketing/%e5%ae%b6%e5%ba%ad%e6%97%a5/" title="View all posts in 家庭日">家庭日</a></li>
+                        <li><a class="disabled">記者會</a></li>
+                        <li><a class="disabled">開幕活動</a></li>
+                        <li><a class="disabled">街頭活動</a></li>
+                        <li><a class="disabled">展覽活動</a></li>
+                        <li><a href="http://www.long-vision.com.tw/marketing/%e5%85%b6%e4%bb%96%e6%b4%bb%e5%8b%95/" title="View all posts in 其他活動">其他活動</a></li>
+                        <li><a class="disabled">精華影片</a></li>
+                    </ul>
+                    <i class="fa fa-caret-down"></i>
+                </nav><div class="clearfix"></div>
             </section>
-            <div id="wpcc_widget_inner"><!--WPCC_NC_START-->
-  <span class="wpcc_current_lang" id="wpcc_original_link"><a title="不轉換" href="//localhost:3000/:8000/%e6%b4%bb%e5%8b%95%e5%bf%ab%e8%a8%8a/" class="wpcc_link">不轉換</a></span>
-  <span class="wpcc_lang" id="wpcc_zh-hans_link"><a title="简体中文" href="//localhost:3000/:8000/%e6%b4%bb%e5%8b%95%e5%bf%ab%e8%a8%8a/?variant=zh-hans" rel="nofollow" class="wpcc_link">简体中文</a></span>
-  <span class="wpcc_lang" id="wpcc_zh-hant_link"><a title="繁體中文" href="//localhost:3000/:8000/%e6%b4%bb%e5%8b%95%e5%bf%ab%e8%a8%8a/?variant=zh-hant" rel="nofollow" class="wpcc_link">繁體中文</a></span>
-  <span class="wpcc_lang" id="wpcc_zh-cn_link"><a title="大陆简体" href="//localhost:3000/:8000/%e6%b4%bb%e5%8b%95%e5%bf%ab%e8%a8%8a/?variant=zh-cn" rel="nofollow" class="wpcc_link">大陆简体</a></span>
-  <span class="wpcc_lang" id="wpcc_zh-hk_link"><a title="港澳繁體" href="//localhost:3000/:8000/%e6%b4%bb%e5%8b%95%e5%bf%ab%e8%a8%8a/?variant=zh-hk" rel="nofollow" class="wpcc_link">港澳繁體</a></span>
-  <span class="wpcc_lang" id="wpcc_zh-sg_link"><a title="马新简体" href="//localhost:3000/:8000/%e6%b4%bb%e5%8b%95%e5%bf%ab%e8%a8%8a/?variant=zh-sg" rel="nofollow" class="wpcc_link">马新简体</a></span>
-  <span class="wpcc_lang" id="wpcc_zh-tw_link"><a title="台灣正體" href="//localhost:3000/:8000/%e6%b4%bb%e5%8b%95%e5%bf%ab%e8%a8%8a/?variant=zh-tw" rel="nofollow" class="wpcc_link">台灣正體</a></span>
-<!--WPCC_NC_END--></div>
-            
-          </aside>
-        </aside>
-
-      </header>
-
-
-      <section class="highlight">
-
-        <ul>
-          <li class="active"><img src="images/highlight/banner.png"></li>
-          <li><img src="images/highlight/banner2.png"></li>
-        </ul>
-
-        <nav>
-          <ul>
-          </ul>
-          <a class="prev" href="javascript:"><img src="images/highlight/next.png"></a>
-          <a class="next" href="javascript:"><img src="images/highlight/next.png"></a>
-        </nav>
-
-      </section>
-
-      <section class="marquee">
-        <aside class="w150">
-          <i class="icon-megaphone"></i>
-          NEWS
-          <i class="fa fa-caret-right"></i>
-        </aside>
-        <aside class="mq">
-          <ul>
-            <li><a href="javascript:">長璟整合行銷FaceBook最新上架!!!</a></li>
-            <li><a href="javascript:">長璟整合行銷FaceBook最新上架!!!</a></li>
-            <li><a href="javascript:">長璟整合行銷FaceBook最新上架!!!</a></li>
-            <li><a href="javascript:">長璟整合行銷FaceBook最新上架!!!</a></li>
-          </ul>
-        </aside>
-      </section>
-
-      <section class="service">
-        <ul>
-          <li>
-            <figure><img src="images/service/marketing.png"/></figure>
-            <figure class="background"></figure>
-            <aside>
-              <h3 class="title">整合行銷<span>MARKETING</span></h3>
-              <p>活動規劃、行銷推廣、媒體整合</p>
-              <a href="javascript:">服務項目</a>
-            </aside>
-          </li>
-          <li>
-            <figure><img src="images/service/management.png"/></figure>
-            <figure class="background"></figure>
-            <aside>
-              <h3 class="title">管理顧問<span>MANAGEMENT</span></h3>
-              <p>全省會議場地導覽</p>
-              <a href="javascript:">服務項目</a>
-            </aside>
-          </li>
-        </ul>
-        <div class="clearfix"></div>
-      </section>
-
-      <section class="news">
-        <h3 class="cwTeXHei">活動快訊 <span>/&nbsp;NEWS</span></h3>
-        <ul>
-          <li>
-            <span class="date">2013.10.25</span>
-            <span class="category c-company">公司情報</span>
-            <a href="news-detail.html" class="subj">長璟整合行銷FaceBook最新上架!!!</a>
-            <a href="news-detail.html" class="more"><i class="icon-right-open-mini"></i><span>more</span></a>
-          </li>
-          <li>
-            <span class="date">2013.10.25</span>
-            <span class="category c-anounce">特別公告</span>
-            <a href="news-detail.html" class="subj">尾牙&amp;春酒 最新最有創意的Idea 都在長璟整合行銷 詢問報價通通免...</a>
-            <a href="news-detail.html" class="more"><i class="icon-right-open-mini"></i><span>more</span></a>
-          </li>
-          <li>
-            <span class="date">2013.10.25</span>
-            <span class="category c-company">優惠情報</span>
-            <a href="news-detail.html" class="subj">慶祝長璟公司12周年慶~即將推出全省會議(20家以上飯店)感恩回饋...</a>
-            <a href="news-detail.html" class="more"><i class="icon-right-open-mini"></i><span>more</span></a>
-          </li>
-          <li>
-            <span class="date">2013.10.25</span>
-            <span class="category c-anounce">特別公告</span>
-            <a href="news-detail.html" class="subj">尾牙&amp;春酒 最新最有創意的Idea 都在長璟整合行銷</a>
-            <a href="news-detail.html" class="more"><i class="icon-right-open-mini"></i><span>more</span></a>
-          </li>
-          <li>
-            <span class="date">2013.10.25</span>
-            <span class="category  c-promotion">優惠情報</span>
-            <a href="news-detail.html" class="subj">慶祝長璟公司12周年慶!!</a>
-            <a href="news-detail.html" class="more"><i class="icon-right-open-mini"></i><span>more</span></a>
-          </li>
-        </ul>
-        <a href="javascript:" class="btn btn-default cwTeXHei">快訊一覽</a>
-      </section>
-
-      <hr>
-
-      <section class="clients">
-        <h3 class="cwTeXHei title">衷心感謝<span> / CLIENTS</span></h3>
-        <ul class="clients">
-          <li>
-            <img src="images/clients/01.png">
-          </li>
-          <li>
-            <img src="images/clients/02.png">
-          </li>
-          <li>
-            <img src="images/clients/03.png">
-          </li>
-          <li>
-            <img src="images/clients/04.png">
-          </li>
-          <li>
-            <img src="images/clients/05.png">
-          </li>
-          <li>
-            <img src="images/clients/06.png">
-          </li>
-          <li>
-            <img src="images/clients/07.png">
-          </li>
-          <li>
-            <img src="images/clients/08.png">
-          </li>
-        </ul>
-        <div class="clearfix"></div>
-      </section>
-
-      <hr>
-
-      <section class="activities">
-        <h3 class="cwTeXHei title">活動實績<span> / ACTIVITIES</span></h3>
-        <nav class="cwTeXHei categories">
-          <ul>
-            <li class="active">
-              <a href="javascript:">各式活動</a>
-            </li>
-            <li>
-              <a href="javascript:">尾牙春酒</a>
-            </li>
-            <li>
-              <a href="javascript:">成果影片</a>
-            </li>
-            <li>
-              <a href="javascript:">產品發表會</a>
-            </li>
-            <li>
-              <a href="javascript:">開幕造勢活動</a>
-            </li>
-            <li>
-              <a href="javascript:">記者會</a>
-            </li>
-            <li>
-              <a href="javascript:">表揚大會</a>
-            </li>
-            <li>
-              <a href="javascript:">社區晚會</a>
-            </li>
-            <li>
-              <a href="javascript:">周邊設備租借</a>
-            </li>
-          </ul>
-          <i class="fa fa-caret-down"></i>
-        </nav>
-        <div class="clearfix"></div>
-      </section>
-
-      <section class="activities content">
-        <ul>
-          <li>
-            <a href="javascript:" title="陳建銘議員石牌公園『愛與環保』感恩園遊會">
-              <img src="images/activities/event01.png">
-              <span>陳建銘議員石牌公園『愛與環保』感恩園遊會<b>2014.10.26</b></span>
-            </a>
-          </li>
-          <li>
-            <a href="javascript:" title="吉廣建設吉廣建設吉廣江子翠住宅大樓開工動土...">
-              <img src="images/activities/event02.png">
-              <span>吉廣建設吉廣建設吉廣江子翠住宅大樓開工動土...<b>2014.10.26</b></span>
-            </a>
-          </li>
-          <li>
-            <a href="javascript:" title="PAREXEL 家庭日">
-              <img src="images/activities/event03.png">
-              <span>PAREXEL 家庭日<b>2014.10.26</b></span>
-            </a>
-          </li>
-          <li class="active">
-            <a href="javascript:" title="陳建銘議員石牌公園『愛與環保』感恩園遊會">
-              <img src="images/activities/event01.png">
-              <span>陳建銘議員石牌公園『愛與環保』感恩園遊會<b>2014.10.26</b></span>
-            </a>
-          </li>
-          <li>
-            <a href="javascript:" title="吉廣建設吉廣建設吉廣江子翠住宅大樓開工動土...">
-              <img src="images/activities/event02.png">
-              <span>吉廣建設吉廣建設吉廣江子翠住宅大樓開工動土...<b>2014.10.26</b></span>
-            </a>
-          </li>
-          <li>
-            <a href="javascript:" title="PAREXEL 家庭日">
-              <img src="images/activities/event03.png">
-              <span>PAREXEL 家庭日<b>2014.10.26</b></span>
-            </a>
-          </li>
-          <li>
-            <a href="javascript:" title="陳建銘議員石牌公園『愛與環保』感恩園遊會">
-              <img src="images/activities/event01.png">
-              <span>陳建銘議員石牌公園『愛與環保』感恩園遊會<b>2014.10.26</b></span>
-            </a>
-          </li>
-          <li>
-            <a href="javascript:" title="吉廣建設吉廣建設吉廣江子翠住宅大樓開工動土...">
-              <img src="images/activities/event02.png">
-              <span>吉廣建設吉廣建設吉廣江子翠住宅大樓開工動土...<b>2014.10.26</b></span>
-            </a>
-          </li>
-          <li>
-            <a href="javascript:" title="PAREXEL 家庭日">
-              <img src="images/activities/event03.png">
-              <span>PAREXEL 家庭日<b>2014.10.26</b></span>
-            </a>
-          </li>
-        </ul>
-        <a href="javascript:" class="next"><img src="images/activities/arrow.png"></a>
-        <a href="javascript:" class="prev"><img src="images/activities/arrow.png"></a>
-
-      </section>
-
-      <hr class="red">
-
-      <footer>
-        <a class="top" href="javascript:">
-          <i class="fa fa-caret-up"></i>
-          <span>PAGE TOP</span>
-        </a>
-        <nav>
-          <ul>
-            <li><a href="tel:+886228823218" title="電話" prop="">
-              <i></i><span>(02)2882-3218</span>
-            </a></li>
-            <li><a href="javascript:" title="傳真">
-              <i></i><span>(02)2883-3237</span></a></li>
-            <li><a href="javascript:" title="long@long-vision.com.tw">
-              <i></i><span>long@long-vision.com.tw</span></a></li>
-            <li><a href="javascript:" title="台北市士林區後港街84號">
-              <i></i><span>台北市士林區後港街84號</span></a></li>
-            <li><a href="javascript:" title="長璟整合行銷粉絲團">
-              <i></i><span>長璟整合行銷粉絲團</span></a></li>
-          </ul>
-        </nav>
-        <h2><img src="images/header/logo.png"></h2>
-        <p class="copy">&copy; VISION Management Consulting Co., Ltd. All Rights Reserved.</p>
-      </footer>
-
-    </section>
-
-    <div id="blueimp-gallery" class="blueimp-gallery blueimp-gallery-controls">
-        <div class="slides"></div>
-        <h3 class="title"></h3>
-        <a class="prev icon-left-open-big"></a>
-        <a class="next icon-right-open-big"></a>
-        <a class="close"><i class="icon-right-open-big"></i><i class="icon-left-open-big"></i></a>
-        <ol class="indicator"></ol>
-    </div>
-    
-    <!-- Google Analytics: change UA-XXXXX-X to be your site's ID. -->
-    <script>
-      (function(b,o,i,l,e,r){b.GoogleAnalyticsObject=l;b[l]||(b[l]=
-      function(){(b[l].q=b[l].q||[]).push(arguments)});b[l].l=+new Date;
-      e=o.createElement(i);r=o.getElementsByTagName(i)[0];
-      e.src='https://www.google-analytics.com/analytics.js';
-      r.parentNode.insertBefore(e,r)}(window,document,'script','ga'));
-      ga('create','UA-XXXXX-X');ga('send','pageview');
-    </script>
-
-    <!-- build:js scripts/vendor.js -->
-    <!-- bower:js -->
-    <script src="/bower_components/jquery/dist/jquery.js"></script>
-    <script src="/bower_components/gsap/src/uncompressed/TweenMax.js"></script>
-    <script src="/bower_components/jquery-colorbox/jquery.colorbox.js"></script>
-    <script src="/bower_components/lodash/lodash.js"></script>
-    <script src="/bower_components/blueimp-gallery/js/blueimp-helper.js"></script>
-    <script src="/bower_components/blueimp-gallery/js/blueimp-gallery.js"></script>
-    <script src="/bower_components/blueimp-gallery/js/blueimp-gallery-fullscreen.js"></script>
-    <script src="/bower_components/blueimp-gallery/js/blueimp-gallery-indicator.js"></script>
-    <script src="/bower_components/blueimp-gallery/js/blueimp-gallery-video.js"></script>
-    <script src="/bower_components/blueimp-gallery/js/blueimp-gallery-vimeo.js"></script>
-    <script src="/bower_components/blueimp-gallery/js/blueimp-gallery-youtube.js"></script>
-    <script src="/bower_components/superfish/dist/js/superfish.js"></script>
-    <script src="/bower_components/superfish/dist/js/hoverIntent.js"></script>
-    <script src="/bower_components/jqmq/js/jquery.marquee.js"></script>
-    <script src="/bower_components/markerclustererplus/src/markerclusterer.js"></script>
-    <!-- endbower -->
-    <!-- endbuild -->
-    
-    <!-- build:js scripts/plugins.js -->
-    <script src="/bower_components/bootstrap-sass/assets/javascripts/bootstrap/affix.js"></script>
-    <script src="/bower_components/bootstrap-sass/assets/javascripts/bootstrap/alert.js"></script>
-    <script src="/bower_components/bootstrap-sass/assets/javascripts/bootstrap/dropdown.js"></script>
-    <script src="/bower_components/bootstrap-sass/assets/javascripts/bootstrap/tooltip.js"></script>
-    <script src="/bower_components/bootstrap-sass/assets/javascripts/bootstrap/modal.js"></script>
-    <script src="/bower_components/bootstrap-sass/assets/javascripts/bootstrap/transition.js"></script>
-    <script src="/bower_components/bootstrap-sass/assets/javascripts/bootstrap/button.js"></script>
-    <script src="/bower_components/bootstrap-sass/assets/javascripts/bootstrap/popover.js"></script>
-    <script src="/bower_components/bootstrap-sass/assets/javascripts/bootstrap/carousel.js"></script>
-    <script src="/bower_components/bootstrap-sass/assets/javascripts/bootstrap/scrollspy.js"></script>
-    <script src="/bower_components/bootstrap-sass/assets/javascripts/bootstrap/collapse.js"></script>
-    <script src="/bower_components/bootstrap-sass/assets/javascripts/bootstrap/tab.js"></script>
-    <!-- endbuild -->
-    
-    <!-- build:js scripts/main.js -->
-    <script src="scripts/main.js"></script>
-    <!-- endbuild -->
-  </body>
+            <section class="activities content"><ul>
+                    <li>
+                        <a href="javascript:" title="" style="background-image:url(http://www.long-vision.com.tw/file/2015/11/marketing1-20150423105200-25.jpg)">
+                            <img src="http://www.long-vision.com.tw/skin/images/blank.png">
+                            <span><label>2015 億嘉國際 台灣表揚大會2015 億嘉國際 台灣表揚大會2015 億嘉國際 台灣表揚大會2015 億嘉國際 台灣表揚大會2015 億嘉國際 台灣表揚大會2015 億嘉國際 台灣表揚大會2015 億嘉國際 台灣表揚大會2015 億嘉國際 台灣表揚大會2015 億嘉國際 台灣表揚大會2015 億嘉國際 台灣表揚大會2015 億嘉國際 台灣表揚大會2015 億嘉國際 台灣表揚大會2015 億嘉國際 台灣表揚大會2015 億嘉國際 台灣表揚大會2015 億嘉國際 台灣表揚大會2015 億嘉國際 台灣表揚大會2015 億嘉國際 台灣表揚大會2015 億嘉國際 台灣表揚大會2015 億嘉國際 台灣表揚大會2015 億嘉國際 台灣表揚大會2015 億嘉國際 台灣表揚大會</label></span><b>2015-03-28</b><ul class="hide">
+                                <li data-src="http://www.long-vision.com.tw/file/2015/11/marketing1-20150423105234-76.jpg" data-description="" data-date=""></li>
+                                <li data-src="http://www.long-vision.com.tw/file/2015/11/marketing1-20150423105231-43.jpg" data-description="" data-date=""></li>
+                                <li data-src="" data-description="" data-date=""></li>
+                                <li data-src="http://www.long-vision.com.tw/file/2015/11/marketing1-20150423105228-46.jpg" data-description="" data-date=""></li>
+                                <li data-src="http://www.long-vision.com.tw/file/2015/11/marketing1-20150423105225-70.jpg" data-description="" data-date=""></li>
+                                <li data-src="http://www.long-vision.com.tw/file/2015/11/marketing1-20150423105222-11.jpg" data-description="" data-date=""></li>
+                                <li data-src="http://www.long-vision.com.tw/file/2015/11/marketing1-20150423105219-23.jpg" data-description="" data-date=""></li>
+                                <li data-src="http://www.long-vision.com.tw/file/2015/11/marketing1-20150423105216-95.jpg" data-description="" data-date=""></li>
+                                <li data-src="http://www.long-vision.com.tw/file/2015/11/marketing1-20150423105213-37.jpg" data-description="" data-date=""></li>
+                                <li data-src="http://www.long-vision.com.tw/file/2015/11/marketing1-20150423105209-10.jpg" data-description="" data-date=""></li>
+                                <li data-src="http://www.long-vision.com.tw/file/2015/11/marketing1-20150423105207-66.jpg" data-description="" data-date=""></li>
+                                <li data-src="http://www.long-vision.com.tw/file/2015/11/marketing1-20150423105202-74.jpg" data-description="" data-date=""></li>
+                                <li data-src="http://www.long-vision.com.tw/file/2015/11/marketing1-20150423105200-251.jpg" data-description="" data-date=""></li>
+                                <li data-src="http://www.long-vision.com.tw/file/2015/11/marketing1-20150423105157-9.jpg" data-description="" data-date=""></li>
+                                <li data-src="http://www.long-vision.com.tw/file/2015/11/marketing1-20150423105154-7.jpg" data-description="" data-date=""></li>
+                                <li data-src="http://www.long-vision.com.tw/file/2015/11/marketing1-20150423105151-83.jpg" data-description="" data-date=""></li>
+                                <li data-src="http://www.long-vision.com.tw/file/2015/11/marketing1-20150423105147-38.jpg" data-description="" data-date=""></li>
+                                <li data-src="http://www.long-vision.com.tw/file/2015/11/marketing1-20150423105143-35.jpg" data-description="" data-date=""></li>
+                                <li data-src="http://www.long-vision.com.tw/file/2015/11/marketing1-20150423105140-76.jpg" data-description="" data-date=""></li>
+                                <li data-src="http://www.long-vision.com.tw/file/2015/11/marketing1-20150423105137-9.jpg" data-description="" data-date=""></li>
+                                <li data-src="http://www.long-vision.com.tw/file/2015/11/marketing1-20150423105133-95.jpg" data-description="" data-date=""></li>
+                                <li data-src="http://www.long-vision.com.tw/file/2015/11/marketing1-20150423105130-19.jpg" data-description="" data-date=""></li>
+                                <li data-src="http://www.long-vision.com.tw/file/2015/11/marketing1-20150423105128-74.jpg" data-description="" data-date=""></li>
+                                <li data-src="" data-description="" data-date="" data-video="https://vimeo.com/45322909"></li>
+                            </ul>
+                        </a></li>
+                    <li class="active">
+                        <a href="javascript:" title="" style="background-image:url(http://www.long-vision.com.tw/file/2015/11/marketing1-20150422173911-14.jpg)">
+                            <img src="http://www.long-vision.com.tw/skin/images/blank.png">
+                            <span><label>2014 百瑞精鼎 家庭日</label></span><b>2015-03-28</b><ul class="hide">
+                                <li data-src="http://www.long-vision.com.tw/file/2015/11/marketing1-20150422173908-100.jpg" data-description="" data-date=""></li>
+                                <li data-src="http://www.long-vision.com.tw/file/2015/11/marketing1-20150422173905-26.jpg" data-description="" data-date=""></li>
+                                <li data-src="http://www.long-vision.com.tw/file/2015/11/marketing1-20150422173903-76.jpg" data-description="" data-date=""></li>
+                                <li data-src="http://www.long-vision.com.tw/file/2015/11/marketing1-20150422173900-43.jpg" data-description="" data-date=""></li>
+                                <li data-src="http://www.long-vision.com.tw/file/2015/11/marketing1-20150422173858-37.jpg" data-description="" data-date=""></li>
+                                <li data-src="http://www.long-vision.com.tw/file/2015/11/marketing1-20150422173601-50.jpg" data-description="" data-date=""></li>
+                                <li data-src="http://www.long-vision.com.tw/file/2015/11/marketing1-20150422173558-40.jpg" data-description="" data-date=""></li>
+                                <li data-src="http://www.long-vision.com.tw/file/2015/11/marketing1-20150422173556-96.jpg" data-description="" data-date=""></li>
+                                <li data-src="http://www.long-vision.com.tw/file/2015/11/marketing1-20150422173554-63.jpg" data-description="" data-date=""></li>
+                                <li data-src="http://www.long-vision.com.tw/file/2015/11/marketing1-20150422173551-32.jpg" data-description="" data-date=""></li>
+                                <li data-src="http://www.long-vision.com.tw/file/2015/11/marketing1-20150422173546-87.jpg" data-description="" data-date=""></li>
+                                <li data-src="http://www.long-vision.com.tw/file/2015/11/marketing1-20150422173544-11.jpg" data-description="" data-date=""></li>
+                                <li data-src="http://www.long-vision.com.tw/file/2015/11/marketing1-20150422173542-65.jpg" data-description="" data-date=""></li>
+                                <li data-src="http://www.long-vision.com.tw/file/2015/11/marketing1-20150422173537-80.jpg" data-description="" data-date=""></li>
+                                <li data-src="http://www.long-vision.com.tw/file/2015/11/marketing1-20150422173534-67.jpg" data-description="" data-date=""></li>
+                                <li data-src="http://www.long-vision.com.tw/file/2015/11/marketing1-20150422173530-78.jpg" data-description="" data-date=""></li>
+                                <li data-src="http://www.long-vision.com.tw/file/2015/11/marketing1-20150422173528-42.jpg" data-description="" data-date=""></li>
+                                <li data-src="http://www.long-vision.com.tw/file/2015/11/marketing1-20150422173522-2.jpg" data-description="" data-date=""></li>
+                                <li data-src="http://www.long-vision.com.tw/file/2015/11/marketing1-20150422173516-40.jpg" data-description="" data-date=""></li>
+                                <li data-src="http://www.long-vision.com.tw/file/2015/11/marketing1-20150422173505-79.jpg" data-description="" data-date=""></li>
+                                <li data-src="http://www.long-vision.com.tw/file/2015/11/marketing1-20150422173503-62.jpg" data-description="" data-date=""></li>
+                                <li data-src="http://www.long-vision.com.tw/file/2015/11/marketing1-20150422173459-82.jpg" data-description="" data-date=""></li>
+                                <li data-src="http://www.long-vision.com.tw/file/2015/11/marketing1-20150422173457-14.jpg" data-description="" data-date=""></li>
+                                <li data-src="http://www.long-vision.com.tw/file/2015/11/marketing1-20150422173455-22.jpg" data-description="" data-date=""></li>
+                                <li data-src="http://www.long-vision.com.tw/file/2015/11/marketing1-20150422173911-14.jpg" data-description="" data-date=""></li>
+                            </ul>
+                        </a></li>
+                    <li>
+                        <a href="javascript:" title="" style="background-image:url(http://www.long-vision.com.tw/file/2015/11/marketing1-20150422104145-92.jpg)">
+                            <img src="http://www.long-vision.com.tw/skin/images/blank.png">
+                            <span><label>2014 永達 年終聚餐</label></span><b>2015-03-28</b><ul class="hide">
+                                <li data-src="http://www.long-vision.com.tw/file/2015/11/marketing1-20150422104151-18.jpg" data-description="" data-date=""></li>
+                                <li data-src="http://www.long-vision.com.tw/file/2015/11/marketing1-20150422104148-42.jpg" data-description="" data-date=""></li>
+                                <li data-src="http://www.long-vision.com.tw/file/2015/11/marketing1-20150422104145-921.jpg" data-description="" data-date=""></li>
+                                <li data-src="http://www.long-vision.com.tw/file/2015/11/marketing1-20150422104142-37.jpg" data-description="" data-date=""></li>
+                                <li data-src="http://www.long-vision.com.tw/file/2015/11/marketing1-20150422104139-11.jpg" data-description="" data-date=""></li>
+                                <li data-src="http://www.long-vision.com.tw/file/2015/11/marketing1-20150422104136-10.jpg" data-description="" data-date=""></li>
+                                <li data-src="http://www.long-vision.com.tw/file/2015/11/marketing1-20150422104133-21.jpg" data-description="" data-date=""></li>
+                                <li data-src="http://www.long-vision.com.tw/file/2015/11/marketing1-20150422104130-69.jpg" data-description="" data-date=""></li>
+                                <li data-src="http://www.long-vision.com.tw/file/2015/11/marketing1-20150422104127-13.jpg" data-description="" data-date=""></li>
+                                <li data-src="http://www.long-vision.com.tw/file/2015/11/marketing1-20150422104124-51.jpg" data-description="" data-date=""></li>
+                                <li data-src="http://www.long-vision.com.tw/file/2015/11/marketing1-20150422104121-51.jpg" data-description="" data-date=""></li>
+                                <li data-src="http://www.long-vision.com.tw/file/2015/11/marketing1-20150422104118-35.jpg" data-description="" data-date=""></li>
+                                <li data-src="http://www.long-vision.com.tw/file/2015/11/marketing1-20150422104115-23.jpg" data-description="" data-date=""></li>
+                                <li data-src="http://www.long-vision.com.tw/file/2015/11/marketing1-20150422104112-48.jpg" data-description="" data-date=""></li>
+                                <li data-src="http://www.long-vision.com.tw/file/2015/11/marketing1-20150422104109-57.jpg" data-description="" data-date=""></li>
+                                <li data-src="http://www.long-vision.com.tw/file/2015/11/marketing1-20150422104106-99.jpg" data-description="" data-date=""></li>
+                                <li data-src="http://www.long-vision.com.tw/file/2015/11/marketing1-20150422104104-7.jpg" data-description="" data-date=""></li>
+                                <li data-src="http://www.long-vision.com.tw/file/2015/11/marketing1-20150422104101-74.jpg" data-description="" data-date=""></li>
+                                <li data-src="http://www.long-vision.com.tw/file/2015/11/marketing1-20150422104058-42.jpg" data-description="" data-date=""></li>
+                                <li data-src="http://www.long-vision.com.tw/file/2015/11/marketing1-20150422104055-18.jpg" data-description="" data-date=""></li>
+                                <li data-src="http://www.long-vision.com.tw/file/2015/11/marketing1-20150422104052-19.jpg" data-description="" data-date=""></li>
+                                <li data-src="http://www.long-vision.com.tw/file/2015/11/marketing1-20150422104049-71.jpg" data-description="" data-date=""></li>
+                                <li data-src="http://www.long-vision.com.tw/file/2015/11/marketing1-20150422104047-24.jpg" data-description="" data-date=""></li>
+                                <li data-src="http://www.long-vision.com.tw/file/2015/11/marketing1-20150422104044-44.jpg" data-description="" data-date=""></li>
+                                <li data-src="http://www.long-vision.com.tw/file/2015/11/marketing1-20150422104041-61.jpg" data-description="" data-date=""></li>
+                                <li data-src="http://www.long-vision.com.tw/file/2015/11/marketing1-20150422104145-92.jpg" data-description="" data-date=""></li>
+                            </ul>
+                        </a></li>
+                    <li>
+                        <a href="javascript:" title="" style="background-image:url(http://www.long-vision.com.tw/file/2015/11/marketing1-20150421172141-82.jpg)">
+                            <img src="http://www.long-vision.com.tw/skin/images/blank.png">
+                            <span><label>2015 保樂力加 萬眾一心尾牙</label></span><b>2015-03-28</b><ul class="hide">
+                                <li data-src="http://www.long-vision.com.tw/file/2015/11/marketing1-20150421172426-71.jpg" data-description="" data-date=""></li>
+                                <li data-src="http://www.long-vision.com.tw/file/2015/11/marketing1-20150421172422-27.jpg" data-description="" data-date=""></li>
+                                <li data-src="http://www.long-vision.com.tw/file/2015/11/marketing1-20150421172940-82.jpg" data-description="" data-date=""></li>
+                                <li data-src="http://www.long-vision.com.tw/file/2015/11/marketing1-20150421172937-81.jpg" data-description="" data-date=""></li>
+                                <li data-src="http://www.long-vision.com.tw/file/2015/11/marketing1-20150421172933-39.jpg" data-description="" data-date=""></li>
+                                <li data-src="http://www.long-vision.com.tw/file/2015/11/marketing1-20150421172929-99.jpg" data-description="" data-date=""></li>
+                                <li data-src="http://www.long-vision.com.tw/file/2015/11/marketing1-20150421172846-66.jpg" data-description="" data-date=""></li>
+                                <li data-src="http://www.long-vision.com.tw/file/2015/11/marketing1-20150421172911-29.jpg" data-description="" data-date=""></li>
+                                <li data-src="http://www.long-vision.com.tw/file/2015/11/marketing1-20150421172909-44.jpg" data-description="" data-date=""></li>
+                                <li data-src="http://www.long-vision.com.tw/file/2015/11/marketing1-20150421172847-71.jpg" data-description="" data-date=""></li>
+                                <li data-src="http://www.long-vision.com.tw/file/2015/11/marketing1-20150421172847-35.jpg" data-description="" data-date=""></li>
+                                <li data-src="http://www.long-vision.com.tw/file/2015/11/marketing1-20150421172845-4.jpg" data-description="" data-date=""></li>
+                                <li data-src="http://www.long-vision.com.tw/file/2015/11/marketing1-20150421172427-38.jpg" data-description="" data-date=""></li>
+                                <li data-src="http://www.long-vision.com.tw/file/2015/11/marketing1-20150421172141-82.jpg" data-description="" data-date=""></li>
+                            </ul>
+                        </a></li>
+                    <li>
+                        <a href="javascript:" title="" style="background-image:url(http://www.long-vision.com.tw/file/2015/11/marketing1-20140508133947-49.jpg)">
+                            <img src="http://www.long-vision.com.tw/skin/images/blank.png">
+                            <span><label>2014 克緹 夢之夜春酒晚宴</label></span><b>2015-03-28</b><ul class="hide">
+                                <li data-src="http://www.long-vision.com.tw/file/2015/11/marketing1-20140508133951-96.jpg" data-description="" data-date=""></li>
+                                <li data-src="http://www.long-vision.com.tw/file/2015/11/marketing1-20140508133952-81.jpg" data-description="" data-date=""></li>
+                                <li data-src="http://www.long-vision.com.tw/file/2015/11/marketing1-20140508133953-5.jpg" data-description="" data-date=""></li>
+                                <li data-src="http://www.long-vision.com.tw/file/2015/11/marketing1-20140508133954-21.jpg" data-description="" data-date=""></li>
+                                <li data-src="http://www.long-vision.com.tw/file/2015/11/marketing1-20140508133956-76.jpg" data-description="" data-date=""></li>
+                                <li data-src="http://www.long-vision.com.tw/file/2015/11/marketing1-20140508133959-88.jpg" data-description="" data-date=""></li>
+                                <li data-src="http://www.long-vision.com.tw/file/2015/11/marketing1-20140508134000-19.jpg" data-description="" data-date=""></li>
+                                <li data-src="http://www.long-vision.com.tw/file/2015/11/marketing1-20140508134001-34.jpg" data-description="" data-date=""></li>
+                                <li data-src="http://www.long-vision.com.tw/file/2015/11/marketing1-20140508134002-27.jpg" data-description="" data-date=""></li>
+                                <li data-src="http://www.long-vision.com.tw/file/2015/11/marketing1-20140508134003-31.jpg" data-description="" data-date=""></li>
+                                <li data-src="http://www.long-vision.com.tw/file/2015/11/marketing1-20140508134004-63.jpg" data-description="" data-date=""></li>
+                                <li data-src="http://www.long-vision.com.tw/file/2015/11/marketing1-20140508134005-10.jpg" data-description="" data-date=""></li>
+                                <li data-src="http://www.long-vision.com.tw/file/2015/11/marketing1-20140508134007-88.jpg" data-description="" data-date=""></li>
+                                <li data-src="http://www.long-vision.com.tw/file/2015/11/marketing1-20140508133949-94.jpg" data-description="" data-date=""></li>
+                            </ul>
+                        </a></li>
+                    <li>
+                        <a href="javascript:" title="" style="background-image:url(http://www.long-vision.com.tw/file/2015/11/marketing1-20140520133015-15.jpg)">
+                            <img src="http://www.long-vision.com.tw/skin/images/blank.png">
+                            <span><label>2014 川方企業 動土儀式</label></span><b>2015-03-28</b><ul class="hide">
+                                <li data-src="http://www.long-vision.com.tw/file/2015/11/marketing1-20140520132953-5.jpg" data-description="" data-date=""></li>
+                                <li data-src="http://www.long-vision.com.tw/file/2015/11/marketing1-20140508135309-42.jpg" data-description="" data-date=""></li>
+                                <li data-src="http://www.long-vision.com.tw/file/2015/11/marketing1-20140508135311-36.jpg" data-description="" data-date=""></li>
+                                <li data-src="http://www.long-vision.com.tw/file/2015/11/marketing1-20140508135313-66.jpg" data-description="" data-date=""></li>
+                                <li data-src="http://www.long-vision.com.tw/file/2015/11/marketing1-20140508135314-9.jpg" data-description="" data-date=""></li>
+                                <li data-src="http://www.long-vision.com.tw/file/2015/11/marketing1-20140508135316-62.jpg" data-description="" data-date=""></li>
+                                <li data-src="http://www.long-vision.com.tw/file/2015/11/marketing1-20140508135317-16.jpg" data-description="" data-date=""></li>
+                                <li data-src="http://www.long-vision.com.tw/file/2015/11/marketing1-20140508135318-13.jpg" data-description="" data-date=""></li>
+                                <li data-src="http://www.long-vision.com.tw/file/2015/11/marketing1-20140508135319-591.jpg" data-description="" data-date=""></li>
+                                <li data-src="http://www.long-vision.com.tw/file/2015/11/marketing1-20140508135320-15.jpg" data-description="" data-date=""></li>
+                                <li data-src="http://www.long-vision.com.tw/file/2015/11/marketing1-20140508135321-4.jpg" data-description="" data-date=""></li>
+                                <li data-src="http://www.long-vision.com.tw/file/2015/11/marketing1-20140508135324-94.jpg" data-description="" data-date=""></li>
+                                <li data-src="http://www.long-vision.com.tw/file/2015/11/marketing1-20140508135325-77.jpg" data-description="" data-date=""></li>
+                                <li data-src="http://www.long-vision.com.tw/file/2015/11/marketing1-20140508135326-21.jpg" data-description="" data-date=""></li>
+                                <li data-src="http://www.long-vision.com.tw/file/2015/11/marketing1-20140508135327-57.jpg" data-description="" data-date=""></li>
+                                <li data-src="http://www.long-vision.com.tw/file/2015/11/marketing1-20140508135328-80.jpg" data-description="" data-date=""></li>
+                                <li data-src="http://www.long-vision.com.tw/file/2015/11/marketing1-20140508135329-89.jpg" data-description="" data-date=""></li>
+                                <li data-src="http://www.long-vision.com.tw/file/2015/11/marketing1-20140508135330-77.jpg" data-description="" data-date=""></li>
+                                <li data-src="http://www.long-vision.com.tw/file/2015/11/marketing1-20140508135333-80.jpg" data-description="" data-date=""></li>
+                                <li data-src="http://www.long-vision.com.tw/file/2015/11/marketing1-20140508135336-34.jpg" data-description="" data-date=""></li>
+                                <li data-src="http://www.long-vision.com.tw/file/2015/11/marketing1-20140508135339-4.jpg" data-description="" data-date=""></li>
+                                <li data-src="http://www.long-vision.com.tw/file/2015/11/marketing1-20140508135343-12.jpg" data-description="" data-date=""></li>
+                                <li data-src="http://www.long-vision.com.tw/file/2015/11/marketing1-20140520132833-18.jpg" data-description="" data-date=""></li>
+                                <li data-src="http://www.long-vision.com.tw/file/2015/11/marketing1-20140520132838-22.jpg" data-description="" data-date=""></li>
+                                <li data-src="http://www.long-vision.com.tw/file/2015/11/marketing1-20140520132917-99.jpg" data-description="" data-date=""></li>
+                                <li data-src="http://www.long-vision.com.tw/file/2015/11/marketing1-20140520132925-77.jpg" data-description="" data-date=""></li>
+                                <li data-src="http://www.long-vision.com.tw/file/2015/11/marketing1-20140520132929-58.jpg" data-description="" data-date=""></li>
+                                <li data-src="" data-description="" data-date=""></li>
+                            </ul>
+                        </a></li>
+                    <li>
+                        <a href="javascript:" title="" style="background-image:url(http://www.long-vision.com.tw/file/2015/11/marketing1-20140508134542-26.jpg)">
+                            <img src="http://www.long-vision.com.tw/skin/images/blank.png">
+                            <span><label>2014 公勝保經 春之饗宴</label></span><b>2015-03-28</b><ul class="hide">
+                                <li data-src="http://www.long-vision.com.tw/file/2015/11/marketing1-20140508134542-26.jpg" data-description="" data-date=""></li>
+                                <li data-src="http://www.long-vision.com.tw/file/2015/11/marketing1-20140508134515-94.jpg" data-description="" data-date=""></li>
+                                <li data-src="http://www.long-vision.com.tw/file/2015/11/marketing1-20140508134517-38.jpg" data-description="" data-date=""></li>
+                                <li data-src="http://www.long-vision.com.tw/file/2015/11/marketing1-20140508134518-39.jpg" data-description="" data-date=""></li>
+                                <li data-src="http://www.long-vision.com.tw/file/2015/11/marketing1-20140508134537-26.jpg" data-description="" data-date=""></li>
+                                <li data-src="http://www.long-vision.com.tw/file/2015/11/marketing1-20140508134538-41.jpg" data-description="" data-date=""></li>
+                                <li data-src="http://www.long-vision.com.tw/file/2015/11/marketing1-20140508134539-57.jpg" data-description="" data-date=""></li>
+                                <li data-src="http://www.long-vision.com.tw/file/2015/11/marketing1-20140508134540-63.jpg" data-description="" data-date=""></li>
+                                <li data-src="http://www.long-vision.com.tw/file/2015/11/marketing1-20140508134541-4.jpg" data-description="" data-date=""></li>
+                                <li data-src="http://www.long-vision.com.tw/file/2015/11/marketing1-20140508134519-63.jpg" data-description="" data-date=""></li>
+                                <li data-src="http://www.long-vision.com.tw/file/2015/11/marketing1-20140508134520-47.jpg" data-description="" data-date=""></li>
+                                <li data-src="http://www.long-vision.com.tw/file/2015/11/marketing1-20140508134521-8.jpg" data-description="" data-date=""></li>
+                                <li data-src="http://www.long-vision.com.tw/file/2015/11/marketing1-20140508134522-10.jpg" data-description="" data-date=""></li>
+                                <li data-src="http://www.long-vision.com.tw/file/2015/11/marketing1-20140508134524-28.jpg" data-description="" data-date=""></li>
+                                <li data-src="http://www.long-vision.com.tw/file/2015/11/marketing1-20140508134525-24.jpg" data-description="" data-date=""></li>
+                                <li data-src="http://www.long-vision.com.tw/file/2015/11/marketing1-20140508134526-49.jpg" data-description="" data-date=""></li>
+                                <li data-src="http://www.long-vision.com.tw/file/2015/11/marketing1-20140508134527-4.jpg" data-description="" data-date=""></li>
+                                <li data-src="http://www.long-vision.com.tw/file/2015/11/marketing1-20140508134528-22.jpg" data-description="" data-date=""></li>
+                                <li data-src="http://www.long-vision.com.tw/file/2015/11/marketing1-20140508134529-35.jpg" data-description="" data-date=""></li>
+                                <li data-src="http://www.long-vision.com.tw/file/2015/11/marketing1-20140508134530-45.jpg" data-description="" data-date=""></li>
+                                <li data-src="http://www.long-vision.com.tw/file/2015/11/marketing1-20140508134531-49.jpg" data-description="" data-date=""></li>
+                                <li data-src="http://www.long-vision.com.tw/file/2015/11/marketing1-20140508134532-32.jpg" data-description="" data-date=""></li>
+                                <li data-src="http://www.long-vision.com.tw/file/2015/11/marketing1-20140508134533-11.jpg" data-description="" data-date=""></li>
+                                <li data-src="http://www.long-vision.com.tw/file/2015/11/marketing1-20140508134534-32.jpg" data-description="" data-date=""></li>
+                                <li data-src="http://www.long-vision.com.tw/file/2015/11/marketing1-20140508134535-62.jpg" data-description="" data-date=""></li>
+                                <li data-src="http://www.long-vision.com.tw/file/2015/11/marketing1-20140508134536-97.jpg" data-description="" data-date=""></li>
+                            </ul>
+                        </a></li>
+                    <li>
+                        <a href="javascript:" title="" style="background-image:url(http://www.long-vision.com.tw/file/2015/11/marketing1-20140804180321-45.jpg)">
+                            <img src="http://www.long-vision.com.tw/skin/images/blank.png">
+                            <span><label>2014 麗嬰房 小萌豆選拔</label></span><b>2015-03-28</b><ul class="hide">
+                                <li data-src="http://www.long-vision.com.tw/file/2015/11/marketing1-20140804180321-45.jpg" data-description="" data-date=""></li>
+                                <li data-src="http://www.long-vision.com.tw/file/2015/11/marketing1-20140804180316-45.jpg" data-description="" data-date=""></li>
+                                <li data-src="http://www.long-vision.com.tw/file/2015/11/marketing1-20140804180317-34.jpg" data-description="" data-date=""></li>
+                                <li data-src="http://www.long-vision.com.tw/file/2015/11/marketing1-20140804180319-48.jpg" data-description="" data-date=""></li>
+                                <li data-src="http://www.long-vision.com.tw/file/2015/11/marketing1-20140804180318-87.jpg" data-description="" data-date=""></li>
+                                <li data-src="http://www.long-vision.com.tw/file/2015/11/marketing1-20140804180322-18.jpg" data-description="" data-date=""></li>
+                                <li data-src="http://www.long-vision.com.tw/file/2015/11/marketing1-20140804180308-94.jpg" data-description="" data-date=""></li>
+                                <li data-src="http://www.long-vision.com.tw/file/2015/11/marketing1-20140804180310-99.jpg" data-description="" data-date=""></li>
+                                <li data-src="http://www.long-vision.com.tw/file/2015/11/marketing1-20140804180311-41.jpg" data-description="" data-date=""></li>
+                                <li data-src="http://www.long-vision.com.tw/file/2015/11/marketing1-20140804180313-49.jpg" data-description="" data-date=""></li>
+                                <li data-src="http://www.long-vision.com.tw/file/2015/11/marketing1-20140804180314-51.jpg" data-description="" data-date=""></li>
+                                <li data-src="http://www.long-vision.com.tw/file/2015/11/marketing1-20140804180315-52.jpg" data-description="" data-date=""></li>
+                            </ul>
+                        </a></li>
+                </ul>
+                <a href="javascript:" class="next"><img src="images/activities/arrow.png"></a>
+                <a href="javascript:" class="prev"><img src="images/activities/arrow.png"></a></section>
+            <hr class="red">
+            <footer>
+                <a class="top" href="javascript:">
+                    <i class="fa fa-caret-up"></i>
+                    <span>PAGE TOP</span>
+                </a>
+                <nav>
+                    <ul>
+                        <li><a href="tel:+886228823218" title="電話" prop="">
+                                <i></i><span>(02)2882-3218</span>
+                            </a></li>
+                        <li><a href="javascript:" title="傳真">
+                                <i></i><span>(02)2883-3237</span></a></li>
+                        <li><a href="javascript:" title="long@long-vision.com.tw">
+                                <i></i><span>long@long-vision.com.tw</span></a></li>
+                        <li><a href="javascript:" title="台北市士林區後港街84號">
+                                <i></i><span>台北市士林區後港街84號</span></a></li>
+                        <li><a href="javascript:" title="長璟整合行銷粉絲團">
+                                <i></i><span>長璟整合行銷粉絲團</span></a></li>
+                    </ul>
+                </nav>
+                <h2><img src="images/header/logo.png"></h2>
+                <p class="copy">&copy; VISION Management Consulting Co., Ltd. All Rights Reserved.</p>
+            </footer>
+        </section>
+        <div id="blueimp-gallery" class="blueimp-gallery blueimp-gallery-controls">
+            <div class="slides"></div>
+            <h3 class="title"></h3>
+            <a class="prev icon-left-open-big"></a>
+            <a class="next icon-right-open-big"></a>
+            <a class="close"><i class="icon-right-open-big"></i><i class="icon-left-open-big"></i></a>
+            <ol class="indicator"></ol>
+        </div>
+        <!-- Google Analytics: change UA-XXXXX-X to be your site's ID. -->
+        <script>
+            (function(b,o,i,l,e,r){b.GoogleAnalyticsObject=l;b[l]||(b[l]=
+            function(){(b[l].q=b[l].q||[]).push(arguments)});b[l].l=+new Date;
+            e=o.createElement(i);r=o.getElementsByTagName(i)[0];
+            e.src='https://www.google-analytics.com/analytics.js';
+            r.parentNode.insertBefore(e,r)}(window,document,'script','ga'));
+            ga('create','UA-XXXXX-X');ga('send','pageview');
+        </script>
+        <!-- build:js scripts/vendor.js -->
+        <!-- bower:js -->
+        <script src="/bower_components/jquery/dist/jquery.js"></script>
+        <script src="/bower_components/jquery-mousewheel/jquery.mousewheel.js"></script>
+        <script src="/bower_components/gsap/src/uncompressed/TweenMax.js"></script>
+        <script src="/bower_components/jquery-colorbox/jquery.colorbox.js"></script>
+        <script src="/bower_components/lodash/lodash.js"></script>
+        <script src="/bower_components/blueimp-gallery/js/blueimp-helper.js"></script>
+        <script src="/bower_components/blueimp-gallery/js/blueimp-gallery.js"></script>
+        <script src="/bower_components/blueimp-gallery/js/blueimp-gallery-fullscreen.js"></script>
+        <script src="/bower_components/blueimp-gallery/js/blueimp-gallery-indicator.js"></script>
+        <script src="/bower_components/blueimp-gallery/js/blueimp-gallery-video.js"></script>
+        <script src="/bower_components/blueimp-gallery/js/blueimp-gallery-vimeo.js"></script>
+        <script src="/bower_components/blueimp-gallery/js/blueimp-gallery-youtube.js"></script>
+        <script src="/bower_components/superfish/dist/js/superfish.js"></script>
+        <script src="/bower_components/superfish/dist/js/hoverIntent.js"></script>
+        <script src="/bower_components/jqmq/js/jquery.marquee.js"></script>
+        <script src="/bower_components/markerclustererplus/src/markerclusterer.js"></script>
+        <!-- endbower -->
+        <!-- endbuild -->
+        <!-- build:js scripts/plugins.js -->
+        <script src="/bower_components/bootstrap-sass/assets/javascripts/bootstrap/affix.js"></script>
+        <script src="/bower_components/bootstrap-sass/assets/javascripts/bootstrap/alert.js"></script>
+        <script src="/bower_components/bootstrap-sass/assets/javascripts/bootstrap/dropdown.js"></script>
+        <script src="/bower_components/bootstrap-sass/assets/javascripts/bootstrap/tooltip.js"></script>
+        <script src="/bower_components/bootstrap-sass/assets/javascripts/bootstrap/modal.js"></script>
+        <script src="/bower_components/bootstrap-sass/assets/javascripts/bootstrap/transition.js"></script>
+        <script src="/bower_components/bootstrap-sass/assets/javascripts/bootstrap/button.js"></script>
+        <script src="/bower_components/bootstrap-sass/assets/javascripts/bootstrap/popover.js"></script>
+        <script src="/bower_components/bootstrap-sass/assets/javascripts/bootstrap/carousel.js"></script>
+        <script src="/bower_components/bootstrap-sass/assets/javascripts/bootstrap/scrollspy.js"></script>
+        <script src="/bower_components/bootstrap-sass/assets/javascripts/bootstrap/collapse.js"></script>
+        <script src="/bower_components/bootstrap-sass/assets/javascripts/bootstrap/tab.js"></script>
+        <!-- endbuild -->
+        <!-- build:js scripts/lightgallery-all.min.js -->
+        <script src="/bower_components/lightgallery/dist/js/lightgallery-all.min.js"></script>
+        <!-- endbuild -->
+        <!-- build:js scripts/main.js -->
+        <script src="scripts/main.js"></script>
+        <!-- endbuild -->
+    </body>
 </html>

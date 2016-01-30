@@ -16,6 +16,7 @@
     <link rel="stylesheet" href="/bower_components/blueimp-gallery/css/blueimp-gallery-indicator.css" />
     <link rel="stylesheet" href="/bower_components/blueimp-gallery/css/blueimp-gallery-video.css" />
     <link rel="stylesheet" href="/bower_components/superfish/dist/css/superfish.css" />
+    <link rel="stylesheet" href="/bower_components/lightgallery/dist/css/lightgallery.css" />
     <!-- endbower -->
     <!-- endbuild -->
 
@@ -28,6 +29,17 @@
     <!-- build:js scripts/vendor/modernizr.js -->
     <script src="/bower_components/modernizr/modernizr.js"></script>
     <!-- endbuild -->
+    <style type="text/css">.notranslate.flag.zh-CN{display:block;background:none!important;}
+.notranslate.flag.zh-CN:after{content:'简中';}
+.notranslate.flag.zh-TW{display:block;background:none!important;background:#313131!important;}
+.notranslate.flag.zh-TW:after{content:'繁中';}
+#flags #sortable li a{line-height:15px;}
+#flags #sortable li {float: right !important;}
+#flags.size18 a {
+    height: auto!important;
+    width: auto!important;
+    padding:5px 12px!important;
+}.goog-tooltip {display: none !important;}.goog-tooltip:hover {display: none !important;}.goog-text-highlight {background-color: transparent !important; border: none !important; box-shadow: none !important;}#google_language_translator a {display: none !important; }.goog-te-gadget {color:transparent !important;}.goog-te-gadget { font-size:0px !important; }.goog-branding { display:none; }#google_language_translator { display:none; }#flags { display:none; }.goog-te-banner-frame{visibility:hidden !important;}body { top:0px !important;}</style>
   </head>
   <body>
     <!--[if lt IE 10]>
@@ -55,12 +67,8 @@
               </ul>
             </nav>
             <h1 class="text-muted"><a href="./"><img alt="長璟整合行銷有限公司, 長璟管理顧問公司" src="images/header/logo.png"></a></h1>
-            <section class="locale">
-              <ul>
-                <li class="active"><a href="javascript:">繁中</a></li>
-                <li><a href="javascript:">簡中</a></li>
-              </ul>
-            </section>
+             <div class="size18" id="flags"><ul style="float:left" class="ui-sortable" id="sortable"><li id="Chinese"><a class="notranslate flag zh-CN" title="Chinese"></a></li><li id="Chinese(Traditional)"><a class="notranslate flag zh-TW" title="Chinese(Traditional)"></a></li></ul></div>
+            <div id="google_language_translator"></div>
             
           </aside>
         </aside>
@@ -107,29 +115,8 @@
           <h3 class="title page-activities">活動實績  <span>/&nbsp;ACTIVITIES</span></h3>
 
           <nav class="categories">
-            <ul>
-              <li class="active">
-                <a href="javascript:">尾牙春酒</a>
-              </li>
-              <li>
-                <a href="javascript:">產品發表會</a>
-              </li>
-              <li>
-                <a href="javascript:">開幕造勢活動</a>
-              </li>
-              <li>
-                <a href="javascript:">記者會</a>
-              </li>
-              <li>
-                <a href="javascript:">表揚大會</a>
-              </li>
-              <li>
-                <a href="javascript:">社區晚會</a>
-              </li>
-              <li>
-                <a href="javascript:">周邊設備租借</a>
-              </li>
-            </ul>
+            <ul><li class="active">
+<a href="" style="color: rgb(255, 255, 255);">所有活動</a></li><li><a title="View all posts in 春酒尾牙" href="javascript:" style="color: rgb(83, 83, 83);">春酒尾牙</a></li><li><a title="View all posts in 表揚大會" href="javascript:" style="color: rgb(83, 83, 83);">表揚大會</a></li><li><a title="View all posts in 家庭日" href="javascript:: rgb(83, 83, 83);">家庭日</a></li><li><a title="View all posts in 記者會" href="javascript:: rgb(83, 83, 83);">記者會</a></li><li><a title="View all posts in 開幕活動" href="javascript:" style="color: rgb(83, 83, 83);">開幕活動</a></li><li><a title="View all posts in 街頭活動" href="javascript:" style="color: rgb(83, 83, 83);">街頭活動</a></li><li><a title="View all posts in 展覽活動" href="javascript:" style="color: rgb(83, 83, 83);">展覽活動</a></li><li><a title="View all posts in 其他活動" href="javascript:" style="color: rgb(83, 83, 83);">其他活動</a></li><li><a title="View all posts in 精華影片" href="javascript:" style="color: rgb(83, 83, 83);">精華影片</a></li></ul>
             <i class="fa fa-caret-down"></i>
           </nav>
           <div class="clearfix"></div>
@@ -137,76 +124,25 @@
         <aside class="fit">
             <ul class="activities-list">
               <li>
-                <a href="javascript:" title="陳建銘議員石牌公園『愛與環保...">
+                <a href="javascript:">
                   <img src="images/activities/event01.png">
-                  <h4 ><span>陳建銘議員石牌公園『愛與環保...<b>2014.10.26</b></span></h4>
-                  <ul class="hide"><li data-date="" data-description="擲 Server 洩憤！&#12288;日電腦工程師運動會舉行擲 Server 比賽" data-src="//localhost:3000/wp-content/uploads/2015/11/l_tomomi_140617saver02-590x442.jpg"></li><li data-date="" data-description="擲 Server 洩憤！&#12288;日電腦工程師運動會舉行擲 Server 比賽" data-src="//localhost:3000/wp-content/uploads/2015/11/l_tomomi_140617saver01-590x442.jpg"></li><li data-date="" data-description="擲 Server 洩憤！&#12288;日電腦工程師運動會舉行擲 Server 比賽" data-src="//localhost:3000/wp-content/uploads/2015/11/l_tomomi_140617saver03-590x442.jpg"></li><li data-date="" data-description="擲 Server 洩憤！&#12288;日電腦工程師運動會舉行擲 Server 比賽擲 Server 洩憤！&#12288;日電腦工程師運動會舉行擲 Server 比賽擲 Server 洩憤！&#12288;日電腦工程師運動會舉行擲 Server 比賽擲 Server 洩憤！&#12288;日電腦工程師運動會舉行擲 Server 比賽" data-src="//localhost:3000/wp-content/uploads/2015/11/l_tomomi_140617saver04-590x442.jpg"></li></ul>
+                  <h4 ><span><label>陳建銘議員石牌公園『愛與環保...</label></span><b>2015-03-28</b></span></h4>
+                  <ul class="hide"><li data-video="" data-date="" data-description="" data-src="http://www.long-vision.com.tw/file/2015/11/marketing1-20130801154524-60.jpg"></li><li data-video="" data-date="" data-description="" data-src="http://www.long-vision.com.tw/file/2015/11/marketing1-20130801154536-4.jpg"></li><li data-video="" data-date="" data-description="" data-src="http://www.long-vision.com.tw/file/2015/11/marketing1-20130801154526-7.jpg"></li><li data-video="" data-date="" data-description="" data-src="http://www.long-vision.com.tw/file/2015/11/marketing1-20130801154532-24.jpg"></li><li data-video="" data-date="" data-description="" data-src="http://www.long-vision.com.tw/file/2015/11/marketing1-20130801154533-97.jpg"></li><li data-video="" data-date="" data-description="" data-src="http://www.long-vision.com.tw/file/2015/11/marketing1-20130801154535-82.jpg"></li><li data-video="" data-date="" data-description="" data-src="http://www.long-vision.com.tw/file/2015/11/marketing1-20130801154539-69.jpg"></li><li data-video="" data-date="" data-description="" data-src="http://www.long-vision.com.tw/file/2015/11/marketing1-20130801154545-99.jpg"></li><li data-video="" data-date="" data-description="" data-src="http://www.long-vision.com.tw/file/2015/11/marketing1-20130801154602-48.jpg"></li><li data-video="" data-date="" data-description="" data-src="http://www.long-vision.com.tw/file/2015/11/marketing1-20130801154605-5.jpg"></li><li data-video="" data-date="" data-description="" data-src="http://www.long-vision.com.tw/file/2015/11/marketing1-20130801154559-54.jpg"></li><li data-video="" data-date="" data-description="" data-src="http://www.long-vision.com.tw/file/2015/11/marketing1-20130801154613-34.jpg"></li><li data-video="" data-date="" data-description="" data-src="http://www.long-vision.com.tw/file/2015/11/marketing1-20130801154614-16.jpg"></li><li data-video="" data-date="" data-description="" data-src="http://www.long-vision.com.tw/file/2015/11/marketing1-20130801154616-5.jpg"></li><li data-video="" data-date="" data-description="" data-src="http://www.long-vision.com.tw/file/2015/11/marketing1-20130801154542-64.jpg"></li><li data-video="" data-date="" data-description="" data-src="http://www.long-vision.com.tw/file/2015/11/marketing1-20130801154610-83.jpg"></li><li data-video="" data-date="" data-description="" data-src="http://www.long-vision.com.tw/file/2015/11/marketing1-20130801154617-44.jpg"></li><li data-video="" data-date="" data-description="" data-src="http://www.long-vision.com.tw/file/2015/11/marketing1-20130801154619-53.jpg"></li></ul>
                 </a>
-
               </li>
               <li>
-                <a href="javascript:" title="吉廣建設江子翠住宅開工動土典禮">
+                <a href="javascript:">
                   <img src="images/activities/event02.png">
-                  <h4 ><span>吉廣建設江子翠住宅開工動土典禮<b>2014.10.26</b></span></h4>
-                  <ul class="hide"><li data-date="" data-description="擲 Server 洩憤！&#12288;日電腦工程師運動會舉行擲 Server 比賽" data-src="//localhost:3000/wp-content/uploads/2015/11/l_tomomi_140617saver02-590x442.jpg"></li><li data-date="" data-description="擲 Server 洩憤！&#12288;日電腦工程師運動會舉行擲 Server 比賽" data-src="//localhost:3000/wp-content/uploads/2015/11/l_tomomi_140617saver01-590x442.jpg"></li><li data-date="" data-description="擲 Server 洩憤！&#12288;日電腦工程師運動會舉行擲 Server 比賽" data-src="//localhost:3000/wp-content/uploads/2015/11/l_tomomi_140617saver03-590x442.jpg"></li><li data-date="" data-description="擲 Server 洩憤！&#12288;日電腦工程師運動會舉行擲 Server 比賽擲 Server 洩憤！&#12288;日電腦工程師運動會舉行擲 Server 比賽擲 Server 洩憤！&#12288;日電腦工程師運動會舉行擲 Server 比賽擲 Server 洩憤！&#12288;日電腦工程師運動會舉行擲 Server 比賽" data-src="//localhost:3000/wp-content/uploads/2015/11/l_tomomi_140617saver04-590x442.jpg"></li></ul>
+                  <h4 ><span><label>吉廣建設江子翠住宅開工動土典禮</label></span><b>2015-03-28</b></span></h4>
+                  <ul class="hide"><li data-video="" data-date="" data-description="" data-src="http://www.long-vision.com.tw/file/2015/11/marketing1-20130801154524-60.jpg"></li><li data-video="" data-date="" data-description="" data-src="http://www.long-vision.com.tw/file/2015/11/marketing1-20130801154536-4.jpg"></li><li data-video="" data-date="" data-description="" data-src="http://www.long-vision.com.tw/file/2015/11/marketing1-20130801154526-7.jpg"></li><li data-video="" data-date="" data-description="" data-src="http://www.long-vision.com.tw/file/2015/11/marketing1-20130801154532-24.jpg"></li><li data-video="" data-date="" data-description="" data-src="http://www.long-vision.com.tw/file/2015/11/marketing1-20130801154533-97.jpg"></li><li data-video="" data-date="" data-description="" data-src="http://www.long-vision.com.tw/file/2015/11/marketing1-20130801154535-82.jpg"></li><li data-video="" data-date="" data-description="" data-src="http://www.long-vision.com.tw/file/2015/11/marketing1-20130801154539-69.jpg"></li><li data-video="" data-date="" data-description="" data-src="http://www.long-vision.com.tw/file/2015/11/marketing1-20130801154545-99.jpg"></li><li data-video="" data-date="" data-description="" data-src="http://www.long-vision.com.tw/file/2015/11/marketing1-20130801154602-48.jpg"></li><li data-video="" data-date="" data-description="" data-src="http://www.long-vision.com.tw/file/2015/11/marketing1-20130801154605-5.jpg"></li><li data-video="" data-date="" data-description="" data-src="http://www.long-vision.com.tw/file/2015/11/marketing1-20130801154559-54.jpg"></li><li data-video="" data-date="" data-description="" data-src="http://www.long-vision.com.tw/file/2015/11/marketing1-20130801154613-34.jpg"></li><li data-video="" data-date="" data-description="" data-src="http://www.long-vision.com.tw/file/2015/11/marketing1-20130801154614-16.jpg"></li><li data-video="" data-date="" data-description="" data-src="http://www.long-vision.com.tw/file/2015/11/marketing1-20130801154616-5.jpg"></li><li data-video="" data-date="" data-description="" data-src="http://www.long-vision.com.tw/file/2015/11/marketing1-20130801154542-64.jpg"></li><li data-video="" data-date="" data-description="" data-src="http://www.long-vision.com.tw/file/2015/11/marketing1-20130801154610-83.jpg"></li><li data-video="" data-date="" data-description="" data-src="http://www.long-vision.com.tw/file/2015/11/marketing1-20130801154617-44.jpg"></li><li data-video="" data-date="" data-description="" data-src="http://www.long-vision.com.tw/file/2015/11/marketing1-20130801154619-53.jpg"></li></ul>
                 </a>
-
               </li>
               <li>
-                <a href="javascript:" title="陳建銘議員石牌公園">
+                <a href="javascript:">
                   <img src="images/activities/event03.png">
-                  <h4 ><span>陳建銘議員石牌公園<b>2014.10.26</b></span></h4>
-                  <ul class="hide"><li data-date="" data-description="擲 Server 洩憤！&#12288;日電腦工程師運動會舉行擲 Server 比賽" data-src="//localhost:3000/wp-content/uploads/2015/11/l_tomomi_140617saver02-590x442.jpg"></li><li data-date="" data-description="擲 Server 洩憤！&#12288;日電腦工程師運動會舉行擲 Server 比賽" data-src="//localhost:3000/wp-content/uploads/2015/11/l_tomomi_140617saver01-590x442.jpg"></li><li data-date="" data-description="擲 Server 洩憤！&#12288;日電腦工程師運動會舉行擲 Server 比賽" data-src="//localhost:3000/wp-content/uploads/2015/11/l_tomomi_140617saver03-590x442.jpg"></li><li data-date="" data-description="擲 Server 洩憤！&#12288;日電腦工程師運動會舉行擲 Server 比賽擲 Server 洩憤！&#12288;日電腦工程師運動會舉行擲 Server 比賽擲 Server 洩憤！&#12288;日電腦工程師運動會舉行擲 Server 比賽擲 Server 洩憤！&#12288;日電腦工程師運動會舉行擲 Server 比賽" data-src="//localhost:3000/wp-content/uploads/2015/11/l_tomomi_140617saver04-590x442.jpg"></li></ul>
+                  <h4 ><span><label>陳建銘議員石牌公園</label></span><b>2015-03-28</b></span></h4>
+                  <ul class="hide"><li data-video="" data-date="" data-description="" data-src="http://www.long-vision.com.tw/file/2015/11/marketing1-20130801154524-60.jpg"></li><li data-video="" data-date="" data-description="" data-src="http://www.long-vision.com.tw/file/2015/11/marketing1-20130801154536-4.jpg"></li><li data-video="" data-date="" data-description="" data-src="http://www.long-vision.com.tw/file/2015/11/marketing1-20130801154526-7.jpg"></li><li data-video="" data-date="" data-description="" data-src="http://www.long-vision.com.tw/file/2015/11/marketing1-20130801154532-24.jpg"></li><li data-video="" data-date="" data-description="" data-src="http://www.long-vision.com.tw/file/2015/11/marketing1-20130801154533-97.jpg"></li><li data-video="" data-date="" data-description="" data-src="http://www.long-vision.com.tw/file/2015/11/marketing1-20130801154535-82.jpg"></li><li data-video="" data-date="" data-description="" data-src="http://www.long-vision.com.tw/file/2015/11/marketing1-20130801154539-69.jpg"></li><li data-video="" data-date="" data-description="" data-src="http://www.long-vision.com.tw/file/2015/11/marketing1-20130801154545-99.jpg"></li><li data-video="" data-date="" data-description="" data-src="http://www.long-vision.com.tw/file/2015/11/marketing1-20130801154602-48.jpg"></li><li data-video="" data-date="" data-description="" data-src="http://www.long-vision.com.tw/file/2015/11/marketing1-20130801154605-5.jpg"></li><li data-video="" data-date="" data-description="" data-src="http://www.long-vision.com.tw/file/2015/11/marketing1-20130801154559-54.jpg"></li><li data-video="" data-date="" data-description="" data-src="http://www.long-vision.com.tw/file/2015/11/marketing1-20130801154613-34.jpg"></li><li data-video="" data-date="" data-description="" data-src="http://www.long-vision.com.tw/file/2015/11/marketing1-20130801154614-16.jpg"></li><li data-video="" data-date="" data-description="" data-src="http://www.long-vision.com.tw/file/2015/11/marketing1-20130801154616-5.jpg"></li><li data-video="" data-date="" data-description="" data-src="http://www.long-vision.com.tw/file/2015/11/marketing1-20130801154542-64.jpg"></li><li data-video="" data-date="" data-description="" data-src="http://www.long-vision.com.tw/file/2015/11/marketing1-20130801154610-83.jpg"></li><li data-video="" data-date="" data-description="" data-src="http://www.long-vision.com.tw/file/2015/11/marketing1-20130801154617-44.jpg"></li><li data-video="" data-date="" data-description="" data-src="http://www.long-vision.com.tw/file/2015/11/marketing1-20130801154619-53.jpg"></li></ul>
                 </a>
-
-              </li>
-              <li>
-                <a href="javascript:" title="陳建銘議員石牌公園『愛與環保...">
-                  <img src="images/activities/event01.png">
-                  <h4 ><span>陳建銘議員石牌公園『愛與環保...<b>2014.10.26</b></span></h4>
-                  <ul class="hide"><li data-date="" data-description="擲 Server 洩憤！&#12288;日電腦工程師運動會舉行擲 Server 比賽" data-src="//localhost:3000/wp-content/uploads/2015/11/l_tomomi_140617saver02-590x442.jpg"></li><li data-date="" data-description="擲 Server 洩憤！&#12288;日電腦工程師運動會舉行擲 Server 比賽" data-src="//localhost:3000/wp-content/uploads/2015/11/l_tomomi_140617saver01-590x442.jpg"></li><li data-date="" data-description="擲 Server 洩憤！&#12288;日電腦工程師運動會舉行擲 Server 比賽" data-src="//localhost:3000/wp-content/uploads/2015/11/l_tomomi_140617saver03-590x442.jpg"></li><li data-date="" data-description="擲 Server 洩憤！&#12288;日電腦工程師運動會舉行擲 Server 比賽擲 Server 洩憤！&#12288;日電腦工程師運動會舉行擲 Server 比賽擲 Server 洩憤！&#12288;日電腦工程師運動會舉行擲 Server 比賽擲 Server 洩憤！&#12288;日電腦工程師運動會舉行擲 Server 比賽" data-src="//localhost:3000/wp-content/uploads/2015/11/l_tomomi_140617saver04-590x442.jpg"></li></ul>
-                </a>
-
-              </li>
-              <li>
-                <a href="javascript:" title="吉廣建設江子翠住宅開工動土典禮.">
-                  <img src="images/activities/event02.png">
-                  <h4 ><span>吉廣建設江子翠住宅開工動土典禮<b>2014.10.26</b></span></h4>
-                  <ul class="hide"><li data-date="" data-description="擲 Server 洩憤！&#12288;日電腦工程師運動會舉行擲 Server 比賽" data-src="//localhost:3000/wp-content/uploads/2015/11/l_tomomi_140617saver02-590x442.jpg"></li><li data-date="" data-description="擲 Server 洩憤！&#12288;日電腦工程師運動會舉行擲 Server 比賽" data-src="//localhost:3000/wp-content/uploads/2015/11/l_tomomi_140617saver01-590x442.jpg"></li><li data-date="" data-description="擲 Server 洩憤！&#12288;日電腦工程師運動會舉行擲 Server 比賽" data-src="//localhost:3000/wp-content/uploads/2015/11/l_tomomi_140617saver03-590x442.jpg"></li><li data-date="" data-description="擲 Server 洩憤！&#12288;日電腦工程師運動會舉行擲 Server 比賽擲 Server 洩憤！&#12288;日電腦工程師運動會舉行擲 Server 比賽擲 Server 洩憤！&#12288;日電腦工程師運動會舉行擲 Server 比賽擲 Server 洩憤！&#12288;日電腦工程師運動會舉行擲 Server 比賽" data-src="//localhost:3000/wp-content/uploads/2015/11/l_tomomi_140617saver04-590x442.jpg"></li></ul>
-                </a>
-
-              </li>
-              <li>
-                <a href="javascript:" title="陳建銘議員石牌公園">
-                  <img src="images/activities/event03.png">
-                  <h4 ><span>陳建銘議員石牌公園<b>2014.10.26</b></span></h4>
-                  <ul class="hide"><li data-date="" data-description="擲 Server 洩憤！&#12288;日電腦工程師運動會舉行擲 Server 比賽" data-src="//localhost:3000/wp-content/uploads/2015/11/l_tomomi_140617saver02-590x442.jpg"></li><li data-date="" data-description="擲 Server 洩憤！&#12288;日電腦工程師運動會舉行擲 Server 比賽" data-src="//localhost:3000/wp-content/uploads/2015/11/l_tomomi_140617saver01-590x442.jpg"></li><li data-date="" data-description="擲 Server 洩憤！&#12288;日電腦工程師運動會舉行擲 Server 比賽" data-src="//localhost:3000/wp-content/uploads/2015/11/l_tomomi_140617saver03-590x442.jpg"></li><li data-date="" data-description="擲 Server 洩憤！&#12288;日電腦工程師運動會舉行擲 Server 比賽擲 Server 洩憤！&#12288;日電腦工程師運動會舉行擲 Server 比賽擲 Server 洩憤！&#12288;日電腦工程師運動會舉行擲 Server 比賽擲 Server 洩憤！&#12288;日電腦工程師運動會舉行擲 Server 比賽" data-src="//localhost:3000/wp-content/uploads/2015/11/l_tomomi_140617saver04-590x442.jpg"></li></ul>
-                </a>
-
-              </li>
-              <li>
-                <a href="javascript:" title="陳建銘議員石牌公園『愛與環保...">
-                  <img src="images/activities/event01.png">
-                  <h4 ><span>陳建銘議員石牌公園『愛與環保...<b>2014.10.26</b></span></h4>
-                  <ul class="hide"><li data-date="" data-description="擲 Server 洩憤！&#12288;日電腦工程師運動會舉行擲 Server 比賽" data-src="//localhost:3000/wp-content/uploads/2015/11/l_tomomi_140617saver02-590x442.jpg"></li><li data-date="" data-description="擲 Server 洩憤！&#12288;日電腦工程師運動會舉行擲 Server 比賽" data-src="//localhost:3000/wp-content/uploads/2015/11/l_tomomi_140617saver01-590x442.jpg"></li><li data-date="" data-description="擲 Server 洩憤！&#12288;日電腦工程師運動會舉行擲 Server 比賽" data-src="//localhost:3000/wp-content/uploads/2015/11/l_tomomi_140617saver03-590x442.jpg"></li><li data-date="" data-description="擲 Server 洩憤！&#12288;日電腦工程師運動會舉行擲 Server 比賽擲 Server 洩憤！&#12288;日電腦工程師運動會舉行擲 Server 比賽擲 Server 洩憤！&#12288;日電腦工程師運動會舉行擲 Server 比賽擲 Server 洩憤！&#12288;日電腦工程師運動會舉行擲 Server 比賽" data-src="//localhost:3000/wp-content/uploads/2015/11/l_tomomi_140617saver04-590x442.jpg"></li></ul>
-                </a>
-
-              </li>
-              <li>
-                <a href="javascript:" title="吉廣建設江子翠住宅開工動土典禮">
-                  <img src="images/activities/event02.png">
-                  <h4 ><span>吉廣建設江子翠住宅開工動土典禮<b>2014.10.26</b></span></h4>
-                  <ul class="hide"><li data-date="" data-description="擲 Server 洩憤！&#12288;日電腦工程師運動會舉行擲 Server 比賽" data-src="//localhost:3000/wp-content/uploads/2015/11/l_tomomi_140617saver02-590x442.jpg"></li><li data-date="" data-description="擲 Server 洩憤！&#12288;日電腦工程師運動會舉行擲 Server 比賽" data-src="//localhost:3000/wp-content/uploads/2015/11/l_tomomi_140617saver01-590x442.jpg"></li><li data-date="" data-description="擲 Server 洩憤！&#12288;日電腦工程師運動會舉行擲 Server 比賽" data-src="//localhost:3000/wp-content/uploads/2015/11/l_tomomi_140617saver03-590x442.jpg"></li><li data-date="" data-description="擲 Server 洩憤！&#12288;日電腦工程師運動會舉行擲 Server 比賽擲 Server 洩憤！&#12288;日電腦工程師運動會舉行擲 Server 比賽擲 Server 洩憤！&#12288;日電腦工程師運動會舉行擲 Server 比賽擲 Server 洩憤！&#12288;日電腦工程師運動會舉行擲 Server 比賽" data-src="//localhost:3000/wp-content/uploads/2015/11/l_tomomi_140617saver04-590x442.jpg"></li></ul>
-                </a>
-
-              </li>
-              <li>
-                <a href="javascript:" title="陳建銘議員石牌公園">
-                  <img src="images/activities/event03.png">
-                  <h4 ><span>陳建銘議員石牌公園<b>2014.10.26</b></span></h4>
-                  <ul class="hide"><li data-date="" data-description="擲 Server 洩憤！&#12288;日電腦工程師運動會舉行擲 Server 比賽" data-src="//localhost:3000/wp-content/uploads/2015/11/l_tomomi_140617saver02-590x442.jpg"></li><li data-date="" data-description="擲 Server 洩憤！&#12288;日電腦工程師運動會舉行擲 Server 比賽" data-src="//localhost:3000/wp-content/uploads/2015/11/l_tomomi_140617saver01-590x442.jpg"></li><li data-date="" data-description="擲 Server 洩憤！&#12288;日電腦工程師運動會舉行擲 Server 比賽" data-src="//localhost:3000/wp-content/uploads/2015/11/l_tomomi_140617saver03-590x442.jpg"></li><li data-date="" data-description="擲 Server 洩憤！&#12288;日電腦工程師運動會舉行擲 Server 比賽擲 Server 洩憤！&#12288;日電腦工程師運動會舉行擲 Server 比賽擲 Server 洩憤！&#12288;日電腦工程師運動會舉行擲 Server 比賽擲 Server 洩憤！&#12288;日電腦工程師運動會舉行擲 Server 比賽" data-src="//localhost:3000/wp-content/uploads/2015/11/l_tomomi_140617saver04-590x442.jpg"></li></ul>
-                </a>
-
               </li>
             </ul>
         </aside>
@@ -231,89 +167,85 @@
       <hr class="red">
 
       <footer>
-        <a class="top">
-          <i class="fa fa-caret-up"></i>
-          <span>PAGE TOP</span>
-        </a>
-        <nav>
-          <ul>
-            <li><a href="tel:+886228823218" title="電話" prop="">
-              <i></i><span>(02)2882-3218</span>
-            </a></li>
-            <li><a href="javascript:" title="傳真">
-              <i></i><span>(02)2883-3237</span></a></li>
-            <li><a href="javascript:" title="long@long-vision.com.tw">
-              <i></i><span>long@long-vision.com.tw</span></a></li>
-            <li><a href="javascript:" title="台北市士林區後港街84號">
-              <i></i><span>台北市士林區後港街84號</span></a></li>
-            <li><a href="javascript:" title="長璟整合行銷粉絲團">
-              <i></i><span>長璟整合行銷粉絲團</span></a></li>
-          </ul>
-        </nav>
-        <h2><img src="images/header/logo.png"></h2>
-        <p class="copy">&copy; VISION Management Consulting Co., Ltd. All Rights Reserved.</p>
+          <a class="top" href="javascript:">
+              <i class="fa fa-caret-up"></i>
+              <span>PAGE TOP</span>
+          </a>
+          <nav>
+              <ul>
+                  <li><a href="tel:+886228823218" title="電話" prop="">
+                          <i></i><span>(02)2882-3218</span>
+                      </a></li>
+                  <li><a href="javascript:" title="傳真">
+                          <i></i><span>(02)2883-3237</span></a></li>
+                  <li><a href="javascript:" title="long@long-vision.com.tw">
+                          <i></i><span>long@long-vision.com.tw</span></a></li>
+                  <li><a href="javascript:" title="台北市士林區後港街84號">
+                          <i></i><span>台北市士林區後港街84號</span></a></li>
+                  <li><a href="javascript:" title="長璟整合行銷粉絲團">
+                          <i></i><span>長璟整合行銷粉絲團</span></a></li>
+              </ul>
+          </nav>
+          <h2><img src="images/header/logo.png"></h2>
+          <p class="copy">&copy; VISION Management Consulting Co., Ltd. All Rights Reserved.</p>
       </footer>
-    </section>
-    <div id="blueimp-gallery" class="blueimp-gallery blueimp-gallery-controls">
-        <div class="slides"></div>
-        <h3 class="title"></h3>
-        <a class="prev icon-left-open-big"></a>
-        <a class="next icon-right-open-big"></a>
-        <a class="close"><i class="icon-right-open-big"></i><i class="icon-left-open-big"></i></a>
-        <ol class="indicator"></ol>
-        <aside class="map-detail">
-          
-        </aside>
-    </div>
-    
-    
-    <!-- Google Analytics: change UA-XXXXX-X to be your site's ID. -->
-    <script>
+  </section>
+  <div id="blueimp-gallery" class="blueimp-gallery blueimp-gallery-controls">
+      <div class="slides"></div>
+      <h3 class="title"></h3>
+      <a class="prev icon-left-open-big"></a>
+      <a class="next icon-right-open-big"></a>
+      <a class="close"><i class="icon-right-open-big"></i><i class="icon-left-open-big"></i></a>
+      <ol class="indicator"></ol>
+  </div>
+  <!-- Google Analytics: change UA-XXXXX-X to be your site's ID. -->
+  <script>
       (function(b,o,i,l,e,r){b.GoogleAnalyticsObject=l;b[l]||(b[l]=
       function(){(b[l].q=b[l].q||[]).push(arguments)});b[l].l=+new Date;
       e=o.createElement(i);r=o.getElementsByTagName(i)[0];
       e.src='https://www.google-analytics.com/analytics.js';
       r.parentNode.insertBefore(e,r)}(window,document,'script','ga'));
       ga('create','UA-XXXXX-X');ga('send','pageview');
-    </script>
-
-    <!-- build:js scripts/vendor.js -->
-    <!-- bower:js -->
-    <script src="/bower_components/jquery/dist/jquery.js"></script>
-    <script src="/bower_components/gsap/src/uncompressed/TweenMax.js"></script>
-    <script src="/bower_components/jquery-colorbox/jquery.colorbox.js"></script>
-    <script src="/bower_components/lodash/lodash.js"></script>
-    <script src="/bower_components/blueimp-gallery/js/blueimp-helper.js"></script>
-    <script src="/bower_components/blueimp-gallery/js/blueimp-gallery.js"></script>
-    <script src="/bower_components/blueimp-gallery/js/blueimp-gallery-fullscreen.js"></script>
-    <script src="/bower_components/blueimp-gallery/js/blueimp-gallery-indicator.js"></script>
-    <script src="/bower_components/blueimp-gallery/js/blueimp-gallery-video.js"></script>
-    <script src="/bower_components/blueimp-gallery/js/blueimp-gallery-vimeo.js"></script>
-    <script src="/bower_components/blueimp-gallery/js/blueimp-gallery-youtube.js"></script>
-    <script src="/bower_components/superfish/dist/js/superfish.js"></script>
-    <script src="/bower_components/superfish/dist/js/hoverIntent.js"></script>
-    <script src="/bower_components/jqmq/js/jquery.marquee.js"></script>
-    <script src="/bower_components/markerclustererplus/src/markerclusterer.js"></script>
-    <!-- endbower -->
-    <!-- endbuild -->
-    
-    <!-- build:js scripts/plugins.js -->
-    <script src="/bower_components/bootstrap-sass/assets/javascripts/bootstrap/affix.js"></script>
-    <script src="/bower_components/bootstrap-sass/assets/javascripts/bootstrap/alert.js"></script>
-    <script src="/bower_components/bootstrap-sass/assets/javascripts/bootstrap/dropdown.js"></script>
-    <script src="/bower_components/bootstrap-sass/assets/javascripts/bootstrap/tooltip.js"></script>
-    <script src="/bower_components/bootstrap-sass/assets/javascripts/bootstrap/modal.js"></script>
-    <script src="/bower_components/bootstrap-sass/assets/javascripts/bootstrap/transition.js"></script>
-    <script src="/bower_components/bootstrap-sass/assets/javascripts/bootstrap/button.js"></script>
-    <script src="/bower_components/bootstrap-sass/assets/javascripts/bootstrap/popover.js"></script>
-    <script src="/bower_components/bootstrap-sass/assets/javascripts/bootstrap/carousel.js"></script>
-    <script src="/bower_components/bootstrap-sass/assets/javascripts/bootstrap/scrollspy.js"></script>
-    <script src="/bower_components/bootstrap-sass/assets/javascripts/bootstrap/collapse.js"></script>
-    <script src="/bower_components/bootstrap-sass/assets/javascripts/bootstrap/tab.js"></script>
-    <!-- endbuild -->
-    
-    <!-- build:js scripts/main.js -->
-    <script src="scripts/main.js"></script>
-    <!-- endbuild -->
-  </body>
+  </script>
+  <!-- build:js scripts/vendor.js -->
+  <!-- bower:js -->
+  <script src="/bower_components/jquery/dist/jquery.js"></script>
+  <script src="/bower_components/jquery-mousewheel/jquery.mousewheel.js"></script>
+  <script src="/bower_components/gsap/src/uncompressed/TweenMax.js"></script>
+  <script src="/bower_components/jquery-colorbox/jquery.colorbox.js"></script>
+  <script src="/bower_components/lodash/lodash.js"></script>
+  <script src="/bower_components/blueimp-gallery/js/blueimp-helper.js"></script>
+  <script src="/bower_components/blueimp-gallery/js/blueimp-gallery.js"></script>
+  <script src="/bower_components/blueimp-gallery/js/blueimp-gallery-fullscreen.js"></script>
+  <script src="/bower_components/blueimp-gallery/js/blueimp-gallery-indicator.js"></script>
+  <script src="/bower_components/blueimp-gallery/js/blueimp-gallery-video.js"></script>
+  <script src="/bower_components/blueimp-gallery/js/blueimp-gallery-vimeo.js"></script>
+  <script src="/bower_components/blueimp-gallery/js/blueimp-gallery-youtube.js"></script>
+  <script src="/bower_components/superfish/dist/js/superfish.js"></script>
+  <script src="/bower_components/superfish/dist/js/hoverIntent.js"></script>
+  <script src="/bower_components/jqmq/js/jquery.marquee.js"></script>
+  <script src="/bower_components/markerclustererplus/src/markerclusterer.js"></script>
+  <!-- endbower -->
+  <!-- endbuild -->
+  <!-- build:js scripts/plugins.js -->
+  <script src="/bower_components/bootstrap-sass/assets/javascripts/bootstrap/affix.js"></script>
+  <script src="/bower_components/bootstrap-sass/assets/javascripts/bootstrap/alert.js"></script>
+  <script src="/bower_components/bootstrap-sass/assets/javascripts/bootstrap/dropdown.js"></script>
+  <script src="/bower_components/bootstrap-sass/assets/javascripts/bootstrap/tooltip.js"></script>
+  <script src="/bower_components/bootstrap-sass/assets/javascripts/bootstrap/modal.js"></script>
+  <script src="/bower_components/bootstrap-sass/assets/javascripts/bootstrap/transition.js"></script>
+  <script src="/bower_components/bootstrap-sass/assets/javascripts/bootstrap/button.js"></script>
+  <script src="/bower_components/bootstrap-sass/assets/javascripts/bootstrap/popover.js"></script>
+  <script src="/bower_components/bootstrap-sass/assets/javascripts/bootstrap/carousel.js"></script>
+  <script src="/bower_components/bootstrap-sass/assets/javascripts/bootstrap/scrollspy.js"></script>
+  <script src="/bower_components/bootstrap-sass/assets/javascripts/bootstrap/collapse.js"></script>
+  <script src="/bower_components/bootstrap-sass/assets/javascripts/bootstrap/tab.js"></script>
+  <!-- endbuild -->
+  <!-- build:js scripts/lightgallery-all.min.js -->
+  <script src="/bower_components/lightgallery/dist/js/lightgallery-all.min.js"></script>
+  <!-- endbuild -->
+  <!-- build:js scripts/main.js -->
+  <script src="scripts/main.js"></script>
+  <!-- endbuild -->
+</body>
 </html>

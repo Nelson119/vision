@@ -1,23 +1,8 @@
 ﻿'use strict';
 /*eslint-disable new-cap, no-unused-vars */
-/*global  $, TweenMax, TimelineMax, blueimp */
+/*global  $, TweenMax, TimelineMax */
 
-//fake data;
 var data = [
-    {
-        title: '陳建銘議員石牌公園『愛與環保...',
-        href: 'images/activities/event02.png',
-        type: 'image/jpeg',
-        thumbnail: 'images/activities/event02.png',
-        date: '2014.10.26'
-    },
-    {
-        title: '吉廣建設江子翠住宅開工動土典禮',
-        href: 'images/activities/event02.png',
-        type: 'image/jpeg',
-        thumbnail: 'images/activities/event02.png',
-        date: '2014.10.26'
-    }
 ];
 $(function(){
 
@@ -102,6 +87,9 @@ $(function(){
         var fade = $(document.createElement('div'));
 
         cur.addClass('cur');
+        cur.on('click', function(){
+            $('ul li.active', container).trigger('click');
+        });
         fade.addClass('fade');
 
         cur.insertBefore($('>nav', container));
@@ -122,16 +110,6 @@ $(function(){
                     TweenMax.set(fade, {display: 'none'});
                 }
             });
-            if(!$('>ul li.active', container).next().length){
-                $('nav .next', container).hide();
-            }else{
-                $('nav .next', container).show();
-            }
-            if($('>ul li.active', container).prev().length){
-                $('nav .prev', container).show();
-            }else{
-                $('nav .prev', container).hide();
-            }
         }
 
 
@@ -152,14 +130,26 @@ $(function(){
         $('nav .prev', container).on('click', function(){
             if($('nav ul li.active', container).prev().length){
                 $('nav ul li.active', container).prev().trigger('click');
+            }else{
+                $('nav ul li.active', container).siblings().last().trigger('click');
             }
         });
 
+        var tick = 0;
         $('nav .next', container).on('click', function(){
             if($('nav ul li.active', container).next().length){
                 $('nav ul li.active', container).next().trigger('click');
+            }else{
+                $('nav ul li.active', container).siblings().first().trigger('click');
             }
+            clearTimeout(tick);
+            tick = setTimeout(function(){
+               $('nav .next', container).trigger('click');
+            }, 5000);
         });
+        tick = setTimeout(function(){
+           $('nav .next', container).trigger('click');
+        }, 7000);
 
 
         hook(0);
@@ -254,51 +244,40 @@ $(function(){
             }
 		});
 
-
         $('>ul li a, .activities-list li a', container).on('click', function(){
             data = [];
             $('ul.hide li', this).each(function(){
+                if(!( $(this).attr('data-video') || $(this).attr('data-src'))){
+                    return;
+                }
                 data.push({
-                    title: $(this).attr('data-description'),
-                    href: $(this).attr('data-src'),
-                    type: 'image/jpeg',
-                    thumbnail: $(this).attr('data-src'),
-                    date: $(this).attr('data-date')
+                    src: $(this).attr('data-video') || $(this).attr('data-src'),
+                    subHtml: '<p>' + $(this).attr('data-description') + '</p>',
+                    thumb: $(this).attr('data-src')
                 });
             });
-            var gallery = blueimp.Gallery(data, {
-                thumbnailProperty: 'thumbnail',
-                closeOnSlideClick: false,
-                transitionSpeed: 1000,
-                onopened: function(){
-                    $(window).on('resize', function(){
-                        var idx = $('#blueimp-gallery .indicator .active').index();
-                        var img = $('.slide-content').eq(idx);
-                        var top = img.offset().top - img.parent().offset().top;
-                        var left = img.offset().left - img.parent().offset().left;
-                        TweenMax.to($('#blueimp-gallery .next'), 0.5, {
-                            left: left + img.width(),
-                            top: top + img.height() / 2 - $('#blueimp-gallery .next').height() / 2
-                        });
-                        TweenMax.to($('#blueimp-gallery .prev'), 0.5, {
-                            left: left - $('#blueimp-gallery .prev').width(),
-                            top: top + img.height() / 2 - $('#blueimp-gallery .prev').height() / 2
-                        });
-                        TweenMax.to($('#blueimp-gallery .close'), 0.5, {
-                            left: left + img.width() + 10,
-                            top: top
-                        });
-                    TweenMax.to($('#blueimp-gallery .title'), 0.5, {
-                        left: left,
-                        top: top + img.height() + 10
-                    });
-                    }).trigger('resize');
+            if(data === []){
+                return false;
+            }
+            $(this).lightGallery({
+                thumbnail: true,
+                dynamic: true,
+                dynamicEl: data,
+                loadYoutubeThumbnail: true,
+                loadVimeoThumbnail: true,
+                youtubeThumbSize: 'maxresdefault',
+                youtubePlayerParams: {
+                    modestbranding: 1,
+                    showinfo: 0,
+                    rel: 0,
+                    controls: 0
                 },
-                onslideend: function(){
-                    $(window).trigger('resize');
-                    var i = $('#blueimp-gallery .indicator .active').index();
-                    $('#blueimp-gallery .title').append('<b>' + data[i].date + '</b>');
-                }
+                vimeoPlayerParams: {
+                    byline: 0,
+                    portrait: 0,
+                    color: 'fe805b'
+                },
+                videoMaxWidth: 800
             });
         });
 

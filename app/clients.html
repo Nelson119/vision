@@ -16,6 +16,7 @@
     <link rel="stylesheet" href="/bower_components/blueimp-gallery/css/blueimp-gallery-indicator.css" />
     <link rel="stylesheet" href="/bower_components/blueimp-gallery/css/blueimp-gallery-video.css" />
     <link rel="stylesheet" href="/bower_components/superfish/dist/css/superfish.css" />
+    <link rel="stylesheet" href="/bower_components/lightgallery/dist/css/lightgallery.css" />
     <!-- endbower -->
     <!-- endbuild -->
 
@@ -28,6 +29,17 @@
     <!-- build:js scripts/vendor/modernizr.js -->
     <script src="/bower_components/modernizr/modernizr.js"></script>
     <!-- endbuild -->
+    <style type="text/css">.notranslate.flag.zh-CN{display:block;background:none!important;}
+.notranslate.flag.zh-CN:after{content:'简中';}
+.notranslate.flag.zh-TW{display:block;background:none!important;background:#313131!important;}
+.notranslate.flag.zh-TW:after{content:'繁中';}
+#flags #sortable li a{line-height:15px;}
+#flags #sortable li {float: right !important;}
+#flags.size18 a {
+    height: auto!important;
+    width: auto!important;
+    padding:5px 12px!important;
+}.goog-tooltip {display: none !important;}.goog-tooltip:hover {display: none !important;}.goog-text-highlight {background-color: transparent !important; border: none !important; box-shadow: none !important;}#google_language_translator a {display: none !important; }.goog-te-gadget {color:transparent !important;}.goog-te-gadget { font-size:0px !important; }.goog-branding { display:none; }#google_language_translator { display:none; }#flags { display:none; }.goog-te-banner-frame{visibility:hidden !important;}body { top:0px !important;}</style>
   </head>
   <body>
     <!--[if lt IE 10]>
@@ -55,12 +67,8 @@
               </ul>
             </nav>
             <h1 class="text-muted"><a href="./"><img alt="長璟整合行銷有限公司, 長璟管理顧問公司" src="images/header/logo.png"></a></h1>
-            <section class="locale">
-              <ul>
-                <li class="active"><a href="javascript:">繁中</a></li>
-                <li><a href="javascript:">簡中</a></li>
-              </ul>
-            </section>
+            <div class="size18" id="flags"><ul style="float:left" class="ui-sortable" id="sortable"><li id="Chinese"><a class="notranslate flag zh-CN" title="Chinese"></a></li><li id="Chinese(Traditional)"><a class="notranslate flag zh-TW" title="Chinese(Traditional)"></a></li></ul></div>
+            <div id="google_language_translator"></div>
             
           </aside>
         </aside>
@@ -158,6 +166,8 @@
     <script src="/bower_components/superfish/dist/js/hoverIntent.js"></script>
     <script src="/bower_components/jqmq/js/jquery.marquee.js"></script>
     <script src="/bower_components/markerclustererplus/src/markerclusterer.js"></script>
+    <script src="/bower_components/lightgallery/dist/js/lightgallery.min.js"></script>
+    <script src="/bower_components/jquery-mousewheel/jquery.mousewheel.js"></script>
     <!-- endbower -->
     <!-- endbuild -->
     

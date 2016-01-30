@@ -9,6 +9,20 @@
     height: 520px;
     display: inline-block;
     margin-bottom:80px;
+    position:relative;
+    #hint-btn{
+      position:absolute;
+      top:10px;
+      right:10px;
+      font-size:15px;
+      content:"  "attr(data-title);
+      padding:10px 13px;
+      background:#fff;
+      color:#313131;
+      font-family: FontAwesome;
+      border-radius:2px;
+      box-shadow: 0 1px 4px -1px rgba(0, 0, 0, 0.3);
+    }
   }
   nav{
     float:right;
@@ -50,7 +64,11 @@
           font-weight: normal;
           border:1px solid #15b5a4;
           position:relative;
-
+          figure{
+            border: 0;
+            border-radius: 0;
+            padding: 0;
+          }
           &.active{
             transition-duration: 0.4s;
             figure:after{
@@ -242,6 +260,6 @@
       line-height: 44px !important;
       padding-left:3px;
     }
-    background:url("../images/map/cluster.png") no-repeat center center;
+    background:url("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABkAAAAoCAMAAAA8EaFZAAABaFBMVEUAAACCxL2CxL2CxL2CxL2CxL2CxL2CxL2CxL19wbp+wrt8wbp9wbp9wbp8wbp5wLh5wLh5wLh4v7h4v7hzvbVturFsubFrubBrubBpuK9ot69ot69mtq5ltq1jtaxjtaxhtKtgtKtfs6pfs6rK5uNdsqlcsqlbsahquLBZsKdVrqVUrqRSraNNq6FLqqBMqqBKqZ9KqZ9Fp53////V6+nT6ug/pJlRraOUzMbi8e9VrqXj8vAsm48tnJAomY0pmo4qmo4nmY0jl4skl4smmIwglYkclIcelYgflYih083r9vUakoUbk4ZTrqQRjoETj4IUj4IWkIMXkYQYkYQclIclmIwGiXsJin0Li34MjH4OjX8RjoEUj4IVkIMclIcmmIwnmY02oJRTrqRuu7Jwu7ODxL2Wzcec0Mui086o1tG13Ni33dm739u94NzA4d3G5OHX7Ora7evi8e/r9vXv+Pf5/Pz9/v7///8ecGWfAAAAVnRSTlMAAgQICgwOEhYXHyYuMDc4QUNGSmKGh4qLkpSXnJ2mp62vsLG1uLm7vsDHyM/V2dnb3OHh4ufp6+vr8fP29/j4+Pn6+vr7/Pz8/Pz9/f3+/v7+/v7+/nCD7SgAAAFoSURBVBgZbcGJIxRxGMfhr2vXmULlSKVLylaELrXl6iJrq8/OEitXOYvw/vvtNWbmZ59HZfU9wxMZMhPDPfUKi/Wn8aX7YzrTniQs2a6yjhTgzW3t/tndmvOAVIeK2haAl6+s5MUzYKFNebWvwfttgY8ejNdKug9sW9g2cFuKfYMNi9qA2Zg6YfnYoo6XoVNDsG6udRhSEnbMtQNJZWHUXH8hK+CfuT4BAg7NdQie3sOBuQ7gncZg01yb8EQ3IXdqUaff4bKaPfhlUc/hS1x6DD9GLOTpnXlISLroweqRBY5WIXNJeQlgZd98+ytAQgUXFslb2zsxs5O9NfK8VhUNUpTN/cxlKRpUScsSUYstKntA1EP5muYJW2rSmQHCBhRoTBNINSrkLoF7Cmv4jO9rgyL68N1SVHyGktm4HNcpuSFX3TQFH+p0zjUKenVezRQwWaMKuoBuVVL9ljfVqugKV1VZ1aMqBf4DJuT1PNd1eEAAAAAASUVORK5CYII=") no-repeat center center;
    }
 }

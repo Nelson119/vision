@@ -24,12 +24,11 @@
   nav.categories{
     position:relative;
     text-align: center;
-    margin-left:210px;
     ul{
       width:100%;
       font-size: 15px;
       li{
-        width:percentage(155/1400);
+        width:percentage(140/1400);
         float: left;
         a{
           color:#535353;
@@ -54,7 +53,7 @@
     }
     i.fa-caret-down{
       position:absolute;
-      width:percentage(154/1400);
+      width:percentage(140/1400);
       height:30px;
       top:-5px;
       left:0;
